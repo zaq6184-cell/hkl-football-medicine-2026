@@ -3,6 +3,7 @@ import { BriefcaseMedical, CalendarDays, ChevronRight, PlayCircle } from "lucide
 import { AppShell, HeroPhoto, Note, Panel, SectionLabel } from "@/components/workshop";
 import { programme } from "@/lib/programme";
 import { workshop } from "@/lib/workshop";
+import { asset } from "@/lib/asset";
 
 export const Route = createFileRoute("/")({ component: Home });
 
@@ -64,7 +65,7 @@ function Home() {
           </Panel>
         </Link>
         <HeroPhoto
-          src="/img/cover.jpg"
+          src={asset("/img/cover.jpg")}
           alt="Team positions around the collapsed player"
           caption="Stand on your colour. If it is not your job, do not reach in. Black owns the clock."
           contain

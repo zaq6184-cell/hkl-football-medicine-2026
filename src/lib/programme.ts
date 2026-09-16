@@ -1,3 +1,5 @@
+import { asset } from "@/lib/asset";
+
 export type EventTab = "programme" | "speakers" | "venue" | "team";
 
 export type SpeakerId =
@@ -89,7 +91,7 @@ export const speakers: Speaker[] = [
     country: "Malaysia",
     title: "Director General, Ministry of Health Malaysia",
     org: "Consultant Emergency Medicine Physician",
-    photo: "/img/event/speakers/mahathar.jpg",
+    photo: asset("/img/event/speakers/mahathar.jpg"),
     bio: "Datuk Dr. Mahathar Abd Wahab is the Director General of the Ministry of Health Malaysia and a distinguished consultant emergency medicine physician. Appointed as DG in 2025, he draws on decades of clinical experience, including his tenure as Head of the Emergency and Trauma Department at Hospital Kuala Lumpur. His leadership focuses on advancing national healthcare resilience, clinical governance, and frontline services.",
   },
   {
@@ -99,7 +101,7 @@ export const speakers: Speaker[] = [
     country: "Malaysia",
     title: "Director, Hospital Kuala Lumpur",
     org: "Wound care · President, World Union of Wound Healing Societies",
-    photo: "/img/event/speakers/harikrishna.jpg",
+    photo: asset("/img/event/speakers/harikrishna.jpg"),
     bio: "Prof. Dato' Dr. Harikrishna K. Ragavan Nair is the Director of Hospital Kuala Lumpur and specialises in wound care management. He leads major international organisations, serving as President of the World Union of Wound Healing Societies. During his tenure at HKL he has modernised hospital operations through healthcare digitalisation, facility upgrades, and nationally recognised quality initiatives.",
   },
   {
@@ -109,7 +111,7 @@ export const speakers: Speaker[] = [
     country: "Malaysia",
     title: "Chairman, AFC Medical Committee",
     org: "Member, FIFA Medical Committee",
-    photo: "/img/event/speakers/gurcharan.jpg",
+    photo: asset("/img/event/speakers/gurcharan.jpg"),
     bio: "Dato' Dr. Gurcharan Singh, commonly known as Dato' Guru, is a senior sports medicine physician with over 35 years of involvement in sports medicine and anti-doping programmes globally. He is a Consultant Sports Medicine Physician, Chairman of the AFC Medical Committee, and a member of the FIFA Medical Committee.",
   },
   {
@@ -119,7 +121,7 @@ export const speakers: Speaker[] = [
     country: "Northern Ireland",
     title: "FIFA Medical Director",
     org: "FIFA Medical Subdivision",
-    photo: "/img/event/speakers/massey.jpg",
+    photo: asset("/img/event/speakers/massey.jpg"),
     bio: "Andrew Massey joined FIFA in 2020, having worked at Liverpool FC for the previous 7 years as Head of Medical Services. At FIFA he leads the Medical Subdivision. His current projects look at strategies to improve the physical and mental health of footballers globally and provide frameworks for clubs, member associations and confederations to deliver optimal medical care — and to encourage football participation.",
   },
   {
@@ -129,7 +131,7 @@ export const speakers: Speaker[] = [
     country: "Croatia",
     title: "UEFA Chief Medical Officer",
     org: "UEFA Medical Unit, Switzerland",
-    photo: "/img/event/speakers/zoran.jpg",
+    photo: asset("/img/event/speakers/zoran.jpg"),
     bio: "Dr. Zoran is a Croatian medical doctor who currently resides in Switzerland, where he serves as UEFA’s Chief Medical Officer. Originating from Zagreb, he built an extensive clinical background with 30 years as a paediatric surgeon and 20 years in elite sports medicine as the official team doctor for the Croatian National Football Team. He now directs UEFA’s medical unit and overall healthcare strategy, overseeing player health policies, injury research, and emergency health initiatives across European football.",
   },
   {
@@ -139,7 +141,7 @@ export const speakers: Speaker[] = [
     country: "United Kingdom",
     title: "FIFA Medical Officer / Aspetar",
     org: "Intensive care & anaesthesia",
-    photo: "/img/event/speakers/peter.jpg",
+    photo: asset("/img/event/speakers/peter.jpg"),
     bio: "Born and educated in England, Peter finished his dual intensive care and anaesthesia training in New Zealand. He then worked in South Auckland for many years before moving to Qatar. Out of hospital he teaches around the world with the BASIC critical care group, running courses in hospitals and pre-hospital settings, mostly in low-resource environments. He has worked in aero-medical retrievals, at Wembley Stadium, the Rugby World Cup, IAAF World Championships, and trained medical teams for the FIFA World Cup — including pitchside.",
   },
   {
@@ -149,7 +151,7 @@ export const speakers: Speaker[] = [
     country: "New Zealand",
     title: "FIFA Medical Officer / Aspetar",
     org: "Sports physician · major event coverage",
-    photo: "/img/event/speakers/celeste.jpg",
+    photo: asset("/img/event/speakers/celeste.jpg"),
     bio: "Dr. Celeste Geertsema is a sports physician whose career focuses on major international event coverage and supporting athletes in maximising human performance. Her experience includes working at ten FIFA World Cups, the Summer and Winter Olympic Games, the Commonwealth Games, World Championships in Athletics, Handball and Swimming, and several other international sporting events in 17 countries.",
   },
   {
@@ -159,7 +161,7 @@ export const speakers: Speaker[] = [
     country: "Malaysia",
     title: "Senior Consultant Cardiothoracic Surgeon, IJN",
     org: "Director, Cardiovascular Sports & Fitness, National Heart Institute",
-    photo: "/img/event/speakers/jeffrey.jpg",
+    photo: asset("/img/event/speakers/jeffrey.jpg"),
     bio: "Prof. Dato' Seri Dr. Jeffrey Jeswant Dillon is a Senior Consultant Cardiothoracic Surgeon and Director of Cardiovascular Sports & Fitness at the National Heart Institute Malaysia. He is Mayo Clinic-trained and serves as President of MATCVS, a Board Director for the National Sports Institute, and a SEAGF Medical Committee member. He was Malaysia’s cycling team doctor at the Paris 2024 Olympics, specialising in complex valve reconstruction, minimally invasive cardiac surgery, and sports cardiology.",
   },
   {
@@ -169,7 +171,7 @@ export const speakers: Speaker[] = [
     country: "IR Iran",
     title: "FIFA Doctor & AFC Medical Officer",
     org: "FIFA / AFC Medical Centre of Excellence",
-    photo: "/img/event/speakers/zohreh.jpg",
+    photo: asset("/img/event/speakers/zohreh.jpg"),
     bio: "Dr. Zohreh Haratian is an Iranian sports medicine specialist serving as a FIFA Doctor and AFC Medical Officer since 2013. She heads both the Iran Football League Organization’s Medical Department and the FIFA and AFC Medical Centre of Excellence. Named the AFC Best Young Medical Officer from 2015 to 2019, she remains a key figure in Asian and international football healthcare.",
   },
   {
@@ -179,7 +181,7 @@ export const speakers: Speaker[] = [
     country: "India",
     title: "FIFA Match Doctor",
     org: "Emergency medicine · AFC since 2016",
-    photo: "/img/event/speakers/fenton.jpg",
+    photo: asset("/img/event/speakers/fenton.jpg"),
     bio: "Dr. Fenton is an Emergency Medicine Physician based in Goa, India, with 14 years of clinical experience. He serves as Director of an emergency medical and repatriation service, leading a team of 60 staff and a fleet of 10 Advanced Life Support ambulances. Deeply involved in sports medicine, he has worked with the Asian Football Confederation since 2016 and served as a FIFA Match Doctor since 2022.",
   },
   {
@@ -189,7 +191,7 @@ export const speakers: Speaker[] = [
     country: "Malaysia",
     title: "Head of Emergency Department, Hospital Kuala Lumpur",
     org: "Immediate Past President, College of Emergency Physicians Malaysia",
-    photo: "/img/event/speakers/alzamani.jpg",
+    photo: asset("/img/event/speakers/alzamani.jpg"),
     bio: "Datuk Dr. Alzamani Mohammad Idrose is Head of the Emergency Department at Hospital Kuala Lumpur and Immediate Past President of the College of Emergency Physicians, Malaysia. He holds a PhD in Sports Science focusing on high-altitude medicine alongside fellowships in emergency critical care and ultrasound. A former personal physician to His Majesty the 14th Agong, his expertise spans disaster management, wilderness emergencies, and sports critical care.",
   },
   {
@@ -199,7 +201,7 @@ export const speakers: Speaker[] = [
     country: "Malaysia",
     title: "Head of Sports Medicine Unit, Hospital Kuala Lumpur",
     org: "Past President, Malaysian Association of Sports Medicine (2024–2026)",
-    photo: "/img/event/speakers/arshad.jpg",
+    photo: asset("/img/event/speakers/arshad.jpg"),
     bio: "Dr. Arshad Puji is a Consultant Sports Medicine Physician and Head of the Sports Medicine Unit at Hospital Kuala Lumpur. He previously served as Medical Director at the National Sports Institute and Chief Medical Officer for Malaysian contingents at the SEA, Asian, and Olympic Games. His clinical expertise focuses on ultrasound-guided musculoskeletal procedures, interventional pain management, and return-to-sports rehabilitation.",
   },
   {
@@ -209,7 +211,7 @@ export const speakers: Speaker[] = [
     country: "Malaysia",
     title: "Deputy Head of Emergency and Trauma, Hospital Kuala Lumpur",
     org: "President, Kuala Lumpur Trauma Care Society",
-    photo: "/img/event/speakers/ahmad.jpg",
+    photo: asset("/img/event/speakers/ahmad.jpg"),
     bio: "Dr. Ahmad Ibrahim Bin Kamal Batcha is Deputy Head of Emergency and Trauma at Hospital Kuala Lumpur and President of the Kuala Lumpur Trauma Care Society. Fellowship-trained at Royal London Hospital with an MSc in Trauma Sciences (Distinction), he specialises in emergency trauma systems and resuscitation protocols. His sports and event medical coverage includes the 2017 SEA Games and VVIP medical teams.",
   },
   {
@@ -219,7 +221,7 @@ export const speakers: Speaker[] = [
     country: "Malaysia",
     title: "Sports Medicine Specialist, Hospital Kuala Lumpur",
     org: "National classifier, para-athletics",
-    photo: "/img/event/speakers/vinotha.jpg",
+    photo: asset("/img/event/speakers/vinotha.jpg"),
     bio: "Dr. Vinotha Genisan earned her MBBS from Melaka-Manipal Medical College before a Master’s in Sports Medicine at the University of Malaya. Since 2014 she has been an integral part of Hospital Kuala Lumpur, supporting the recovery and performance of countless athletes. She has served as team physician or tournament doctor at SUKMA, Para SUKMA, SEA Games, Badminton Asia, and more. As a national classifier for para-athletics, she is deeply involved in advancing adaptive sports.",
   },
   {
@@ -229,7 +231,7 @@ export const speakers: Speaker[] = [
     country: "APAC",
     title: "Clinical Marketing, Senior Manager APAC",
     org: "ZOLL Medical",
-    photo: "/img/event/speakers/jimmy.jpg",
+    photo: asset("/img/event/speakers/jimmy.jpg"),
     bio: "Dr. Jimmy Jot is Senior Manager, Clinical Marketing (APAC) at ZOLL Medical. He delivers the Saturday lunch talk on building a high-performance cardiac emergency response system — beyond simply placing AEDs.",
   },
 ];
@@ -414,21 +416,21 @@ export const parking = [
     id: "hta",
     name: "Hospital Tunku Azizah multilevel parking",
     hint: "Closest to Dewan Perdana — park here first.",
-    photo: "/img/event/venue/hta.jpg",
+    photo: asset("/img/event/venue/hta.jpg"),
     maps: "https://maps.app.goo.gl/GGHKjksbyddbquPF9",
   },
   {
     id: "ortho",
     name: "HKL Orthopaedic Clinic parking",
     hint: "Klinik Ortopedik — short walk across the campus.",
-    photo: "/img/event/venue/ortho.jpg",
+    photo: asset("/img/event/venue/ortho.jpg"),
     maps: "https://maps.app.goo.gl/8zC1Z7EvZWt422ce7",
   },
   {
     id: "takraw",
     name: "Akademi Sepak Takraw Malaysia carpark",
     hint: "Overflow lot beside the sepak takraw hall.",
-    photo: "/img/event/venue/takraw.jpg",
+    photo: asset("/img/event/venue/takraw.jpg"),
     maps: "https://maps.app.goo.gl/FD2RM9DuqCYJhwjn8",
   },
 ];
@@ -466,7 +468,7 @@ export const committee = [
 ];
 
 export const sponsors = {
-  platinum: [{ name: "ZOLL", logo: "/img/event/sponsors/zoll.png" }],
+  platinum: [{ name: "ZOLL", logo: asset("/img/event/sponsors/zoll.png") }],
   gold: [{ name: "medsyn — The Orthopaedic Device Company" }],
   silver: [
     "Primo Orthocare",

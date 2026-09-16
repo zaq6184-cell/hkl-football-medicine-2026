@@ -1,3 +1,5 @@
+import { asset } from "@/lib/asset";
+
 export type FifaClip = {
   youtubeId: string;
   title: string;
@@ -13,7 +15,7 @@ export const fifaClips: FifaClip[] = [
     title: "Heart Heroes United",
     source: "FIFA Health Education",
     duration: "2:44",
-    poster: "/img/videos/fifa-heroes.jpg",
+    poster: asset("/img/videos/fifa-heroes.jpg"),
     why: "Official FIFA film on the SCA page. Check response, call for help, hands-only CPR, switch on the AED.",
   },
   {
@@ -21,7 +23,7 @@ export const fifaClips: FifaClip[] = [
     title: "FIFA Sudden Death Registry",
     source: "FIFA Medical Network · Prof Tim Meyer",
     duration: "4:59",
-    poster: "/img/videos/fifa-meyer.jpg",
+    poster: asset("/img/videos/fifa-meyer.jpg"),
     why: "Why pitchside resuscitation quality changes survival. FIFA-SDR data, commotio cordis, regional gaps.",
   },
   {
@@ -29,7 +31,7 @@ export const fifaClips: FifaClip[] = [
     title: "SCA on the pitch — lessons learned",
     source: "UEFA Medical · Prof Jens Kleinefeld",
     duration: "12:01",
-    poster: "/img/videos/uefa-sca.jpg",
+    poster: asset("/img/videos/uefa-sca.jpg"),
     why: "Non-contact collapse = SCA until proven otherwise. Compressions, AED and airway in the first two minutes.",
   },
   {
@@ -37,7 +39,7 @@ export const fifaClips: FifaClip[] = [
     title: "Recognize to Recover — CPR and AED",
     source: "U.S. Soccer",
     duration: "4:14",
-    poster: "/img/videos/ussoccer-cpr.jpg",
+    poster: asset("/img/videos/ussoccer-cpr.jpg"),
     why: "Pitchside demo: hands-only CPR, pad placement, shock, then back on compressions. Matches this drill’s first minutes.",
   },
   {
@@ -45,7 +47,7 @@ export const fifaClips: FifaClip[] = [
     title: "FIFA Football Medicine Course",
     source: "FIFA",
     duration: "4:21",
-    poster: "/img/videos/fifa-course.jpg",
+    poster: asset("/img/videos/fifa-course.jpg"),
     why: "Member-association course: SCA, the FIFA medical bag, and how the team enters the field of play.",
   },
 ];

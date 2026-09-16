@@ -1,3 +1,5 @@
+import { asset } from "@/lib/asset";
+
 export type BagItem = {
   name: string;
   qty?: string;
@@ -34,16 +36,16 @@ export const bag = {
     },
   ],
   photos: {
-    afc: { src: "/img/bag/afc-bag.jpg", alt: "AFC emergency bag used at the workshop" },
-    closed: { src: "/img/bag/fifa-closed.jpg", alt: "FIFA Medical Emergency Bag closed" },
-    open: { src: "/img/bag/fifa-open.jpg", alt: "FIFA Medical Emergency Bag folded open" },
-    trays: { src: "/img/bag/fifa-trays.jpg", alt: "Labelled trays inside the FIFA emergency bag" },
-    aed: { src: "/img/bag/aed.jpg", alt: "Philips HeartStart FRx AED and red carry case" },
+    afc: { src: asset("/img/bag/afc-bag.jpg"), alt: "AFC emergency bag used at the workshop" },
+    closed: { src: asset("/img/bag/fifa-closed.jpg"), alt: "FIFA Medical Emergency Bag closed" },
+    open: { src: asset("/img/bag/fifa-open.jpg"), alt: "FIFA Medical Emergency Bag folded open" },
+    trays: { src: asset("/img/bag/fifa-trays.jpg"), alt: "Labelled trays inside the FIFA emergency bag" },
+    aed: { src: asset("/img/bag/aed.jpg"), alt: "Philips HeartStart FRx AED and red carry case" },
     batteryTab: {
-      src: "/img/bag/battery-tab.jpg",
+      src: asset("/img/bag/battery-tab.jpg"),
       alt: "Green tab on the back of the Philips FRx for battery removal",
     },
-    battery: { src: "/img/bag/battery.jpg", alt: "Philips HeartStart FRx lithium battery pack" },
+    battery: { src: asset("/img/bag/battery.jpg"), alt: "Philips HeartStart FRx lithium battery pack" },
   },
 } as const;
 

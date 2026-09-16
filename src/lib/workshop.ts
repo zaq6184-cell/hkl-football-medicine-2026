@@ -1,3 +1,5 @@
+import { asset } from "@/lib/asset";
+
 export type RoleId = "black" | "orange" | "red" | "blue" | "white" | "green";
 
 export type Role = {
@@ -67,7 +69,7 @@ export const workshop = {
       text: "#FFFFFF",
       stand: "At the player's FEET, one step back. Hands off the chest.",
       bring: "Radio / comms.",
-      photo: "/img/black.jpg",
+      photo: asset("/img/black.jpg"),
       fifa: "FIFA ECM: hands-off team leader. Coordinate, close the loop, stop task-fixation. One job is making sure the AED is used the moment it arrives.",
       do: [
         "Own the clock and every movement command.",
@@ -91,7 +93,7 @@ export const workshop = {
       text: "#FFFFFF",
       stand: "Kneel at the player's HEAD. Never leave the head.",
       bring: "LMA (or OPA) and BVM with reservoir.",
-      photo: "/img/orange.jpg",
+      photo: asset("/img/orange.jpg"),
       fifa: "FIFA ECM “Take the Head”: MILS, speak to the player, jaw thrust, hold BVM mask, control the log-roll. Preferred airway in SCA is an i-gel LMA. With LMA: continuous CPR and about 10 breaths/min (one every 10th compression). Face-mask is two-person 30:2.",
       do: [
         "Open the airway with a jaw thrust (protect the neck).",
@@ -110,7 +112,7 @@ export const workshop = {
       text: "#FFFFFF",
       stand: "Player's RIGHT side — chest. First hands on the player.",
       bring: "Nothing. Run straight to the player.",
-      photo: "/img/red.jpg",
+      photo: asset("/img/red.jpg"),
       fifa: "FIFA ECM “Chest”: player’s right. Signs of life, pulse, start CPR 5–6 cm at 100–120/min. Do not wait for the end of a 30-count before Green puts the AED on.",
       do: [
         "Tap and check responsiveness.",
@@ -130,7 +132,7 @@ export const workshop = {
       text: "#FFFFFF",
       stand: "Player's LEFT side.",
       bring: "Oxygen tank.",
-      photo: "/img/blue.jpg",
+      photo: asset("/img/blue.jpg"),
       fifa: "FIFA PEAP: bring the oxygen cylinder. FIFA ECM: 15 L/min to the BVM / i-gel reservoir. Take over compressions from Red at 2 minutes. Turn oxygen OFF (or ≥1 m away) before a shock.",
       do: [
         "Bring the O2 tank onto the field.",
@@ -148,7 +150,7 @@ export const workshop = {
       text: "#1C1C1C",
       stand: "Beside the player, board side. Coordinate the 4 stretcher bearers.",
       bring: "Spinal board / extrication device. Brief the 4 bearers.",
-      photo: "/img/white.jpg",
+      photo: asset("/img/white.jpg"),
       fifa: "FIFA ECM set-piece: basket/scoop in line with the feet, 2–3 lengths away; scoop split ready to slide. FIFA PEAP White brings extrication devices. Player + board + AED move as one unit.",
       do: [
         "Position the board in line with the player.",
@@ -167,7 +169,7 @@ export const workshop = {
       text: "#FFFFFF",
       stand: "LEFT flank of the player (FIFA: often left of the head).",
       bring: "Emergency care bag and AED.",
-      photo: "/img/green.jpg",
+      photo: asset("/img/green.jpg"),
       fifa: "FIFA ECM Equipment + AED: pads anterolateral; apical pad mid-axillary (V6), below the armpit. Apply the AED as soon as it arrives — do not wait for the current 30 compressions to finish. Check everyone is clear and oxygen is off before shock.",
       do: [
         "Expose the chest. Pads: upper-right chest below the collarbone + lower-left mid-axillary line / axilla.",

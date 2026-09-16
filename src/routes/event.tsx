@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { EventSubNav, AppShell, Note, Panel, SectionLabel } from "@/components/workshop";
+import { asset } from "@/lib/asset";
 import {
   committee,
   currentSession,
@@ -58,7 +59,7 @@ function Cover() {
   return (
     <figure className="overflow-hidden rounded-xl bg-navy shadow-card">
       <img
-        src="/img/event/cover.jpg"
+        src={asset("/img/event/cover.jpg")}
         alt="HKL Sports-Emergency Football Medicine Workshop 2026 programme cover"
         className="block max-h-72 w-full object-cover object-top"
       />
@@ -315,7 +316,7 @@ function VenueView() {
     <>
       <Panel>
         <img
-          src="/img/event/venue/hta.jpg"
+          src={asset("/img/event/venue/hta.jpg")}
           alt="Hospital Tunku Azizah entrance"
           className="block max-h-52 w-full object-cover object-center"
         />
@@ -343,12 +344,12 @@ function VenueView() {
           </ol>
         </div>
         <img
-          src="/img/event/venue/lobby.jpg"
+          src={asset("/img/event/venue/lobby.jpg")}
           alt="Hospital Tunku Azizah lobby"
           className="block max-h-48 w-full object-cover object-center"
         />
         <img
-          src="/img/event/venue/stairs.jpg"
+          src={asset("/img/event/venue/stairs.jpg")}
           alt="Stairs to Auditorium Perdana"
           className="block max-h-44 w-full object-cover object-center"
         />
@@ -362,7 +363,7 @@ function VenueView() {
 
       <Panel>
         <img
-          src="/img/event/venue/mrt.jpg"
+          src={asset("/img/event/venue/mrt.jpg")}
           alt="Hospital Kuala Lumpur MRT station Door A"
           className="block max-h-52 w-full object-cover object-center"
         />
@@ -382,7 +383,7 @@ function VenueView() {
           </div>
         </div>
         <img
-          src="/img/event/venue/walk.jpg"
+          src={asset("/img/event/venue/walk.jpg")}
           alt="Walking map from HKL MRT Door A to Hospital Tunku Azizah"
           className="block max-h-56 w-full object-contain bg-cream"
         />
@@ -411,7 +412,7 @@ function TeamView() {
     <>
       <Panel>
         <img
-          src="/img/event/venue/thanks.jpg"
+          src={asset("/img/event/venue/thanks.jpg")}
           alt="Organising committee of the HKL football medicine workshop"
           className="block max-h-52 w-full object-cover object-center"
         />

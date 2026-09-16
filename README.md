@@ -2,6 +2,8 @@
 
 Participant app for **HKL's Sports-Emergency Football Medicine Workshop 2026** — on-field sudden cardiac arrest (SCA) management at Hospital Tunku Azizah, 3–4 October 2026.
 
+**Open on a phone:** [https://zaq6184-cell.github.io/hkl-football-medicine-2026/](https://zaq6184-cell.github.io/hkl-football-medicine-2026/)
+
 Mobile-first. Colour roles, 6-step drill, 10-second dash timer, programme book, FIFA emergency bag list, and official FIFA/UEFA guideline films.
 
 ## Features
@@ -27,6 +29,8 @@ Open [http://localhost:8080](http://localhost:8080).
 npm run typecheck
 npm run build
 ```
+
+Public site (GitHub Pages): `npm run build:pages` then publish `.output/public`.
 
 ## Stack
 

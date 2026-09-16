@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PlayCircle } from "lucide-react";
 import { AppShell, HeroPhoto, Panel, RoleChip, SectionLabel } from "@/components/workshop";
 import { workshop } from "@/lib/workshop";
+import { asset } from "@/lib/asset";
 
 export const Route = createFileRoute("/drill")({ component: Drill });
 
@@ -10,7 +11,7 @@ function Drill() {
     <AppShell tab="drill">
       <div className="flex flex-col gap-3.5">
         <HeroPhoto
-          src="/img/flow.jpg"
+          src={asset("/img/flow.jpg")}
           alt="Six-step pictorial sequence of the on-field SCA drill"
           caption="Workshop drill sequence. Call your line out loud."
           contain
