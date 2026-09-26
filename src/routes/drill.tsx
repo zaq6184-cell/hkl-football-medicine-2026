@@ -57,8 +57,9 @@ function Drill() {
         </Panel>
         <SectionLabel>SEQUENCE</SectionLabel>
         <p className="text-xs leading-snug text-muted">
-          Assess → CPR + airway + AED → analyse + board → shock → 10-second dash → cycle 2 +
-          handover. Workshop drill stays 30:2 until an LMA is in.
+          Recognise → compressions + AED → airway + O2 → analyse → shock → log roll onto board → CPR
+          cycles → 10-second carry → board down, CPR ≥ 2 min → repeat to the ambulance. FIFA
+          Emergency Care Manual, Ch.3.
         </p>
         <Link to="/guides" className="block active:scale-[0.99]">
           <Panel>

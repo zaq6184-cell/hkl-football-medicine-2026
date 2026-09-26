@@ -1,5 +1,5 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { BookOpen, CalendarDays, ListOrdered, Timer, Users } from "lucide-react";
+import { BookOpen, CalendarDays, ClipboardList, ListOrdered, Timer, Users } from "lucide-react";
 import { useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { getRole, type RoleId, workshop } from "@/lib/workshop";
@@ -11,7 +11,7 @@ export function AppShell({
   tab,
 }: {
   children: React.ReactNode;
-  tab: "home" | "drill" | "timer" | "rules" | "event";
+  tab: "home" | "stations" | "drill" | "timer" | "rules" | "event";
 }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
 
@@ -35,6 +35,8 @@ export function AppShell({
               ? "FIFA / UEFA guideline films · needs a connection"
               : tab === "event"
                 ? "3–4 Oct 2026 · Hospital Tunku Azizah"
+                : tab === "stations"
+                  ? "Skill stations & simulation · Sunday 4 Oct"
                 : `${workshop.title} · Participant app`}
         </p>
       </header>
@@ -42,10 +44,11 @@ export function AppShell({
         {children}
       </main>
       <nav
-        className="fixed inset-x-0 bottom-0 z-20 grid grid-cols-5 border-t border-line bg-paper pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-1.5"
+        className="fixed inset-x-0 bottom-0 z-20 grid grid-cols-6 border-t border-line bg-paper pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-1.5"
         aria-label="Primary"
       >
         <TabLink to="/" label="Roles" icon={Users} active={tab === "home"} />
+        <TabLink to="/stations" label="Stations" icon={ClipboardList} active={tab === "stations"} />
         <TabLink to="/drill" label="Drill" icon={ListOrdered} active={tab === "drill"} />
         <TabLink to="/timer" label="Dash" icon={Timer} active={tab === "timer"} />
         <TabLink to="/rules" label="Rules" icon={BookOpen} active={tab === "rules"} />
@@ -61,7 +64,7 @@ function TabLink({
   icon: Icon,
   active,
 }: {
-  to: "/" | "/drill" | "/timer" | "/rules" | "/event";
+  to: "/" | "/stations" | "/drill" | "/timer" | "/rules" | "/event";
   label: string;
   icon: typeof Users;
   active: boolean;

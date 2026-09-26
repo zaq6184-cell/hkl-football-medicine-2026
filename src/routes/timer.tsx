@@ -25,8 +25,9 @@ function TimerPage() {
                 </li>
               ))}
             </ul>
-            <SayLine text="Black: “Ready to lift. On three. One, two, three, LIFT.”" />
-            <SayLine text="Green: “Ten seconds!”" />
+            <SayLine text="Black: “Stretcher bearers… LIFT AND GO!”" />
+            <SayLine text="Green: “1… 2… 3… 4… 5… 6… 7… 8… 9… 10!”" />
+            <SayLine text="Black: “STOP. Board DOWN. Start CPR.”" />
           </div>
         </Panel>
       </div>

@@ -8,7 +8,8 @@ Mobile-first. Colour roles, 6-step drill, 10-second dash timer, programme book, 
 
 ## Features
 
-- **Roles** — Black, Orange, Red, Blue, White, Green: stand, bring, do, say, FIFA PEAP note
+- **Roles** — Black, Orange, Red, Blue, White, Green + Yellow first aiders: stand, bring, do, say, FIFA PEAP note
+- **Stations** — skill stations 1–5 (PEAP, emergency care bag, primary survey, cardiac arrest, immobilization) with equipment lists, plus the simulation rotation and scenarios
 - **Drill** — 6-step SCA sequence
 - **Dash** — 10-second movement timer
 - **Rules** — workshop timings vs FIFA notes

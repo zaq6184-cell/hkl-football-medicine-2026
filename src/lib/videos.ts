@@ -52,6 +52,125 @@ export const fifaClips: FifaClip[] = [
   },
 ];
 
+export type SkillClip = {
+  youtubeId: string;
+  title: string;
+  source: string;
+  /** Key points from the FIFA Emergency Care Manual (2022) skill zone / chapter 2–3. */
+  fifa: string[];
+  poster?: string;
+};
+
+const thumb = (id: string) => `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+
+export const skillClips: SkillClip[] = [
+  {
+    youtubeId: "7NNe_Qje3yg",
+    title: "Airway opening — jaw thrust & head-tilt/chin-lift",
+    source: "Geeky Medics",
+    fifa: [
+      "Trauma: jaw thrust is preferred — it avoids moving the cervical spine. Head-tilt/chin-lift is contraindicated with suspected trauma.",
+      "Middle and ring fingers under the angle of the mandible, lift upwards. Only the jaw moves — not the head, midface or neck.",
+      "If the person holding MILS cannot jaw-thrust without moving the neck, stop: a second person protects the spine.",
+      "Never put fingers in a player's mouth — you cannot “swallow your tongue”.",
+    ],
+  },
+  {
+    youtubeId: "cF2PZ5NpcLA",
+    title: "Oropharyngeal airway (OPA / Guedel)",
+    source: "Geeky Medics",
+    fifa: [
+      "Size from the midline of the incisors to the angle of the mandible.",
+      "Usually size 3 (orange) adult man, size 2 (green) adult woman; size 4 (red) or 5 (purple) for tall players.",
+      "Insert upside-down and rotate 180°; flange rests at the lips. Flange pushed out = too big.",
+      "Do not use if the player coughs or gags, with a choking foreign body, or with clenched teeth (seizure).",
+    ],
+  },
+  {
+    youtubeId: "_hri0MCSFYM",
+    title: "Nasopharyngeal airway (NPA)",
+    source: "Geeky Medics",
+    fifa: [
+      "Best-tolerated adjunct — can be used with a gag reflex.",
+      "Choose one slightly smaller than the nostril: usually size 7–8 man, 6–7 woman. Safety pin if the type needs one.",
+      "Lubricate; pass straight BACKWARDS along the floor of the nose, never upwards. Gentle twist; never force — try the other nostril.",
+      "Relative contraindication: suspected base-of-skull fracture. Caution with nosebleed.",
+    ],
+  },
+  {
+    youtubeId: "Z0962B8axAY",
+    title: "i-gel supraglottic airway (LMA)",
+    source: "Intersurgical (manufacturer)",
+    fifa: [
+      "Preferred adjunct in apnoea and cardiac arrest — allows continuous compressions.",
+      "Size by weight: size 4 (green) 50–90 kg, size 5 (orange) over 90 kg.",
+      "Lubricate, cuff outlet towards the chin, glide along the hard palate until definite resistance; teeth on the bite block. Tape maxilla to maxilla.",
+      "Not a definitive airway. Not tolerated if the player is coughing / has a gag reflex.",
+    ],
+  },
+  {
+    youtubeId: "Cszypj9qIU4",
+    title: "Bag-valve-mask ventilation",
+    source: "Merck Manuals",
+    fifa: [
+      "Attach the bag with reservoir to oxygen at 15 L/min.",
+      "Face mask + OPA/NPA is a two-person technique and CPR pauses for 30:2.",
+      "With an i-gel: continuous compressions, one breath every 10th compression (~10/min). Leak → pause for 30:2.",
+      "Squeeze, then let the bag refill. Look for symmetrical rise and fall of the chest.",
+    ],
+  },
+  {
+    youtubeId: "3miDnZOhAjU",
+    title: "Two-person BVM technique",
+    source: "Medmastery",
+    fifa: [
+      "One person seals the mask (and holds the jaw), the other squeezes the bag.",
+      "This is why FIFA prefers the i-gel in cardiac arrest: one person can hold it and ventilate.",
+    ],
+  },
+  {
+    youtubeId: "RkkE3eGcIU0",
+    title: "Portable suction (Yankauer)",
+    source: "Diesel Therapy Academy",
+    fifa: [
+      "Suction and oxygen at 15 L/min must both be available pitchside.",
+      "Use for blood, secretions or vomit as part of airway management — before moving on to breathing.",
+      "Apply oxygen as soon as it arrives; do not wait for the primary survey to finish.",
+    ],
+  },
+  {
+    youtubeId: "tzobASnovRc",
+    title: "Sizing and fitting a cervical collar",
+    source: "Top Hat Tutorials",
+    fifa: [
+      "Neutral head: line from chin back to sternomastoid, measure fingerbreadths down to trapezius.",
+      "Between two sizes → start with the SMALLER one.",
+      "Airway obstruction is a contraindication — keep MILS instead. Recheck the player after fitting.",
+      "A collar alone does not immobilise: keep MILS until blocks, tape and a device are on. Treat the collar as part of extrication.",
+    ],
+  },
+  {
+    youtubeId: "5FUnepktYxE",
+    title: "Log roll",
+    source: "Top Hat Tutorials",
+    fifa: [
+      "Four people + a fifth to place the device. The person at the HEAD controls the move and the count.",
+      "Head: MILS. Chest: opposite shoulder + hip. Pelvis: waist + under the knee. Legs: lower leg + ankle.",
+      "Say how far: 90° full log roll vs 15–20° tilt for a scoop.",
+    ],
+  },
+  {
+    youtubeId: "qUGWDodlGK4",
+    title: "Scoop stretcher",
+    source: "Top Hat Tutorials",
+    fifa: [
+      "FIFA prefers a scoop for trauma: only ~15° of movement vs 90° log roll for a board.",
+      "Basket in line with the feet 2–3 lengths away; scoop laid out, extended and split between basket and player.",
+      "For cardiac arrest transfer, a long spinal board may give better compressions (rigid).",
+    ],
+  },
+].map((c) => ({ ...c, poster: thumb(c.youtubeId) }));
+
 export const fifaDocs = [
   {
     label: "FIFA sudden cardiac arrest — how to help",

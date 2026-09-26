@@ -15,9 +15,11 @@ import { Route as DrillRouteImport } from './routes/drill'
 import { Route as EventRouteImport } from './routes/event'
 import { Route as GuidesRouteImport } from './routes/guides'
 import { Route as RulesRouteImport } from './routes/rules'
+import { Route as StationsRouteImport } from './routes/stations'
 import { Route as TimerRouteImport } from './routes/timer'
 import { Route as RoleIdRouteImport } from './routes/role.$id'
 import { Route as SpeakerIdRouteImport } from './routes/speaker.$id'
+import { Route as StationIdRouteImport } from './routes/station.$id'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -49,6 +51,11 @@ const RulesRoute = RulesRouteImport.update({
   path: '/rules',
   getParentRoute: () => rootRouteImport,
 } as any)
+const StationsRoute = StationsRouteImport.update({
+  id: '/stations',
+  path: '/stations',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TimerRoute = TimerRouteImport.update({
   id: '/timer',
   path: '/timer',
@@ -64,6 +71,11 @@ const SpeakerIdRoute = SpeakerIdRouteImport.update({
   path: '/speaker/$id',
   getParentRoute: () => rootRouteImport,
 } as any)
+const StationIdRoute = StationIdRouteImport.update({
+  id: '/station/$id',
+  path: '/station/$id',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -72,9 +84,11 @@ export interface FileRoutesByFullPath {
   '/event': typeof EventRoute
   '/guides': typeof GuidesRoute
   '/rules': typeof RulesRoute
+  '/stations': typeof StationsRoute
   '/timer': typeof TimerRoute
   '/role/$id': typeof RoleIdRoute
   '/speaker/$id': typeof SpeakerIdRoute
+  '/station/$id': typeof StationIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -83,9 +97,11 @@ export interface FileRoutesByTo {
   '/event': typeof EventRoute
   '/guides': typeof GuidesRoute
   '/rules': typeof RulesRoute
+  '/stations': typeof StationsRoute
   '/timer': typeof TimerRoute
   '/role/$id': typeof RoleIdRoute
   '/speaker/$id': typeof SpeakerIdRoute
+  '/station/$id': typeof StationIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -95,9 +111,11 @@ export interface FileRoutesById {
   '/event': typeof EventRoute
   '/guides': typeof GuidesRoute
   '/rules': typeof RulesRoute
+  '/stations': typeof StationsRoute
   '/timer': typeof TimerRoute
   '/role/$id': typeof RoleIdRoute
   '/speaker/$id': typeof SpeakerIdRoute
+  '/station/$id': typeof StationIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -108,9 +126,11 @@ export interface FileRouteTypes {
     | '/event'
     | '/guides'
     | '/rules'
+    | '/stations'
     | '/timer'
     | '/role/$id'
     | '/speaker/$id'
+    | '/station/$id'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -119,9 +139,11 @@ export interface FileRouteTypes {
     | '/event'
     | '/guides'
     | '/rules'
+    | '/stations'
     | '/timer'
     | '/role/$id'
     | '/speaker/$id'
+    | '/station/$id'
   id:
     | '__root__'
     | '/'
@@ -130,9 +152,11 @@ export interface FileRouteTypes {
     | '/event'
     | '/guides'
     | '/rules'
+    | '/stations'
     | '/timer'
     | '/role/$id'
     | '/speaker/$id'
+    | '/station/$id'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -142,9 +166,11 @@ export interface RootRouteChildren {
   EventRoute: typeof EventRoute
   GuidesRoute: typeof GuidesRoute
   RulesRoute: typeof RulesRoute
+  StationsRoute: typeof StationsRoute
   TimerRoute: typeof TimerRoute
   RoleIdRoute: typeof RoleIdRoute
   SpeakerIdRoute: typeof SpeakerIdRoute
+  StationIdRoute: typeof StationIdRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -191,6 +217,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RulesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/stations': {
+      id: '/stations'
+      path: '/stations'
+      fullPath: '/stations'
+      preLoaderRoute: typeof StationsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/timer': {
       id: '/timer'
       path: '/timer'
@@ -212,6 +245,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SpeakerIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/station/$id': {
+      id: '/station/$id'
+      path: '/station/$id'
+      fullPath: '/station/$id'
+      preLoaderRoute: typeof StationIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -222,9 +262,11 @@ const rootRouteChildren: RootRouteChildren = {
   EventRoute: EventRoute,
   GuidesRoute: GuidesRoute,
   RulesRoute: RulesRoute,
+  StationsRoute: StationsRoute,
   TimerRoute: TimerRoute,
   RoleIdRoute: RoleIdRoute,
   SpeakerIdRoute: SpeakerIdRoute,
+  StationIdRoute: StationIdRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
