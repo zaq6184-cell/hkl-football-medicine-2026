@@ -59,9 +59,11 @@ function Cover() {
   return (
     <figure className="overflow-hidden rounded-xl bg-navy shadow-card">
       <img
-        src={asset("/img/event/cover.jpg")}
+        src={asset("/img/event/cover-v2.jpg")}
         alt="HKL Sports-Emergency Football Medicine Workshop 2026 programme cover"
-        className="block max-h-72 w-full object-cover object-top"
+        width={1100}
+        height={1578}
+        className="block h-auto w-full"
       />
       <figcaption className="px-3.5 py-3">
         <p className="font-display text-sm font-semibold tracking-[0.08em] text-gold">
@@ -407,16 +409,29 @@ function VenueView() {
   );
 }
 
+function SponsorLogo({ s, className }: { s: { name: string; logo: string }; className?: string }) {
+  return (
+    <div className={`overflow-hidden rounded-lg bg-white p-2 ${className ?? ""}`}>
+      <img src={s.logo} alt={s.name} loading="lazy" className="block h-full w-full object-contain" />
+    </div>
+  );
+}
+
 function TeamView() {
   return (
     <>
       <Panel>
         <img
-          src={asset("/img/event/venue/thanks.jpg")}
+          src={asset("/img/event/venue/thanks-v2.jpg")}
           alt="Organising committee of the HKL football medicine workshop"
-          className="block max-h-52 w-full object-cover object-center"
+          width={1600}
+          height={772}
+          className="block h-auto w-full"
         />
         <div className="px-3.5 py-3.5">
+          <p className="mb-2 font-display text-sm font-semibold tracking-[0.08em] text-navy">
+            THANK YOU FROM ALL OF US!
+          </p>
           <p className="text-sm italic leading-snug text-ink">“{programme.quote.text}”</p>
           <p className="mt-2 font-display text-xs font-semibold tracking-[0.08em] text-gold">
             {programme.quote.by}
@@ -445,18 +460,22 @@ function TeamView() {
       <SectionLabel>SUPPORTED BY</SectionLabel>
       <Panel>
         <div className="px-3.5 py-3.5">
-          <p className="font-display text-[11px] font-semibold tracking-[0.14em] text-gold">PLATINUM</p>
-          <img
-            src={sponsors.platinum[0].logo}
-            alt="ZOLL"
-            className="mt-3 h-10 w-auto object-contain object-left"
-          />
-          <p className="mt-5 font-display text-[11px] font-semibold tracking-[0.14em] text-gold">GOLD</p>
-          <p className="mt-2 text-sm font-medium">{sponsors.gold[0].name}</p>
-          <p className="mt-5 font-display text-[11px] font-semibold tracking-[0.14em] text-gold">SILVER</p>
-          <ul className="mt-2 grid grid-cols-2 gap-x-3 gap-y-1.5 text-sm leading-snug">
-            {sponsors.silver.map((name) => (
-              <li key={name}>{name}</li>
+          <p className="text-center font-display text-[11px] font-semibold tracking-[0.14em] text-gold">
+            PLATINUM
+          </p>
+          <SponsorLogo s={sponsors.platinum[0]} className="mx-auto mt-3 h-20 w-4/5" />
+          <p className="mt-6 text-center font-display text-[11px] font-semibold tracking-[0.14em] text-gold">
+            GOLD
+          </p>
+          <SponsorLogo s={sponsors.gold[0]} className="mx-auto mt-3 h-16 w-3/4" />
+          <p className="mt-6 text-center font-display text-[11px] font-semibold tracking-[0.14em] text-gold">
+            SILVER
+          </p>
+          <ul className="mt-3 grid grid-cols-2 gap-2.5">
+            {sponsors.silver.map((s) => (
+              <li key={s.name}>
+                <SponsorLogo s={s} className="h-14 w-full" />
+              </li>
             ))}
           </ul>
         </div>

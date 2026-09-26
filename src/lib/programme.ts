@@ -202,7 +202,7 @@ export const speakers: Speaker[] = [
     title: "Head of Sports Medicine Unit, Hospital Kuala Lumpur",
     org: "Past President, Malaysian Association of Sports Medicine (2024–2026)",
     photo: asset("/img/event/speakers/arshad.jpg"),
-    bio: "Dr. Arshad Puji is a Consultant Sports Medicine Physician and Head of the Sports Medicine Unit at Hospital Kuala Lumpur. He previously served as Medical Director at the National Sports Institute and Chief Medical Officer for Malaysian contingents at the SEA, Asian, and Olympic Games. His clinical expertise focuses on ultrasound-guided musculoskeletal procedures, interventional pain management, and return-to-sports rehabilitation.",
+    bio: "Dr. Arshad Puji is a Consultant Sports Medicine Physician and Head of the Sports Medicine Unit at Hospital Kuala Lumpur. He previously served as Medical Director at the National Sports Institute and Chief Medical Officer for Malaysian contingents at the SEA, Asian, and Olympic Games. His clinical expertise focuses on ultrasound-guided musculoskeletal procedures, interventional pain management, and return-to-sports rehabilitation. He is also the Past President of the Malaysian Association of Sports Medicine (2024–2026).",
   },
   {
     id: "ahmad",
@@ -222,7 +222,7 @@ export const speakers: Speaker[] = [
     title: "Sports Medicine Specialist, Hospital Kuala Lumpur",
     org: "National classifier, para-athletics",
     photo: asset("/img/event/speakers/vinotha.jpg"),
-    bio: "Dr. Vinotha Genisan earned her MBBS from Melaka-Manipal Medical College before a Master’s in Sports Medicine at the University of Malaya. Since 2014 she has been an integral part of Hospital Kuala Lumpur, supporting the recovery and performance of countless athletes. She has served as team physician or tournament doctor at SUKMA, Para SUKMA, SEA Games, Badminton Asia, and more. As a national classifier for para-athletics, she is deeply involved in advancing adaptive sports.",
+    bio: "Dr. Vinotha Genisan is a dedicated Sports Medicine Specialist. She earned her MBBS from Melaka-Manipal Medical College before a Master’s in Sports Medicine at the University of Malaya. Since 2014 she has been an integral part of Hospital Kuala Lumpur, supporting the recovery and performance of countless athletes. She has served as team physician or tournament doctor at SUKMA, Para SUKMA, SEA Games, Badminton Asia, and more. As a national classifier for para-athletics, she is deeply involved in advancing adaptive sports.",
   },
   {
     id: "jimmy",
@@ -462,23 +462,25 @@ export const committee = [
   },
   { role: "Programme book", names: ["Dr. Kamil Norzam"] },
   {
-    role: "Host departments",
+    role: "Miscellaneous",
     names: ["Department of Emergency Medicine", "Department of Orthopaedics & Traumatology"],
   },
 ];
 
+const logo = (file: string) => asset(`/img/event/sponsors/${file}.png`);
+
 export const sponsors = {
-  platinum: [{ name: "ZOLL", logo: asset("/img/event/sponsors/zoll.png") }],
-  gold: [{ name: "medsyn — The Orthopaedic Device Company" }],
+  platinum: [{ name: "ZOLL", logo: logo("zoll") }],
+  gold: [{ name: "medsyn — The Orthopaedic Device Company", logo: logo("medsyn") }],
   silver: [
-    "Primo Orthocare",
-    "medispec",
-    "Medi Trump Sdn Bhd",
-    "CIMed Healthcare",
-    "PhilosMed",
-    "Humedical",
-    "Reliance Medical",
-    "WFL World Football Legends",
+    { name: "Primo Orthocare", logo: logo("primo") },
+    { name: "medispec", logo: logo("medispec") },
+    { name: "Medi Trump Sdn Bhd", logo: logo("meditrump") },
+    { name: "CIMed Healthcare", logo: logo("cimed") },
+    { name: "PhilosMed", logo: logo("philosmed") },
+    { name: "Humedical", logo: logo("humedical") },
+    { name: "Reliance Medical", logo: logo("reliance") },
+    { name: "WFL World Football Legends", logo: logo("wfl") },
   ],
 };
 
