@@ -90,7 +90,7 @@ function Home() {
           </Panel>
         </Link>
         <HeroPhoto
-          src={asset("/img/stations/positions-aerial.jpg")}
+          src={asset("/img/stations/positions-aerial-v2.jpg")}
           alt="Team positions around the collapsed player: Orange and Green at the head, Red chest, Blue right hip, White right leg, Black left flank, four Yellow First Aiders at the feet"
           caption="FIFA PEAP 2025 positions. Orange, Red, Blue and White on the player's RIGHT. Green at the head on the LEFT. Black on the LEFT flank. Yellow First Aiders at the FEET. If it is not your colour, hands off."
           contain
