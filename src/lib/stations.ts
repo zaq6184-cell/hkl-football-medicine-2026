@@ -131,7 +131,7 @@ export const stations: Station[] = [
         blocks: [
           {
             kind: "image",
-            src: asset("/img/stations/s1-positioning.jpg"),
+            src: asset("/img/stations/s1-positioning-v2.jpg"),
             alt: "Positioning layout: coloured marks around the player, bags and AED at the head, first aiders at the feet",
             caption: "May flip all aspects depending on site of injury and hazards.",
           },
