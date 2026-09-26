@@ -6,7 +6,7 @@ import {
   ClipboardList,
   PlayCircle,
 } from "lucide-react";
-import { AppShell, HeroPhoto, Note, Panel, SayLine, SectionLabel } from "@/components/workshop";
+import { AppShell, HeroPhoto, Note, Panel, SectionLabel } from "@/components/workshop";
 import { programme } from "@/lib/programme";
 import { workshop } from "@/lib/workshop";
 import { asset } from "@/lib/asset";
@@ -91,8 +91,8 @@ function Home() {
         </Link>
         <HeroPhoto
           src={asset("/img/stations/positions-aerial.jpg")}
-          alt="Team positions around the collapsed player: Orange and Green at the head, Red chest, Blue right hip, White right leg, Black left flank, four stretcher bearers in yellow at the feet"
-          caption="FIFA PEAP 2025 positions. Orange, Red, Blue and White on the player's RIGHT. Green at the head on the LEFT. Black on the LEFT flank. 4 stretcher bearers (yellow) at the FEET. If it is not your colour, hands off."
+          alt="Team positions around the collapsed player: Orange and Green at the head, Red chest, Blue right hip, White right leg, Black left flank, four Yellow First Aiders at the feet"
+          caption="FIFA PEAP 2025 positions. Orange, Red, Blue and White on the player's RIGHT. Green at the head on the LEFT. Black on the LEFT flank. Yellow First Aiders at the FEET. If it is not your colour, hands off."
           contain
         />
         <Note>
@@ -105,7 +105,7 @@ function Home() {
               key={r.id}
               to="/role/$id"
               params={{ id: r.id }}
-              className="flex min-h-[4.75rem] flex-col items-center justify-center rounded-lg px-2 py-4 text-center transition-transform duration-150 ease-out active:scale-95"
+              className={`flex min-h-[4.75rem] flex-col items-center justify-center rounded-lg px-2 py-4 text-center transition-transform duration-150 ease-out active:scale-95${r.id === "yellow" ? " col-span-2" : ""}`}
               style={{
                 backgroundColor: r.color,
                 color: r.text,
@@ -113,21 +113,13 @@ function Home() {
               }}
             >
               <span className="font-display text-xl font-bold tracking-[0.1em]">{r.name}</span>
-              <span className="mt-1 text-[11px] font-medium opacity-90">{r.role}</span>
+              <span className="mt-1 text-[11px] font-medium opacity-90">
+                {r.id === "yellow" ? "× 4 First Aiders" : r.role}
+              </span>
             </Link>
           ))}
         </div>
-        <Panel>
-          <div className="bg-[#E8C31A] px-3.5 py-2.5 text-ink">
-            <p className="font-display text-lg font-bold tracking-[0.1em]">{workshop.bearers.name}</p>
-          </div>
-          <div className="flex flex-col gap-1.5 px-3.5 py-3">
-            <p className="text-sm leading-snug text-ink">{workshop.bearers.text}</p>
-            {workshop.bearers.say.map((line) => (
-              <SayLine key={line} text={`“${line}”`} />
-            ))}
-          </div>
-        </Panel>
+        <Note>If it is not your colour, do not reach in.</Note>
         <HeroPhoto
           src={asset("/img/stations/peap-marks.jpg")}
           alt="FIFA PEAP 2025 official position marks around the player"

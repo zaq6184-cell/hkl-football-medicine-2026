@@ -71,6 +71,9 @@ function RoleCard() {
                 <SayLine key={line} text={`“${line}”`} />
               ))}
             </section>
+            <p className="rounded-lg bg-navy px-2.5 py-2 text-center font-display text-xs font-semibold tracking-wide text-gold">
+              If it is not your colour, do not reach in.
+            </p>
             <Note>
               <span className="font-semibold text-navy">FIFA PEAP: </span>
               {r.fifa}

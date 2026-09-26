@@ -727,7 +727,7 @@ export const stations: Station[] = [
           {
             kind: "steps",
             items: [
-              ...workshop.roles.map((r) => ({
+              ...workshop.roles.filter((r) => r.id !== "yellow").map((r) => ({
                 title: `${r.role} — brings: ${r.bring}`,
                 who: [r.id],
                 lines: [r.stand],
