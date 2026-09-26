@@ -167,7 +167,7 @@ export const stations: Station[] = [
           },
           {
             kind: "text",
-            text: "Scoop / basket is for a conscious or stable player. For an arrest in progress the same scoop / basket is used with CPR continuing — see Station 4.",
+            text: "Scoop / basket is for a conscious or stable player. For an arrest in progress, log-roll onto the spinal board — see Station 4.",
           },
         ],
       },
@@ -717,7 +717,7 @@ export const stations: Station[] = [
           {
             kind: "alert",
             title: "Follows the HKL SCA Colour Role Cards",
-            text: "Orange (the head) controls the log roll. White + Yellow First Aiders slide in the scoop / basket; player + scoop/basket + AED move as one strapped unit. Green takes over compressions at 2 minutes. Carry ≤ 10 seconds on Black's “LIFT”, then basket down and at least 2 minutes of compressions.",
+            text: "Orange (the head) controls the log roll. White + Yellow First Aiders slide in the spinal board; player + spinal board + AED move as one strapped unit. Green takes over compressions at 2 minutes. Carry ≤ 10 seconds on Black's “LIFT”, then board down and at least 2 minutes of compressions.",
           },
         ],
       },
@@ -896,7 +896,7 @@ export const stations: Station[] = [
           { kind: "remember", text: "BODY FIRST → LEGS → HEAD LAST → REASSESS" },
           {
             kind: "text",
-            text: "FIFA ECM: a scoop is preferred over a spinal board for trauma (~15° tilt vs a 90° log roll). FIFA notes a long board may give firmer compressions in cardiac arrest; this workshop's arrest drill uses the scoop + basket carry from the role cards.",
+            text: "FIFA ECM: a scoop is preferred over a spinal board for trauma (~15° tilt vs a 90° log roll). For cardiac-arrest transfer this workshop uses the long spinal board — FIFA notes its rigid surface may give better compressions.",
           },
         ],
       },

@@ -29,7 +29,7 @@ export const DASH_SECONDS = 10;
 /**
  * Protocol copy follows the FIFA Emergency Care Manual (2022) — Ch.1 roles / set piece,
  * Ch.2 primary survey, Ch.3 cardiac arrest, Ch.10 skill zone — and the FIFA PEAP colour roles.
- * Roles and the carry follow the HKL SCA Colour Role Cards / Pictorial Card: scoop + basket, Yellow First Aiders.
+ * Roles follow the HKL SCA Colour Role Cards / Pictorial Card; the arrest carry uses a spinal board lifted by the Yellow First Aiders.
  */
 export const workshop = {
   event: "HKL'S SPORTS-EMERGENCY FOOTBALL MEDICINE WORKSHOP 2026",
@@ -39,7 +39,7 @@ export const workshop = {
   sources: [
     "FIFA Emergency Care Manual (2022) — Ch.1 roles & set piece, Ch.2 primary survey, Ch.3 cardiac arrest, Ch.10 FIFA Emergency Care Bag & skill zone",
     "FIFA Pre-Match Emergency Action Plan (PEAP) colour roles",
-    "HKL SCA Colour Role Cards & Pictorial Participant Card 2026 — scoop / basket carry with 10-second stop and start",
+    "HKL SCA Colour Role Cards & Pictorial Participant Card 2026 — spinal-board carry with 10-second stop and start",
     "ERC 2021 Basic & Advanced Life Support guidelines (as reproduced in the FIFA manual)",
   ],
   timings: [
@@ -54,7 +54,7 @@ export const workshop = {
     { tag: "15 L/min", text: "Oxygen to the bag reservoir." },
     { tag: "2 min", text: "Rhythm check every 2 minutes. Rotate the compressor (Red → Green)." },
     { tag: "≤ 10 s", text: "Maximum CPR interruption for any carry." },
-    { tag: "≥ 2 min", text: "After each carry: basket down and at least 2 minutes of compressions." },
+    { tag: "≥ 2 min", text: "After each carry: board down and at least 2 minutes of compressions." },
   ],
   roles: [
     {
@@ -141,20 +141,20 @@ export const workshop = {
     {
       id: "white",
       name: "WHITE",
-      role: "Basket stretcher",
+      role: "Spinal board",
       color: "#F2F2F0",
       text: "#1C1C1C",
       stand: "Player's RIGHT LEG, level with the lower legs, same side as Red and Blue (FIFA PEAP white mark).",
-      bring: "Scoop, splints and basket stretcher.",
-      photo: asset("/img/roles/white.jpg"),
-      fifa: "Scoop, splints and basket (2–3 lengths from the feet). Involve First Aiders. Take the legs in the log-roll. Player + AED move as one strapped unit.",
+      bring: "Spinal board, spider straps and splints.",
+      photo: asset("/img/white.jpg"),
+      fifa: "FIFA ECM: for cardiac-arrest transfer the player, long spinal board and AED are strapped together as one unit. Involve First Aiders. Take the legs in the log-roll.",
       do: [
-        "Bring the scoop, splints and basket stretcher. Involve the yellow First Aiders.",
-        "Basket in line with the feet, 2–3 lengths away; scoop opened and split beside the player.",
+        "Bring the spinal board, spider straps and splints. Involve the yellow First Aiders.",
+        "Spinal board in line with the feet, 2–3 lengths away, ready to slide in.",
         "Take the LEGS in the log-roll.",
-        "Player + scoop/basket + AED move as one strapped unit.",
+        "Strap the player to the board: player + spinal board + AED move as one strapped unit.",
       ],
-      say: ["Basket ready.", "Basket is in. Hands off for analysis."],
+      say: ["Board ready.", "Board is in. Hands off for analysis."],
     },
     {
       id: "green",
@@ -181,14 +181,14 @@ export const workshop = {
       color: "#E8C31A",
       text: "#1C1C1C",
       stand: "At the FEET, in an arc facing the player (FIFA PEAP yellow marks). Not medical staff by default.",
-      bring: "Nothing required. Scoop/basket stretcher, splints and spider straps if directed.",
+      bring: "Nothing required. Spinal board, splints and spider straps if directed.",
       photo: asset("/img/roles/yellow.jpg"),
-      fifa: "FIFA ECM: the extrication team stands or kneels beside the scoop / basket facing the player and awaits instructions. They may be invited into log-roll positions if extra hands are needed.",
+      fifa: "FIFA ECM: the extrication team stands or kneels beside the extrication device facing the player and awaits instructions. They may be invited into log-roll positions if extra hands are needed.",
       do: [
-        "Stand or kneel beside the scoop/basket, facing the player. Await instructions.",
+        "Stand or kneel beside the spinal board, facing the player. Await instructions.",
         "Do not enter the circle unless Black invites you to take a log-roll position.",
-        "If asked: help pass the scoop up the side of the player and slide the basket underneath.",
-        "On Black's command only: lift and carry the basket.",
+        "If asked: help slide the spinal board underneath during the log-roll.",
+        "On Black's command only: lift and carry the spinal board.",
         "During the carry: keep pace, stay silent, listen for Green's 10-second count.",
       ],
       say: ["Ready and waiting.", "Lifting on your command, Black."],
@@ -222,14 +222,14 @@ export const workshop = {
     },
     {
       n: 3,
-      title: "Basket",
+      title: "Spinal board",
       time: "Orange's count",
       who: ["black", "orange", "red", "blue", "white", "yellow"],
       lines: [
         "Black: “Orange, you have the roll.”",
         "Orange: “Roll on three. One, two, three, ROLL.” Red chest · Blue pelvis · White legs.",
-        "White + Yellow First Aiders slide in the scoop / basket (basket was 2–3 lengths from the feet).",
-        "White: “Basket is in. Hands off for analysis.” Player + scoop/basket + AED = one strapped unit.",
+        "White + Yellow First Aiders slide the spinal board underneath (board was 2–3 lengths from the feet).",
+        "White: “Board is in. Hands off for analysis.” Strap: player + spinal board + AED = one unit.",
       ],
     },
     {
@@ -252,7 +252,7 @@ export const workshop = {
         "Black: “Ready to lift. On three. One, two, three, LIFT.”",
         "Yellow First Aiders: “Lifting on your command, Black.” Carry ≤ 10 s — keep pace, stay silent.",
         "Green times the window out loud: “Ten seconds!”",
-        "Basket down. CPR for at least 2 minutes before the next carry.",
+        "Board down. CPR for at least 2 minutes before the next carry.",
       ],
     },
     {
@@ -262,7 +262,7 @@ export const workshop = {
       who: ["green", "black"],
       lines: [
         "Green takes over compressions at 2 min.",
-        "Repeat shock → dash → basket down → CPR until the player is inside the ambulance.",
+        "Repeat shock → dash → board down → CPR until the player is inside the ambulance.",
         "Prefer the ambulance onto the field.",
         "ALS if trained: adrenaline 1 mg IV after the 3rd shock, every 3–5 min; amiodarone 300 mg after the 3rd shock.",
       ],
@@ -274,14 +274,14 @@ export const workshop = {
     "With an i-gel: continuous compressions, ~10 breaths/min (every 10th compression). Face mask + OPA/NPA: 30:2.",
     "Before a shock the person shocking checks all clear and oxygen off. Turn the flow off rather than disconnecting the i-gel.",
     "After a shock: restart CPR immediately — no pulse check. Rhythm check every 2 minutes.",
-    "Transfer: player, scoop / basket and AED strapped as one unit. CPR interrupted ≤ 10 s per carry, then ≥ 2 minutes of compressions. Prefer the ambulance onto the field.",
+    "Transfer: player, spinal board and AED strapped as one unit. CPR interrupted ≤ 10 s per carry, then ≥ 2 minutes of compressions. Prefer the ambulance onto the field.",
     "ALS if trained: adrenaline 1 mg IV after the 3rd shock (shockable) or as soon as possible (non-shockable), every 3–5 min; amiodarone 300 mg after the 3rd shock, 150 mg after the 5th.",
     "Reversible causes (4 Hs & 4 Ts) — only once compressions, AED and airway are running: hypoxia, hypovolaemia, hypo/hyperthermia, tension pneumothorax are the pitchside ones.",
     "Destination: a hospital with 24/7 coronary angiography, agreed before the match.",
   ],
   dashRules: [
     "Carry only on Black's command, and never more than 10 seconds — Green counts out loud.",
-    "At “Ten seconds!”: basket down, compressions at once.",
+    "At “Ten seconds!”: board down, compressions at once.",
     "At least 2 minutes of compressions before the next carry.",
     "Repeat until the player is inside the ambulance. Prefer the ambulance onto the field.",
   ],

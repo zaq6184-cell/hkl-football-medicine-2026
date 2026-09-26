@@ -27,7 +27,7 @@ function TimerPage() {
             </ul>
             <SayLine text="Black: “Ready to lift. On three. One, two, three, LIFT.”" />
             <SayLine text="Yellow: “Lifting on your command, Black.”" />
-            <SayLine text="Green: “Ten seconds!” — basket down, CPR on." />
+            <SayLine text="Green: “Ten seconds!” — board down, CPR on." />
           </div>
         </Panel>
       </div>

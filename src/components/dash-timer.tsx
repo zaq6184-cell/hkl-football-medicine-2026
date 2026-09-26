@@ -95,10 +95,10 @@ export function DashTimer() {
       </div>
 
       <p className="mt-3 min-h-6 font-display text-sm font-semibold tracking-[0.12em] text-navy">
-        {finished ? "BASKET DOWN — CPR ON" : running ? "CARRY WINDOW" : "READY"}
+        {finished ? "BOARD DOWN — CPR ON" : running ? "CARRY WINDOW" : "READY"}
       </p>
       <p className="mt-2 max-w-xs text-sm leading-snug text-muted">
-        Lift on Black’s command. Green counts. Basket down and CPR back on before this hits 0.
+        Lift on Black’s command. Green counts. Board down and CPR back on before this hits 0.
       </p>
 
       <div className="mt-5 flex w-full max-w-xs gap-2">
