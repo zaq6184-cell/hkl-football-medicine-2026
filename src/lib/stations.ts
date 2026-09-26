@@ -167,7 +167,7 @@ export const stations: Station[] = [
           },
           {
             kind: "text",
-            text: "Scoop / basket is for a conscious or stable player. For an arrest in progress, log-roll onto the spinal board — see Station 4.",
+            text: "Scoop / basket is for a conscious or stable player. For an arrest in progress the same scoop / basket is used with CPR continuing — see Station 4.",
           },
         ],
       },
@@ -712,12 +712,12 @@ export const stations: Station[] = [
     ],
     sections: [
       {
-        title: "FIFA alignment",
+        title: "Workshop standard",
         blocks: [
           {
             kind: "alert",
-            title: "Updated to the FIFA Emergency Care Manual",
-            text: "Airway comes after compressions + AED are running. Orange (the head) controls the log roll. Green relieves compressions at 2 minutes. After each 10-second carry: at least 2 minutes of compressions. The spinal board and stop-and-start transfer are as FIFA describes.",
+            title: "Follows the HKL SCA Colour Role Cards",
+            text: "Orange (the head) controls the log roll. White + Yellow First Aiders slide in the scoop / basket; player + scoop/basket + AED move as one strapped unit. Green takes over compressions at 2 minutes. Carry ≤ 10 seconds on Black's “LIFT”, then basket down and at least 2 minutes of compressions.",
           },
         ],
       },
@@ -727,12 +727,11 @@ export const stations: Station[] = [
           {
             kind: "steps",
             items: [
-              ...workshop.roles.filter((r) => r.id !== "yellow").map((r) => ({
+              ...workshop.roles.map((r) => ({
                 title: `${r.role} — brings: ${r.bring}`,
                 who: [r.id],
                 lines: [r.stand],
               })),
-              { title: "Stretcher bearers (4)", lines: [workshop.bearers.text] },
             ],
           },
         ],
@@ -897,7 +896,7 @@ export const stations: Station[] = [
           { kind: "remember", text: "BODY FIRST → LEGS → HEAD LAST → REASSESS" },
           {
             kind: "text",
-            text: "FIFA ECM: a scoop is preferred over a spinal board for trauma (~15° tilt vs a 90° log roll). For cardiac-arrest transfer a long board is used — its rigid surface may give better compressions.",
+            text: "FIFA ECM: a scoop is preferred over a spinal board for trauma (~15° tilt vs a 90° log roll). FIFA notes a long board may give firmer compressions in cardiac arrest; this workshop's arrest drill uses the scoop + basket carry from the role cards.",
           },
         ],
       },
