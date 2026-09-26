@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, MapPin } from "lucide-react";
+import { LockedList } from "@/components/locked-list";
 import { AppShell, Note, Panel, SectionLabel } from "@/components/workshop";
 import { simulation, stations } from "@/lib/stations";
 import { workshop } from "@/lib/workshop";
@@ -94,11 +95,7 @@ function Stations() {
               <p className="mt-3 font-display text-xs font-semibold tracking-[0.12em] text-navy">
                 EXPECTED INTERVENTIONS
               </p>
-              <ol className="mt-1.5 flex list-decimal flex-col gap-1 pl-5 text-sm leading-snug marker:text-muted">
-                {sc.expected.map((line) => (
-                  <li key={line}>{line}</li>
-                ))}
-              </ol>
+              <LockedList payload={sc.locked} />
             </div>
           </Panel>
         ))}
