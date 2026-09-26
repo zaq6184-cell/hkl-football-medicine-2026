@@ -16,8 +16,7 @@ export type SpeakerId =
   | "alzamani"
   | "arshad"
   | "ahmad"
-  | "vinotha"
-  | "jimmy";
+  | "vinotha";
 
 export type SessionKind =
   | "reg"
@@ -68,14 +67,6 @@ export const programme = {
     maps: "https://maps.app.goo.gl/GGHKjksbyddbquPF9",
     lobbyMaps: "https://maps.app.goo.gl/tt5tSdHozG9TYDbm9",
     mrtMaps: "https://share.google/uaRRONcZrM8lCoyKg",
-  },
-  lunchTalk: {
-    date: "2026-10-03",
-    start: "13:00",
-    end: "13:15",
-    place: "Dewan Perdana, Hospital Tunku Azizah",
-    title: "Beyond AED availability: building a high-performance cardiac emergency response system",
-    speakerId: "jimmy" as SpeakerId,
   },
   quote: {
     text: "Education is for improving the lives of others and for leaving your community and world better than you found it.",
@@ -224,16 +215,6 @@ export const speakers: Speaker[] = [
     photo: asset("/img/event/speakers/vinotha.jpg"),
     bio: "Dr. Vinotha Genisan is a dedicated Sports Medicine Specialist. She earned her MBBS from Melaka-Manipal Medical College before a Master’s in Sports Medicine at the University of Malaya. Since 2014 she has been an integral part of Hospital Kuala Lumpur, supporting the recovery and performance of countless athletes. She has served as team physician or tournament doctor at SUKMA, Para SUKMA, SEA Games, Badminton Asia, and more. As a national classifier for para-athletics, she is deeply involved in advancing adaptive sports.",
   },
-  {
-    id: "jimmy",
-    name: "Jimmy Jot",
-    honorific: "Dr.",
-    country: "APAC",
-    title: "Clinical Marketing, Senior Manager APAC",
-    org: "ZOLL Medical",
-    photo: asset("/img/event/speakers/jimmy.jpg"),
-    bio: "Dr. Jimmy Jot is Senior Manager, Clinical Marketing (APAC) at ZOLL Medical. He delivers the Saturday lunch talk on building a high-performance cardiac emergency response system — beyond simply placing AEDs.",
-  },
 ];
 
 export const day1: Session[] = [
@@ -304,13 +285,6 @@ export const day1: Session[] = [
     kind: "interactive",
   },
   { start: "13:00", end: "14:00", topic: "Luncheon", kind: "lunch" },
-  {
-    start: "13:00",
-    end: "13:15",
-    topic: "Lunch talk — beyond AED availability",
-    speakerId: "jimmy",
-    kind: "talk",
-  },
   {
     start: "14:00",
     end: "14:20",

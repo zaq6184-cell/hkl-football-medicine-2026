@@ -179,15 +179,11 @@ function ProgrammeView() {
           })}
         </ol>
       </Panel>
-      {day === "d1" ? (
-        <Note>
-          Lunch talk 13:00–13:15 in Dewan Perdana — Dr. Jimmy Jot, ZOLL Medical, during the luncheon.
-        </Note>
-      ) : (
+      {day === "d2" ? (
         <Note>
           Sunday is practical: colour-role skill stations in the morning, then scenario simulation after lunch.
         </Note>
-      )}
+      ) : null}
     </>
   );
 }
@@ -253,8 +249,7 @@ function SessionRow({
 }
 
 function SpeakersView() {
-  const faculty = speakers.filter((s) => s.id !== "jimmy");
-  const lunch = speakers.find((s) => s.id === "jimmy");
+  const faculty = speakers;
   return (
     <>
       <SectionLabel>FACULTY</SectionLabel>
@@ -263,12 +258,6 @@ function SpeakersView() {
           <SpeakerCard key={s.id} id={s.id} />
         ))}
       </div>
-      {lunch ? (
-        <>
-          <SectionLabel>LUNCH TALK</SectionLabel>
-          <SpeakerCard id={lunch.id} />
-        </>
-      ) : null}
     </>
   );
 }
