@@ -166,7 +166,7 @@ export const skillClips: SkillClip[] = [
     fifa: [
       "FIFA prefers a scoop for trauma: only ~15° of movement vs 90° log roll for a board.",
       "Basket in line with the feet 2–3 lengths away; scoop laid out, extended and split between basket and player.",
-      "Workshop arrest drill uses a spinal board (FIFA: rigid, better compressions); the scoop is for trauma extrication.",
+      "Trauma: scoop stretcher + basket. Cardiac arrest: spinal board ± basket.",
     ],
   },
 ].map((c) => ({ ...c, poster: thumb(c.youtubeId) }));

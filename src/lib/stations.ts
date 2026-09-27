@@ -167,7 +167,7 @@ export const stations: Station[] = [
           },
           {
             kind: "text",
-            text: "Scoop / basket is for a conscious or stable player. For an arrest in progress, log-roll onto the spinal board — see Station 4.",
+            text: "Trauma: scoop stretcher + basket. Cardiac arrest: spinal board ± basket. The scoop / basket set piece above is for trauma; for an arrest in progress, log-roll onto the spinal board (± basket for the carry) — see Station 4.",
           },
         ],
       },
@@ -493,12 +493,22 @@ export const stations: Station[] = [
     ],
     sections: [
       {
-        title: "Triage framework & protocol selection",
+        title: "Definition of primary survey",
         blocks: [
           {
-            kind: "text",
-            text: "A structured assessment and intervention process designed to identify life- or limb-threatening injuries and enable clinicians to perform evaluations efficiently.",
+            kind: "list",
+            items: [
+              "A rapid, structured assessment.",
+              "Performed to identify life- or limb-threatening injuries.",
+              "When present, immediate intervention must be carried out.",
+              "Designed to enable clinicians to perform evaluations efficiently.",
+            ],
           },
+        ],
+      },
+      {
+        title: "Protocol selection — focused vs complete 1° survey",
+        blocks: [
           {
             kind: "cards",
             items: [
@@ -526,9 +536,9 @@ export const stations: Station[] = [
           },
           {
             kind: "image",
-            src: asset("/img/stations/s3-pathway.png"),
-            alt: "Flow chart for the initial assessment pathway: green focused pathway, red complete primary survey",
-            caption: "Figure 1 — Initial assessment pathway. Green: focused pathway (isolated, unconcerning injury). Red: complete ABCDE primary survey.",
+            src: asset("/img/stations/s3-pathway-v2.png"),
+            alt: "Initial assessment flow chart: purple focused primary survey pathway, green complete primary survey pathway",
+            caption: "Initial assessment (FIFA Emergency Care Manual, Figure 6). Purple: focused 1° survey — isolated, unconcerning injury. Green: complete 1° survey — protect the cervical spine and assess fully. Any concern or change in condition → complete survey.",
           },
         ],
       },
@@ -646,10 +656,10 @@ export const stations: Station[] = [
             items: [
               "Direct pressure to control active bleeding — this takes priority in the survey.",
               "Splint suspected fractures (reduces bleeding and pain).",
-              "Scoop stretcher preferred: ~15° of movement vs a 90° log roll onto a board.",
+              "Utilise a scoop stretcher to minimise movement during handling (~15° tilt vs a 90° log roll onto a board).",
               "Capillary refill centrally: press the sternum for 5 seconds; skin should pink up within 2 seconds. A normal CRT does not exclude bleeding.",
               "On-pitch BP has almost no value — measure it off the pitch with a properly fitted cuff.",
-              "Radial pulse: no single blood-pressure figure can be attached to it (FIFA). An ABSENT radial pulse is extremely concerning — think cardiac arrest.",
+              "SBP estimator: a palpable radial pulse indicates a minimum systolic BP of approximately 80–90 mmHg. FIFA caution: studies differ, so treat this as a rough guide only. An ABSENT radial pulse is extremely concerning — think cardiac arrest.",
               "Check blood glucose in any confused or collapsed player.",
             ],
           },
@@ -688,6 +698,7 @@ export const stations: Station[] = [
         title: "E — Exposure & extrication",
         blocks: [
           { kind: "text", text: "Complete necessary exposure and safely extricate the player from the pitch." },
+          { kind: "remember", text: "TRAUMA: SCOOP STRETCHER + BASKET · CARDIAC ARREST: SPINAL BOARD ± BASKET" },
         ],
       },
     ],
@@ -717,7 +728,7 @@ export const stations: Station[] = [
           {
             kind: "alert",
             title: "Follows the HKL SCA Colour Role Cards",
-            text: "Orange (the head) controls the log roll. White + Yellow First Aiders slide in the spinal board; player + spinal board + AED move as one strapped unit. Green takes over compressions at 2 minutes. Carry ≤ 10 seconds on Black's “LIFT”, then board down and at least 2 minutes of compressions.",
+            text: "Orange (the head) controls the log roll. White + Yellow First Aiders slide in the spinal board; player + spinal board + AED move as one strapped unit (± basket for the carry). Green takes over compressions at 2 minutes. Carry ≤ 10 seconds on Black's “LIFT”, then board down and at least 2 minutes of compressions.",
           },
         ],
       },
@@ -896,7 +907,7 @@ export const stations: Station[] = [
           { kind: "remember", text: "BODY FIRST → LEGS → HEAD LAST → REASSESS" },
           {
             kind: "text",
-            text: "FIFA ECM: a scoop is preferred over a spinal board for trauma (~15° tilt vs a 90° log roll). For cardiac-arrest transfer this workshop uses the long spinal board — FIFA notes its rigid surface may give better compressions.",
+            text: "Trauma: scoop stretcher + basket. Cardiac arrest: spinal board ± basket. FIFA ECM: a scoop moves a trauma player only ~15° vs a 90° log roll; for cardiac arrest the rigid long board gives better compressions. A basket makes carrying a scoop or board safer.",
           },
         ],
       },
