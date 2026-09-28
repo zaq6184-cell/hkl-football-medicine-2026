@@ -15,6 +15,7 @@ import { Route as DrillRouteImport } from './routes/drill'
 import { Route as EventRouteImport } from './routes/event'
 import { Route as FifaRouteImport } from './routes/fifa'
 import { Route as GuidesRouteImport } from './routes/guides'
+import { Route as PitchsideRouteImport } from './routes/pitchside'
 import { Route as RulesRouteImport } from './routes/rules'
 import { Route as StationsRouteImport } from './routes/stations'
 import { Route as TimerRouteImport } from './routes/timer'
@@ -50,6 +51,11 @@ const FifaRoute = FifaRouteImport.update({
 const GuidesRoute = GuidesRouteImport.update({
   id: '/guides',
   path: '/guides',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PitchsideRoute = PitchsideRouteImport.update({
+  id: '/pitchside',
+  path: '/pitchside',
   getParentRoute: () => rootRouteImport,
 } as any)
 const RulesRoute = RulesRouteImport.update({
@@ -90,6 +96,7 @@ export interface FileRoutesByFullPath {
   '/event': typeof EventRoute
   '/fifa': typeof FifaRoute
   '/guides': typeof GuidesRoute
+  '/pitchside': typeof PitchsideRoute
   '/rules': typeof RulesRoute
   '/stations': typeof StationsRoute
   '/timer': typeof TimerRoute
@@ -104,6 +111,7 @@ export interface FileRoutesByTo {
   '/event': typeof EventRoute
   '/fifa': typeof FifaRoute
   '/guides': typeof GuidesRoute
+  '/pitchside': typeof PitchsideRoute
   '/rules': typeof RulesRoute
   '/stations': typeof StationsRoute
   '/timer': typeof TimerRoute
@@ -119,6 +127,7 @@ export interface FileRoutesById {
   '/event': typeof EventRoute
   '/fifa': typeof FifaRoute
   '/guides': typeof GuidesRoute
+  '/pitchside': typeof PitchsideRoute
   '/rules': typeof RulesRoute
   '/stations': typeof StationsRoute
   '/timer': typeof TimerRoute
@@ -135,6 +144,7 @@ export interface FileRouteTypes {
     | '/event'
     | '/fifa'
     | '/guides'
+    | '/pitchside'
     | '/rules'
     | '/stations'
     | '/timer'
@@ -149,6 +159,7 @@ export interface FileRouteTypes {
     | '/event'
     | '/fifa'
     | '/guides'
+    | '/pitchside'
     | '/rules'
     | '/stations'
     | '/timer'
@@ -163,6 +174,7 @@ export interface FileRouteTypes {
     | '/event'
     | '/fifa'
     | '/guides'
+    | '/pitchside'
     | '/rules'
     | '/stations'
     | '/timer'
@@ -178,6 +190,7 @@ export interface RootRouteChildren {
   EventRoute: typeof EventRoute
   FifaRoute: typeof FifaRoute
   GuidesRoute: typeof GuidesRoute
+  PitchsideRoute: typeof PitchsideRoute
   RulesRoute: typeof RulesRoute
   StationsRoute: typeof StationsRoute
   TimerRoute: typeof TimerRoute
@@ -228,6 +241,13 @@ declare module '@tanstack/react-router' {
       path: '/guides'
       fullPath: '/guides'
       preLoaderRoute: typeof GuidesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pitchside': {
+      id: '/pitchside'
+      path: '/pitchside'
+      fullPath: '/pitchside'
+      preLoaderRoute: typeof PitchsideRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/rules': {
@@ -282,6 +302,7 @@ const rootRouteChildren: RootRouteChildren = {
   EventRoute: EventRoute,
   FifaRoute: FifaRoute,
   GuidesRoute: GuidesRoute,
+  PitchsideRoute: PitchsideRoute,
   RulesRoute: RulesRoute,
   StationsRoute: StationsRoute,
   TimerRoute: TimerRoute,
