@@ -917,7 +917,7 @@ export const stations: Station[] = [
           },
           {
             kind: "text",
-            text: "FIFA on-field protocol: after the third shock and medications, the team leader decides when to extricate. Where available, apply a mechanical CPR device (e.g. LUCAS / AutoPulse) before extrication to keep interruptions to a minimum.",
+            text: "FIFA World Cup protocol (ALS-trained team): after the third shock and drugs, the team leader decides when to extricate — ideally with a mechanical CPR device (e.g. LUCAS / AutoPulse) fitted first, so compressions are not interrupted. This workshop drill practises the manual alternative: the 10-second stop-and-start carry after the second shock, as in Step 5.",
           },
         ],
       },
@@ -1071,11 +1071,11 @@ export const stations: Station[] = [
             ordered: true,
             items: [
               "FIFA extrication order (suspected neck injury): size and fit the collar — check the mouth can still open.",
-              "Log roll onto the scoop or spine board (Orange leads).",
+              "Log roll onto the scoop (workshop trauma standard; FIFA allows a spine board) — Orange leads.",
               "Apply straps — the first, centre strap lined up with the sternum.",
               "Apply head blocks and fix them to the board, then tape.",
               "Only now can MILS be released.",
-              "Slide the basket under the scoop / board and extricate with 6 people if possible.",
+              "Slide the basket under the scoop and extricate with 6 people if possible.",
             ],
           },
         ],
