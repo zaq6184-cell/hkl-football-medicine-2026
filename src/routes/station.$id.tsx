@@ -1,5 +1,6 @@
 import { createFileRoute, Link, Navigate } from "@tanstack/react-router";
-import { ArrowLeft, ChevronLeft, ChevronRight, MapPin } from "lucide-react";
+import { ArrowLeft, Box, ChevronLeft, ChevronRight, MapPin, X } from "lucide-react";
+import { useState } from "react";
 import { AppShell, Note, Panel, RoleChip, SectionLabel } from "@/components/workshop";
 import { type Block, getStation, stations } from "@/lib/stations";
 
@@ -200,6 +201,8 @@ function BlockView({ b }: { b: Block }) {
           <p>{b.text}</p>
         </div>
       );
+    case "device":
+      return <DeviceFigure b={b} />;
     case "image":
       return (
         <figure className="-mx-3.5">
@@ -250,4 +253,63 @@ function BlockView({ b }: { b: Block }) {
         </div>
       );
   }
+}
+
+function DeviceFigure({ b }: { b: Extract<Block, { kind: "device" }> }) {
+  const [show3d, setShow3d] = useState(false);
+  return (
+    <figure className="-mx-3.5 -mt-1">
+      {show3d && b.model ? (
+        <div className="relative aspect-[4/3] w-full bg-navy">
+          <iframe
+            title={`3D model: ${b.model.name}`}
+            src={`https://sketchfab.com/models/${b.model.uid}/embed?autostart=1&ui_theme=dark&dnt=1&ui_infos=0&ui_watermark_link=0`}
+            className="absolute inset-0 h-full w-full"
+            allow="autoplay; fullscreen; xr-spatial-tracking"
+            allowFullScreen
+          />
+        </div>
+      ) : (
+        <img src={b.src} alt={b.alt} loading="lazy" className="block max-h-72 w-full bg-white object-contain" />
+      )}
+      <figcaption className="flex flex-wrap items-center gap-x-3 gap-y-1.5 px-3.5 pt-2">
+        {b.model ? (
+          <button
+            type="button"
+            onClick={() => setShow3d((v) => !v)}
+            className="inline-flex min-h-9 items-center gap-1.5 rounded-full bg-navy px-3 font-display text-xs font-semibold tracking-wide text-gold"
+          >
+            {show3d ? <X className="size-3.5" /> : <Box className="size-3.5" />}
+            {show3d ? "Back to photo" : "View in 3D"}
+          </button>
+        ) : null}
+        <span className="text-[11px] leading-snug text-muted">
+          {show3d && b.model ? (
+            <>
+              3D model “{b.model.name}” by {b.model.by} on{" "}
+              <a
+                href={`https://sketchfab.com/3d-models/${b.model.uid}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline"
+              >
+                Sketchfab
+              </a>
+              . Drag to rotate, pinch to zoom. Needs a connection.
+            </>
+          ) : b.credit.href ? (
+            <>
+              Photo:{" "}
+              <a href={b.credit.href} target="_blank" rel="noopener noreferrer" className="underline">
+                {b.credit.by}
+              </a>
+              , {b.credit.license}, via Wikimedia Commons
+            </>
+          ) : (
+            <>Diagram drawn for this workshop app</>
+          )}
+        </span>
+      </figcaption>
+    </figure>
+  );
 }

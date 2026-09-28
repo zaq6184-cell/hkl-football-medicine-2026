@@ -11,6 +11,13 @@ export type Block =
   | { kind: "alert"; title?: string; text: string }
   | { kind: "info"; title?: string; text: string }
   | { kind: "image"; src: string; alt: string; caption?: string }
+  | {
+      kind: "device";
+      src: string;
+      alt: string;
+      credit: { by: string; license: string; href: string };
+      model?: { uid: string; name: string; by: string };
+    }
   | { kind: "steps"; items: { title: string; who?: RoleId[]; lines: string[] }[] }
   | { kind: "cards"; items: { title: string; sub?: string; lines: string[] }[] };
 
@@ -837,6 +844,13 @@ export const stations: Station[] = [
         title: "Cervical collar",
         blocks: [
           {
+            kind: "device",
+            src: asset("/img/s5/collar.jpg"),
+            alt: "Adjustable extrication cervical collar fitted on an adult, side view",
+            credit: { by: "James Heilman, MD", license: "CC BY-SA 3.0", href: "https://commons.wikimedia.org/wiki/File:LateralCollar.JPG" },
+            model: { uid: "4baa44a5069b41b0bac9ce4038945c23", name: "Cervical Collar", by: "ChakkitPP" },
+          },
+          {
             kind: "text",
             text: "Restricts excessive cervical movement when the spine cannot be clinically cleared — midline tenderness, neurological deficit, altered mental status, intoxication or distracting injury.",
           },
@@ -868,6 +882,13 @@ export const stations: Station[] = [
         title: "Head immobilizer",
         blocks: [
           {
+            kind: "device",
+            src: asset("/img/s5/head.jpg"),
+            alt: "Head immobiliser: orange lateral head blocks with forehead and chin straps on a board, ear opening visible",
+            credit: { by: "Stefan Schumacher", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:Elk_paramedics_stretcher_Grey.jpg" },
+            model: { uid: "1216e5d1e494433d92d36517337444ce", name: "Spine board kit", by: "Guardiano" },
+          },
+          {
             kind: "text",
             text: "Lateral head support during spinal motion restriction and transport, used with an appropriate transfer device.",
           },
@@ -889,6 +910,13 @@ export const stations: Station[] = [
       {
         title: "Spinal board & spider strap",
         blocks: [
+          {
+            kind: "device",
+            src: asset("/img/s5/board.jpg"),
+            alt: "Patient on a long board with head blocks and body straps, two paramedics at head and feet",
+            credit: { by: "Stefan Schumacher", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:Elk_paramedics_stretcher_Grey.jpg" },
+            model: { uid: "1216e5d1e494433d92d36517337444ce", name: "Spine board kit", by: "Guardiano" },
+          },
           {
             kind: "text",
             text: "Rigid surface for controlled extrication or transfer; spider straps secure the torso, pelvis and lower limbs.",
@@ -935,6 +963,13 @@ export const stations: Station[] = [
         title: "Scoop stretcher",
         blocks: [
           {
+            kind: "device",
+            src: asset("/img/s5/scoop.jpg"),
+            alt: "Yellow scoop stretcher with its two halves joined and straps attached",
+            credit: { by: "Rama", license: "CeCILL", href: "https://commons.wikimedia.org/wiki/File:Civiere_a_aubes.jpg" },
+            model: { uid: "fb718c84f1de4d7e80ec755b7de08a1e", name: "Scoop Stretcher", by: "ChakkitPP" },
+          },
+          {
             kind: "text",
             text: "Lifting and transfer with reduced rolling — useful to move an injured player from the pitch to another transport device.",
           },
@@ -958,6 +993,13 @@ export const stations: Station[] = [
         title: "Basket stretcher",
         blocks: [
           {
+            kind: "device",
+            src: asset("/img/s5/basket.jpg"),
+            alt: "Orange basket stretcher on the ground",
+            credit: { by: "Christoph Baumgartinger", license: "CC BY 2.5", href: "https://commons.wikimedia.org/wiki/File:Korbtrage.jpg" },
+            model: { uid: "9ce6ccf9cb67408c90dc4896babfe44a", name: "Basket Stretcher", by: "Greavsie93" },
+          },
+          {
             kind: "text",
             text: "Protected carrying platform for difficult terrain or longer manual carries — stairs, slopes or poor pitch access.",
           },
@@ -980,6 +1022,12 @@ export const stations: Station[] = [
         title: "Limb splints",
         blocks: [
           {
+            kind: "device",
+            src: asset("/img/s5/splint.jpg"),
+            alt: "SAM splint: flexible padded splint, orange and blue, partly unrolled",
+            credit: { by: "Florian Thillmann", license: "CC BY-SA 3.0", href: "https://commons.wikimedia.org/wiki/File:SamSplint-straight.jpg" },
+          },
+          {
             kind: "list",
             ordered: true,
             items: [
@@ -999,6 +1047,12 @@ export const stations: Station[] = [
         title: "Arm sling",
         blocks: [
           {
+            kind: "device",
+            src: asset("/img/s5/sling.jpg"),
+            alt: "Illustration of a broad arm sling supporting the forearm across the chest, tied at the neck",
+            credit: { by: "Laboratoires Servier (Servier Medical Art)", license: "CC BY-SA 3.0", href: "https://commons.wikimedia.org/wiki/File:Orthopedics_2_--_Smart-Servier.png" },
+          },
+          {
             kind: "list",
             ordered: true,
             items: [
@@ -1015,6 +1069,12 @@ export const stations: Station[] = [
       {
         title: "T-shirt arm sling (improvised)",
         blocks: [
+          {
+            kind: "device",
+            src: asset("/img/s5/tshirt-sling.svg"),
+            alt: "Two-step diagram: support the forearm across the chest, then fold the shirt hem up over it and secure at the collar",
+            credit: { by: "HKL workshop app", license: "Diagram", href: "" },
+          },
           {
             kind: "list",
             ordered: true,
