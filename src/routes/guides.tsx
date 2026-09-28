@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, HeartPulse } from "lucide-react";
-import { FifaVideoList, SkillVideoList } from "@/components/fifa-video";
+import { FifaSkillZoneList, FifaVideoList, SkillVideoList } from "@/components/fifa-video";
 import { AppShell } from "@/components/workshop";
 
 export const Route = createFileRoute("/guides")({ component: GuidesPage });
@@ -18,6 +18,7 @@ function GuidesPage() {
           <ChevronRight className="size-5 shrink-0 text-gold" />
         </Link>
         <FifaVideoList />
+        <FifaSkillZoneList />
         <div id="skills">
           <SkillVideoList />
         </div>

@@ -1,6 +1,7 @@
 import { createFileRoute, Link, Navigate } from "@tanstack/react-router";
 import { ArrowLeft, Box, ChevronLeft, ChevronRight, MapPin, X } from "lucide-react";
 import { useState } from "react";
+import { FifaClipCard } from "@/components/fifa-video";
 import { AppShell, Note, Panel, RoleChip, SectionLabel } from "@/components/workshop";
 import { type Block, getStation, stations } from "@/lib/stations";
 
@@ -201,12 +202,20 @@ function BlockView({ b }: { b: Block }) {
           <p>{b.text}</p>
         </div>
       );
+    case "video":
+      return (
+        <div className="-mx-3.5">
+          <FifaClipCard clip={b.clip} />
+        </div>
+      );
     case "device":
       return <DeviceFigure b={b} />;
     case "image":
       return (
         <figure className="-mx-3.5">
-          <img src={b.src} alt={b.alt} loading="lazy" className="block max-h-[28rem] w-full bg-cream object-contain" />
+          <a href={b.src} target="_blank" rel="noopener noreferrer">
+            <img src={b.src} alt={b.alt} loading="lazy" className="block max-h-[28rem] w-full bg-cream object-contain" />
+          </a>
           {b.caption ? (
             <figcaption className="px-3.5 pt-2 text-xs leading-snug text-muted">{b.caption}</figcaption>
           ) : null}

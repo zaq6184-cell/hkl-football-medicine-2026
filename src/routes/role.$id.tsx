@@ -2,6 +2,7 @@ import { createFileRoute, Link, Navigate } from "@tanstack/react-router";
 import { ArrowLeft } from "lucide-react";
 import { AppShell, Note, Panel, SayLine, SectionLabel } from "@/components/workshop";
 import { getRole, isRoleId } from "@/lib/workshop";
+import { FIFA_ROLE_CARDS_PDF, fifaRoleCards } from "@/lib/fifa-roles";
 
 export const Route = createFileRoute("/role/$id")({ component: RoleCard });
 
@@ -78,9 +79,49 @@ function RoleCard() {
               <span className="font-semibold text-navy">FIFA: </span>
               {r.fifa}
             </Note>
+            {fifaRoleCards[r.id] ? <FifaCard id={r.id} /> : null}
           </div>
         </Panel>
       </div>
     </AppShell>
+  );
+}
+
+function FifaCard({ id }: { id: keyof typeof fifaRoleCards }) {
+  const c = fifaRoleCards[id];
+  if (!c) return null;
+  const groups: [string, string[] | undefined][] = [
+    ["In trauma", c.trauma],
+    ["In a log roll", c.logRoll],
+    ["In cardiac arrest", c.arrest],
+    ["Your role", c.general],
+  ];
+  return (
+    <section className="rounded-lg border border-line bg-cream px-3 py-3">
+      <p className="font-display text-[11px] font-semibold tracking-[0.14em] text-navy">
+        FIFA OFFICIAL ROLE CARD (2025)
+      </p>
+      <p className="mt-1 text-sm font-medium leading-snug">{c.who}</p>
+      {groups.map(([title, items]) =>
+        items?.length ? (
+          <div key={title} className="mt-2.5">
+            <p className="text-xs font-semibold text-navy">{title}</p>
+            <ul className="mt-1 flex list-disc flex-col gap-1 pl-4 text-sm leading-snug marker:text-gold">
+              {items.map((t) => (
+                <li key={t}>{t}</li>
+              ))}
+            </ul>
+          </div>
+        ) : null,
+      )}
+      <a
+        href={FIFA_ROLE_CARDS_PDF}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-2 inline-flex min-h-9 items-center text-xs font-medium text-navy underline underline-offset-2"
+      >
+        FIFA role cards (PDF) · © FIFA
+      </a>
+    </section>
   );
 }

@@ -1,5 +1,6 @@
 import { asset } from "@/lib/asset";
 import { type RoleId, workshop } from "@/lib/workshop";
+import { type FifaClip, fifaSkillClips } from "@/lib/videos";
 
 /** Content blocks rendered by the station page. Copy is taken from the station handouts — do not invent protocol. */
 export type Block =
@@ -11,6 +12,7 @@ export type Block =
   | { kind: "alert"; title?: string; text: string }
   | { kind: "info"; title?: string; text: string }
   | { kind: "image"; src: string; alt: string; caption?: string }
+  | { kind: "video"; clip: FifaClip }
   | {
       kind: "device";
       src: string;
@@ -123,15 +125,23 @@ export const stations: Station[] = [
               ["Team Leader (Black)", "Left flank, 2–3 m back; full view", "Hands off. Overall command, CPR/AED flow, calls the lift for extrication, ambulance/referee liaison."],
               ["M1 Head (Orange)", "At head", "MILS, airway alignment; commands the log-roll / tilt count."],
               ["M2 Chest (Red)", "Right chest", "ABCDE, continuous CPR 100–120/min, full recoil."],
-              ["M3 Oxygen (Blue)", "Right hip", "O2 15 L/min; takes PELVIS in log-roll; oxygen OFF for shocks."],
+              ["M3 Oxygen (Blue)", "Right hip", "O2 15 L/min; takes PELVIS in log-roll; oxygen OFF for shocks; takes over compressions at 2 min."],
               ["M4 Legs / Extrication (White)", "Right leg", "Extrication kit (trauma: scoop + basket; arrest: spinal board ± basket), splints; takes LEGS in log-roll."],
-              ["M5 Equipment (Green)", "Left head/shoulder", "AED, emergency bag, equipment to M2; CLEAR + oxygen off before shock; relieves compressions at 2 min."],
+              ["M5 Equipment (Green)", "Left head/shoulder", "AED, emergency bag, equipment to M2; CLEAR + oxygen off before shock; priority is timely, safe defibrillation."],
             ],
           },
           {
             kind: "text",
             text: "FIFA ECM: the Chest member should be one of the most experienced — they lead if no one else can. Pelvis and Legs need no medical skills but must be trained in the log roll. First aiders and paramedics only help if they are part of the plan.",
           },
+        ],
+      },
+      {
+        title: "FIFA Skill Zone: sideline and set-up",
+        blocks: [
+          { kind: "text", text: "FIFA's own films of the first seconds of the set piece: where the team waits, how it enters, and how the kit is laid out around the player." },
+          { kind: "video", clip: fifaSkillClips.sideline },
+          { kind: "video", clip: fifaSkillClips.setup },
         ],
       },
       {
@@ -625,6 +635,7 @@ export const stations: Station[] = [
       {
         title: "B — Breathing",
         blocks: [
+          { kind: "video", clip: fifaSkillClips.handsOn },
           {
             kind: "text",
             text: "Pitch-side breathing assessment is limited — use a focused “hands-on 1, 2, 3” approach.",
@@ -736,7 +747,7 @@ export const stations: Station[] = [
           {
             kind: "info",
             title: "Follows the HKL SCA Colour Role Cards",
-            text: "First shock before the board. Then Orange (the head) controls the log roll; White + Yellow First Aiders slide in the spinal board; player + spinal board + AED move as one strapped unit (± basket for the carry). Green takes over compressions at 2 minutes. Carry ≤ 10 seconds on Black's “LIFT”, then board down and at least 2 minutes of compressions.",
+            text: "First shock before the board. Then Orange (the head) controls the log roll; White + Yellow First Aiders slide in the spinal board; player + spinal board + AED move as one strapped unit (± basket for the carry). Blue takes over compressions from Red at 2 minutes (FIFA role card). Carry ≤ 10 seconds on Black's “LIFT”, then board down and at least 2 minutes of compressions.",
           },
         ],
       },
@@ -843,6 +854,13 @@ export const stations: Station[] = [
       {
         title: "Cervical collar",
         blocks: [
+          { kind: "video", clip: fifaSkillClips.cspine },
+          {
+            kind: "image",
+            src: asset("/img/fifa/cspine-protocol.jpg"),
+            alt: "FIFA Medical Set-Piece protocol for cervical spine injury: colour-coded tasks from assessment to extrication",
+            caption: "FIFA Medical Set-Piece protocol for cervical spine injury — each colour's tasks from MILS to extrication. Tap to open full size. © FIFA",
+          },
           {
             kind: "device",
             src: asset("/img/s5/collar.jpg"),
@@ -1021,6 +1039,7 @@ export const stations: Station[] = [
       {
         title: "Limb splints",
         blocks: [
+          { kind: "video", clip: fifaSkillClips.lowerLimb },
           {
             kind: "device",
             src: asset("/img/s5/splint.jpg"),

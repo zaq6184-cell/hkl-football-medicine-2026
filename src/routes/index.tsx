@@ -3,6 +3,7 @@ import {
   BriefcaseMedical,
   CalendarDays,
   HeartPulse,
+  Stethoscope,
   ClipboardList,
   PlayCircle,
 } from "lucide-react";
@@ -52,6 +53,7 @@ function Home() {
         <div className="grid grid-cols-2 gap-2.5">
           {[
             { to: "/fifa" as const, icon: HeartPulse, title: "FIFA: sudden cardiac arrest", sub: "Signs · emergency steps · videos · official downloads", wide: true },
+            { to: "/pitchside" as const, icon: Stethoscope, title: "FIFA: pitchside emergency care", sub: "5 Skill Zone films · set-piece protocols · role cards · bag", wide: true },
             { to: "/stations" as const, icon: ClipboardList, title: "Skill stations", sub: "Stations 1–5 + simulation" },
             { to: "/event" as const, icon: CalendarDays, title: "Programme", sub: `${programme.datesLabel}` },
             { to: "/bag" as const, icon: BriefcaseMedical, title: "Emergency bag", sub: "FIFA packing list" },

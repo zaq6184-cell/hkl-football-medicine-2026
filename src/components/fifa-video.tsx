@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Play } from "lucide-react";
 import { Note, Panel, SectionLabel } from "@/components/workshop";
-import { fifaClips, fifaDocs, skillClips, type FifaClip } from "@/lib/videos";
+import { fifaClips, fifaDocs, fifaSkillList, skillClips, type FifaClip } from "@/lib/videos";
 
 export function FifaVideoList() {
   return (
@@ -37,6 +37,20 @@ export function FifaVideoList() {
           </Note>
         </div>
       </Panel>
+    </div>
+  );
+}
+
+export function FifaSkillZoneList() {
+  return (
+    <div className="flex flex-col gap-3.5">
+      <SectionLabel>FIFA SKILL ZONE</SectionLabel>
+      <p className="text-sm leading-snug text-muted">
+        FIFA’s pitchside technique films: sideline, set-up, Hands On 1-2-3, cervical spine and lower limb.
+      </p>
+      {fifaSkillList.map((clip) => (
+        <FifaClipCard key={clip.youtubeId} clip={clip} />
+      ))}
     </div>
   );
 }
