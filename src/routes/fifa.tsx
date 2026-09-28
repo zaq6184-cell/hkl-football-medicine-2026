@@ -83,6 +83,14 @@ function FifaScaPage() {
 
         <Section title="EMERGENCY STEPS">
           <List items={fifaSca.steps} ordered />
+          <div className="rounded-lg border-l-4 border-navy bg-note px-2.5 py-2 text-sm leading-snug">
+            <p className="font-semibold text-navy">Bystander steps vs the medical team</p>
+            <p>
+              These are FIFA's steps for anyone on the scene (hands-only CPR). The pitchside medical team follows the
+              colour-role drill: 30:2 with a face mask until an i-gel is in, then continuous compressions with a breath
+              every 10th compression.
+            </p>
+          </div>
           <Link
             to="/drill"
             className="inline-flex min-h-11 items-center font-display text-sm font-semibold tracking-wide text-gold"

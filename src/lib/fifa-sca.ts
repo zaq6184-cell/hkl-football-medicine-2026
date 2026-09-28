@@ -1,7 +1,6 @@
 /**
  * Summary (in our own words) of FIFA's official "Sudden cardiac arrest" page,
- * plus links to FIFA's own videos and downloads. FIFA's videos and images are
- * FIFA / Getty copyright, so they are linked, not copied.
+ * with FIFA's infographics, embedded FIFA videos and links to FIFA's downloads (all © FIFA).
  */
 import { asset } from "@/lib/asset";
 
@@ -27,7 +26,7 @@ export const fifaSca = {
     { title: "Unresponsive", text: "No response at all to voice or touch." },
     {
       title: "Abnormal or absent breathing",
-      text: "Breathing can look normal and fast for about 90 seconds, then turns to gasping, then stops. Do not let early breathing reassure you.",
+      text: "Breathing may look normal at first, then turns to gasping and usually stops within 60–90 seconds. Gasping is not normal breathing — do not let it reassure you.",
     },
     {
       title: "Brief seizure-like movements",
