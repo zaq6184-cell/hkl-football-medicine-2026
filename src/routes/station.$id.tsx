@@ -193,6 +193,13 @@ function BlockView({ b }: { b: Block }) {
           <p>{b.text}</p>
         </div>
       );
+    case "info":
+      return (
+        <div className="rounded-lg border-l-4 border-navy bg-note px-2.5 py-2 text-sm leading-snug">
+          {b.title ? <p className="font-semibold text-navy">{b.title}</p> : null}
+          <p>{b.text}</p>
+        </div>
+      );
     case "image":
       return (
         <figure className="-mx-3.5">

@@ -9,6 +9,7 @@ export type Block =
   | { kind: "table"; head: string[]; rows: string[][] }
   | { kind: "remember"; text: string }
   | { kind: "alert"; title?: string; text: string }
+  | { kind: "info"; title?: string; text: string }
   | { kind: "image"; src: string; alt: string; caption?: string }
   | { kind: "steps"; items: { title: string; who?: RoleId[]; lines: string[] }[] }
   | { kind: "cards"; items: { title: string; sub?: string; lines: string[] }[] };
@@ -726,7 +727,7 @@ export const stations: Station[] = [
         title: "Workshop standard",
         blocks: [
           {
-            kind: "alert",
+            kind: "info",
             title: "Follows the HKL SCA Colour Role Cards",
             text: "First shock before the board. Then Orange (the head) controls the log roll; White + Yellow First Aiders slide in the spinal board; player + spinal board + AED move as one strapped unit (± basket for the carry). Green takes over compressions at 2 minutes. Carry ≤ 10 seconds on Black's “LIFT”, then board down and at least 2 minutes of compressions.",
           },

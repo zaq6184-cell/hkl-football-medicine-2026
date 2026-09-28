@@ -2,7 +2,6 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   BriefcaseMedical,
   CalendarDays,
-  ChevronRight,
   ClipboardList,
   PlayCircle,
 } from "lucide-react";
@@ -17,84 +16,6 @@ function Home() {
   return (
     <AppShell tab="home">
       <div className="flex flex-col gap-3.5">
-        <Link to="/stations" className="block active:scale-[0.99]">
-          <Panel>
-            <div className="flex items-center gap-3 px-3.5 py-3">
-              <span className="grid size-10 shrink-0 place-items-center rounded-full bg-navy text-gold">
-                <ClipboardList className="size-5" strokeWidth={2} />
-              </span>
-              <div className="min-w-0 flex-1">
-                <p className="font-display text-xs font-semibold tracking-[0.14em] text-navy">
-                  SKILL STATIONS 1–5
-                </p>
-                <p className="text-sm leading-snug">PEAP · bag · primary survey · cardiac arrest · immobilization</p>
-                <p className="text-xs text-muted">Plus simulation rotation and scenarios</p>
-              </div>
-              <ChevronRight className="size-5 shrink-0 text-gold" />
-            </div>
-          </Panel>
-        </Link>
-        <Link to="/event" search={{ tab: "programme" }} className="block active:scale-[0.99]">
-          <Panel>
-            <div className="flex items-center gap-3 px-3.5 py-3">
-              <span className="grid size-10 shrink-0 place-items-center rounded-full bg-navy text-gold">
-                <CalendarDays className="size-5" strokeWidth={2} />
-              </span>
-              <div className="min-w-0 flex-1">
-                <p className="font-display text-xs font-semibold tracking-[0.14em] text-navy">
-                  PROGRAMME BOOK
-                </p>
-                <p className="text-sm leading-snug">
-                  {programme.datesLabel} · {programme.venue.hall}
-                </p>
-                <p className="text-xs text-muted">{programme.venue.building}</p>
-              </div>
-              <ChevronRight className="size-5 shrink-0 text-gold" />
-            </div>
-          </Panel>
-        </Link>
-        <Link to="/bag" className="block active:scale-[0.99]">
-          <Panel>
-            <div className="flex items-center gap-3 px-3.5 py-3">
-              <span className="grid size-10 shrink-0 place-items-center rounded-full bg-navy text-gold">
-                <BriefcaseMedical className="size-5" strokeWidth={2} />
-              </span>
-              <div className="min-w-0 flex-1">
-                <p className="font-display text-xs font-semibold tracking-[0.14em] text-navy">
-                  EMERGENCY BAG
-                </p>
-                <p className="text-sm leading-snug">FIFA Medical Emergency Bag packing list</p>
-                <p className="text-xs text-muted">Airway · AED · drugs · travel rules</p>
-              </div>
-              <ChevronRight className="size-5 shrink-0 text-gold" />
-            </div>
-          </Panel>
-        </Link>
-        <Link to="/guides" className="block active:scale-[0.99]">
-          <Panel>
-            <div className="flex items-center gap-3 px-3.5 py-3">
-              <span className="grid size-10 shrink-0 place-items-center rounded-full bg-navy text-gold">
-                <PlayCircle className="size-5" strokeWidth={2} />
-              </span>
-              <div className="min-w-0 flex-1">
-                <p className="font-display text-xs font-semibold tracking-[0.14em] text-navy">
-                  FIFA GUIDELINE FILMS
-                </p>
-                <p className="text-sm leading-snug">
-                  SCA films + airway skills: OPA, NPA, i-gel, BVM, suction, collar, log roll
-                </p>
-                <p className="text-xs text-muted">15 videos with FIFA key points · needs a connection</p>
-              </div>
-              <ChevronRight className="size-5 shrink-0 text-gold" />
-            </div>
-          </Panel>
-        </Link>
-        <HeroPhoto
-          src={asset("/img/stations/positions-aerial-v2.jpg")}
-          alt="Team positions around the collapsed player: Orange and Green at the head, Red chest, Blue right hip, White right leg, Black left flank, four Yellow First Aiders at the feet"
-          caption="FIFA PEAP 2025 positions. Orange, Red, Blue and White on the player's RIGHT. Green at the head on the LEFT. Black on the LEFT flank. Yellow First Aiders at the FEET. If it is not your colour, hands off."
-          contain
-        />
         <Note>
           <span className="font-semibold text-navy">{workshop.rule}</span>
         </Note>
@@ -120,6 +41,37 @@ function Home() {
           ))}
         </div>
         <Note>If it is not your colour, do not reach in.</Note>
+        <HeroPhoto
+          src={asset("/img/stations/positions-aerial-v2.jpg")}
+          alt="Team positions around the collapsed player: Orange and Green at the head, Red chest, Blue right hip, White right leg, Black left flank, four Yellow First Aiders at the feet"
+          caption="FIFA PEAP 2025 positions. Orange, Red, Blue and White on the player's RIGHT. Green at the head on the LEFT. Black on the LEFT flank. Yellow First Aiders at the FEET."
+          contain
+        />
+        <SectionLabel>WORKSHOP</SectionLabel>
+        <div className="grid grid-cols-2 gap-2.5">
+          {[
+            { to: "/stations" as const, icon: ClipboardList, title: "Skill stations", sub: "Stations 1–5 + simulation" },
+            { to: "/event" as const, icon: CalendarDays, title: "Programme", sub: `${programme.datesLabel}` },
+            { to: "/bag" as const, icon: BriefcaseMedical, title: "Emergency bag", sub: "FIFA packing list" },
+            { to: "/guides" as const, icon: PlayCircle, title: "Films", sub: "SCA + airway skills" },
+          ].map((t) => (
+            <Link key={t.to} to={t.to} className="block active:scale-[0.98]">
+              <Panel className="h-full">
+                <div className="flex h-full flex-col gap-2 px-3 py-3">
+                  <span className="grid size-9 place-items-center rounded-full bg-navy text-gold">
+                    <t.icon className="size-[18px]" strokeWidth={2} />
+                  </span>
+                  <div>
+                    <p className="font-display text-xs font-semibold tracking-[0.12em] text-navy">
+                      {t.title.toUpperCase()}
+                    </p>
+                    <p className="mt-0.5 text-xs leading-snug text-muted">{t.sub}</p>
+                  </div>
+                </div>
+              </Panel>
+            </Link>
+          ))}
+        </div>
         <HeroPhoto
           src={asset("/img/stations/peap-marks.jpg")}
           alt="FIFA PEAP 2025 official position marks around the player"

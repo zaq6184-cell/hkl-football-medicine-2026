@@ -10,12 +10,14 @@ function Drill() {
   return (
     <AppShell tab="drill">
       <div className="flex flex-col gap-3.5">
-        <HeroPhoto
-          src={asset("/img/drill-sequence-v4.jpg")}
-          alt="Six-step pictorial sequence of the on-field SCA drill"
-          caption="Drill sequence: assess · airway + O2 + AED · first shock · spinal board · 10-second dash · continue. Call your line out loud."
-          contain
-        />
+        <a href={asset("/img/drill-sequence-v4.jpg")} target="_blank" rel="noopener noreferrer" className="block">
+          <HeroPhoto
+            src={asset("/img/drill-sequence-v4.jpg")}
+            alt="Six-step pictorial sequence of the on-field SCA drill"
+            caption="Tap the picture to open it full size. Assess · airway + O2 + AED · first shock · spinal board · 10-second dash · continue."
+            contain
+          />
+        </a>
         <Panel>
           <div className="px-3.5 py-2">
             {workshop.steps.map((step, i) => (
