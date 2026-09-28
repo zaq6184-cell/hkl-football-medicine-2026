@@ -185,6 +185,14 @@ export const stations: Station[] = [
             alt: "Pitch diagram showing the medical team seated left of Team A's bench, with two basket stretchers in front",
             caption: "Where the field-of-play medical team sits. FIFA Medical Set Piece — Protocols for on-field interventions (v3, March 2025). © FIFA",
           },
+          {
+            kind: "defs",
+            items: [
+              { term: "FIFA field-of-play team", text: "8–9 members: one emergency physician experienced in out-of-hospital care plus paramedics / health professionals doing BLS and ALS, with 2–3 reserves. The same team works every match at a venue." },
+              { term: "Training", text: "The whole team trains in the FIFA set piece with the FIFA Match Doctor 5–7 days before the first match, on the standard FIFA equipment." },
+              { term: "FIFA Match Doctor", text: "Sits with and leads the team, reviews injury mechanisms on a replay device (often with a remote injury spotter), makes their own assessment, calls the ready position, and enters for potentially serious injury or concussion — then directs when the team comes on with the equipment." },
+            ],
+          },
         ],
       },
       {
@@ -727,6 +735,16 @@ export const stations: Station[] = [
             kind: "alert",
             text: "Any NSAID feature present → the spine cannot be cleared; extricate in a collar. The player must also actively rotate the neck 45° laterally (the player moves, not the clinician), and the mechanism must not be concerning (e.g. axial load). Intoxication includes strong analgesics such as codeine. (NSAID here is a spinal-clearance mnemonic, not the drug class.)",
           },
+          {
+            kind: "text",
+            text: "FIFA: a player shouting or screaming has a patent airway. Signs of obstruction: gurgling, snoring, choking, stridor, cyanosis, no breathing effort — treat at once and give oxygen. Head-tilt/chin-lift only if there is no suspicion of trauma.",
+          },
+          {
+            kind: "defs",
+            items: [
+              { term: "FIFA — clearing the cervical spine (all 6 needed)", text: "1 No midline tenderness · 2 GCS 15 · 3 No distracting injury · 4 No neurology · 5 No concerning mechanism (e.g. fall onto the head, axial load) · 6 Active rotation of 45° to each side." },
+            ],
+          },
         ],
       },
       {
@@ -884,6 +902,13 @@ export const stations: Station[] = [
         title: "Airway & ventilation in arrest",
         blocks: [
           {
+            kind: "defs",
+            items: [
+              { term: "FIFA — 3 keys to survival", text: "1 Recognise SCA · 2 Early good-quality compressions · 3 Early, safe defibrillation." },
+              { term: "Pads", text: "Anterolateral, lateral pad in the mid-axillary line — keep compressing while the pads go on." },
+            ],
+          },
+          {
             kind: "list",
             items: [
               "i-gel is FIFA's adjunct of choice: one person holds it and squeezes the bag.",
@@ -892,6 +917,11 @@ export const stations: Station[] = [
               "Let the bag refill after each squeeze. Watch for symmetrical chest rise.",
               "No i-gel: use the adjunct you know best (OPA or NPA) with a face mask.",
             ],
+          },
+          {
+            kind: "info",
+            title: "Oxygen at the shock — workshop rule",
+            text: "FIFA's 2025 on-field booklet allows oxygen to stay connected through a closed system such as the i-gel. This workshop follows the FIFA Emergency Care Manual and the role cards: Blue turns the flow OFF for every shock (do not disconnect the i-gel), and any mask or cannula goes at least 1 m away.",
           },
         ],
       },
