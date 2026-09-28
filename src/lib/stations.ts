@@ -1121,9 +1121,9 @@ export const simulation = {
       title: "Cardiac arrest scenario",
       story: "Mid-game, a walking player suddenly collapses without contact with another player.",
       locked: {
-        salt: "GdoMnbmv2CDHguCRTHmKQQ==",
-        iv: "FTv1U+IRJmKEfwjB",
-        data: "RnDiPGHu5suUS4hCJvKYGbj463cZNBUZuqJfSgLMOc2/ByU9QFI1o7Gs9+1bVAc9GHG1Zf4BDhLmv60F2/pwC/9oT1ZdIlMsD0o1oSyRaB4m0gWkBk4XTB6LCqEdOM4qBwEZTRgJOCDOk640ozCTGMdwJKGMVEAZgThePYHYnJY9vcI0J5/ar47gk/wd/0d8Yu9rRqZ8jxEs/RMFEGGKiYQzt4MLZDTlxe+sjfADHjhm8WWBCsV6i5nUKsbfr0HsZ42UhZUuAW8kBlEOzEaon0Eg+suqchtdbIM1xzbNcjo3kJbwCPflPNCLZ1f7GSRrKBfo672KfQSxjQeEArXBtN3C/hZADDHcgCq6T6HRDLnKni/o2DMjH0zvkAit8325h2GWEguBMvpfd/O0Z0IdZxqtB/CyKP+yChdfRQipA61S2efXpYLzHxeNBts+/bkZ7V2dMJf8OHWYfpNkcEXrBDC9WmTTg3ZIFjTNUV6SoIfaHHXa3CgxAWikAeJYOa73b9gAjlLOikWACnqbGIYQLU2aKZJv56dv5S9RLZ/34CzMQXGUOxaInBbxcTyCpl3CgsoBoBMAOeAed+/ZfwEqV8zznBn7io3v1GnWNBmjQ0GkLGnjCDAID/IVKVO5qxWQVho=",
+        salt: "GYTB2wuuVsN/KK+PN9wmNw==",
+        iv: "S+xW7GVDz637KiHh",
+        data: "tydtF6mtaUvbvw6lFK6PkSw3l3wQeq+3mDcyy9psEYUwKhRWP7GiveGpagTk93pMXENW9o+S5vLhR4eoTF6qJdZWYINyqBdspAqg/g5c0fW3Zq36kLpqN+cxoPyiI4FWiPZA5ouplEqMmKEapJeAJ2sMrMsa8sQFpOSOXlN199Ai84JNAall6HIbN+4dbK6PWAjmWI0PX7JNdXaJE9Es+oglurn8kuTx6w+ulzbUM9O8Ejl9rBIPNk4GlN6w++TI4XlE0aDWbLUNjj+iXSEbFjr4N8XPkgLdNl2gsuxtWewQTkWZkhegD6+Ce2yq9YpzOHG8Tdmo2+Y0S5+TkVhWAUqxQ9U3vrJnuDSfnWKUf+LQzq9/A7RMHl+nNHBWkUQJ5YFAGkbg3xJrCK9YnKBFoCiYdZ9a01Zf9fxR2zIFlkdJtH9F7i3uo3x4mtbeQcUQyx5IMMVqCzI4JM4bpEEgfG8IiygF1tOmMo/ByuV+lZtciiwVrV6CHTOaINd5yKmNn8Ot5n2CnJwKWc4lmHSr1zjfygMDOqNjeYi9VGCwVpGd0rNJqEwnoUdGilcRpF5JHUBfDn52bPQa5RWPOZhNMWiYr393ciEO0a4jyVB0gq/+vlfyV9uY71adGI/XlcXaU4K1L8lJw80WxmliF7TnqU99sFLrzkmreYl8TtQwRMoFFRjTrQKxrsWKw2R4mSsrwg+boIsN+JuZzxZkmIVhztr2YAmM1gU+cT4I35XKoc7cY5b2wwMrFvZWrrnRqSOxnQiNZzvvZuXWZ98163TPPBhMM5kCnF4xFbRSpcTfFh07mFDtpSRrg60whiI+nrDBoKQ5/ONf",
       },
     },
   ],
