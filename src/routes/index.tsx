@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   BriefcaseMedical,
   CalendarDays,
+  FileText,
   HeartPulse,
   Stethoscope,
   ClipboardList,
@@ -43,6 +44,33 @@ function Home() {
           ))}
         </div>
         <Note>If it is not your colour, do not reach in.</Note>
+        <Panel>
+          <div className="px-3.5 py-3.5">
+            <SectionLabel>PRINTABLE HKL CARDS (PDF)</SectionLabel>
+            <p className="mt-2 text-xs leading-snug text-muted">
+              Updated to FIFA: Blue takes over compressions at 2 min; White = spinal board ± basket.
+            </p>
+            <ul className="mt-2 flex flex-col divide-y divide-line">
+              {[
+                ["Colour role cards (A4, 10 cards)", "/docs/HKL-SCA-Colour-Role-Cards-2026.pdf"],
+                ["Pictorial participant card (2 pages)", "/docs/HKL-SCA-Pictorial-Participant-Card-2026.pdf"],
+                ["On-field colour reference (2 pages)", "/docs/HKL-SCA-OnField-Colour-Reference-2026.pdf"],
+              ].map(([t, h]) => (
+                <li key={h}>
+                  <a
+                    href={asset(h)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex min-h-11 items-center gap-2.5 py-2 text-sm leading-snug text-navy"
+                  >
+                    <FileText className="size-4 shrink-0 text-gold" />
+                    {t}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </Panel>
         <HeroPhoto
           src={asset("/img/stations/positions-aerial-v2.jpg")}
           alt="Team positions around the collapsed player: Orange and Green at the head, Red chest, Blue right hip, White right leg, Black left flank, four Yellow First Aiders at the feet"
