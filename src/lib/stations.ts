@@ -88,7 +88,7 @@ export const stations: Station[] = [
               {
                 title: "E — Equipment",
                 sub: "Is everything ready?",
-                lines: ["Emergency care bag", "AED + pads", "Oxygen + BVM", "Scoop / basket + straps"],
+                lines: ["Emergency care bag", "AED + pads", "Oxygen + BVM", "Scoop / spinal board / basket + straps"],
               },
             ],
           },
@@ -112,11 +112,11 @@ export const stations: Station[] = [
             kind: "table",
             head: ["Role", "Position", "Main responsibility"],
             rows: [
-              ["Team Leader (Black)", "2–3 m away; full view", "Hands off. Overall command, CPR/AED flow, extrication, ambulance/referee liaison."],
-              ["M1 Head (Orange)", "At head", "MILS, airway alignment; commands all movement counts."],
+              ["Team Leader (Black)", "Left flank, 2–3 m back; full view", "Hands off. Overall command, CPR/AED flow, calls the lift for extrication, ambulance/referee liaison."],
+              ["M1 Head (Orange)", "At head", "MILS, airway alignment; commands the log-roll / tilt count."],
               ["M2 Chest (Red)", "Right chest", "ABCDE, continuous CPR 100–120/min, full recoil."],
               ["M3 Oxygen (Blue)", "Right hip", "O2 15 L/min; takes PELVIS in log-roll; oxygen OFF for shocks."],
-              ["M4 Legs/Basket (White)", "Right leg", "Scoop/basket stretcher, splints; takes LEGS in log-roll."],
+              ["M4 Legs / Extrication (White)", "Right leg", "Extrication kit (trauma: scoop + basket; arrest: spinal board ± basket), splints; takes LEGS in log-roll."],
               ["M5 Equipment (Green)", "Left head/shoulder", "AED, emergency bag, equipment to M2; CLEAR + oxygen off before shock; relieves compressions at 2 min."],
             ],
           },
@@ -139,7 +139,7 @@ export const stations: Station[] = [
             kind: "defs",
             items: [
               { term: "Equipment zone", text: "AED + O2 + emergency care bag at the player's head / left side." },
-              { term: "Extrication zone", text: "Scoop and basket aligned at the feet, initially kept back until required." },
+              { term: "Extrication zone", text: "Extrication kit (scoop or spinal board, basket) aligned at the feet, initially kept back until required." },
               { term: "Team Leader", text: "Remain 2–3 m away with a full view. Keep the working area clean and uncluttered." },
             ],
           },
@@ -185,9 +185,9 @@ export const stations: Station[] = [
             kind: "defs",
             items: [
               { term: "Before match", text: "M-CRE: Meet – Call – Position – Check" },
-              { term: "Non-contact collapse", text: "SCA → CPR → AED. AED within 30 sec." },
+              { term: "Non-contact collapse", text: "SCA → CPR → AED. AED within 30 sec. Spinal board ± basket; Black calls the lift." },
               { term: "Leadership", text: "Hands off – eyes up. Command and confirm." },
-              { term: "Extrication", text: "M1 commands. Tilt – Scoop – Strap – Basket." },
+              { term: "Extrication (trauma)", text: "M1 commands. Tilt – Scoop – Strap – Basket." },
             ],
           },
         ],
@@ -440,7 +440,7 @@ export const stations: Station[] = [
           {
             kind: "list",
             items: [
-              "Scoop stretcher (preferred over a spinal / long board where affordable)",
+              "Scoop stretcher (preferred over a spinal / long board for trauma, where affordable)",
               "Spider straps or clip-on straps · head huggers / restraints",
               "Basket stretcher — carrying a scoop or board is far safer inside a basket",
               "Splints (vacuum or individual)",
@@ -728,7 +728,7 @@ export const stations: Station[] = [
           {
             kind: "alert",
             title: "Follows the HKL SCA Colour Role Cards",
-            text: "Orange (the head) controls the log roll. White + Yellow First Aiders slide in the spinal board; player + spinal board + AED move as one strapped unit (± basket for the carry). Green takes over compressions at 2 minutes. Carry ≤ 10 seconds on Black's “LIFT”, then board down and at least 2 minutes of compressions.",
+            text: "First shock before the board. Then Orange (the head) controls the log roll; White + Yellow First Aiders slide in the spinal board; player + spinal board + AED move as one strapped unit (± basket for the carry). Green takes over compressions at 2 minutes. Carry ≤ 10 seconds on Black's “LIFT”, then board down and at least 2 minutes of compressions.",
           },
         ],
       },
@@ -1041,7 +1041,7 @@ export const stations: Station[] = [
                 lines: [
                   "Approach safely; primary survey.",
                   "Initiate MILS. Do not let the player sit or stand unnecessarily.",
-                  "If the spine cannot be cleared: spinal motion restriction and controlled extrication.",
+                  "If the spine cannot be cleared: spinal motion restriction and controlled extrication (scoop stretcher + basket).",
                   "Repeat ABC and neurological reassessment.",
                 ],
               },
@@ -1051,7 +1051,7 @@ export const stations: Station[] = [
                 lines: [
                   "Primary survey; control bleeding.",
                   "Check CSM, support and splint, recheck CSM.",
-                  "Appropriate stretcher for removal from the pitch.",
+                  "Scoop stretcher + basket for removal from the pitch.",
                 ],
               },
               {

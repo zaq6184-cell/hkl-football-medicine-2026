@@ -11,9 +11,9 @@ function Drill() {
     <AppShell tab="drill">
       <div className="flex flex-col gap-3.5">
         <HeroPhoto
-          src={asset("/img/flow.jpg")}
+          src={asset("/img/drill-sequence.jpg")}
           alt="Six-step pictorial sequence of the on-field SCA drill"
-          caption="Drill sequence: assess · airway + O2 + AED · spinal board · shock · 10-second dash · continue. Call your line out loud."
+          caption="Drill sequence: assess · airway + O2 + AED · first shock · spinal board · 10-second dash · continue. Call your line out loud."
           contain
         />
         <Panel>
@@ -57,8 +57,8 @@ function Drill() {
         </Panel>
         <SectionLabel>SEQUENCE</SectionLabel>
         <p className="text-xs leading-snug text-muted">
-          Assess → airway + O2 + AED → spinal board → shock → 10-second dash → continue. Follows the
-          HKL SCA Colour Role Cards, with the spinal-board carry.
+          Assess → airway + O2 + AED → first shock → spinal board → shock + 10-second dash → continue.
+          HKL colour roles, spinal-board carry, first shock before the board.
         </p>
         <Link to="/guides" className="block active:scale-[0.99]">
           <Panel>

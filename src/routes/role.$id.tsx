@@ -75,7 +75,7 @@ function RoleCard() {
               If it is not your colour, do not reach in.
             </p>
             <Note>
-              <span className="font-semibold text-navy">FIFA PEAP: </span>
+              <span className="font-semibold text-navy">FIFA: </span>
               {r.fifa}
             </Note>
           </div>

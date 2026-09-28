@@ -9,7 +9,7 @@ export function FifaVideoList() {
       <SectionLabel>FIFA / UEFA GUIDELINE FILMS</SectionLabel>
       <p className="text-sm leading-snug text-muted">
         Official films from FIFA, UEFA Medical and U.S. Soccer. Tap play — needs a connection. Roles
-        and timings in this app follow the FIFA Emergency Care Manual.
+        follow the HKL colour role cards; timings follow the FIFA Emergency Care Manual.
       </p>
       {fifaClips.map((clip) => (
         <FifaClipCard key={clip.youtubeId} clip={clip} />
