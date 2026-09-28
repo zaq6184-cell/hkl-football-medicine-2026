@@ -11,7 +11,7 @@ function Drill() {
     <AppShell tab="drill">
       <div className="flex flex-col gap-3.5">
         <HeroPhoto
-          src={asset("/img/drill-sequence-v3.jpg")}
+          src={asset("/img/drill-sequence-v4.jpg")}
           alt="Six-step pictorial sequence of the on-field SCA drill"
           caption="Drill sequence: assess · airway + O2 + AED · first shock · spinal board · 10-second dash · continue. Call your line out loud."
           contain
