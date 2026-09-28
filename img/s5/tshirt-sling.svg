@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" font-family="Arial, Helvetica, sans-serif">
+  <title>Improvised T-shirt arm sling: the lower front of the player's shirt is folded up over the injured forearm and secured at the collar</title>
+  <rect width="640" height="400" fill="#f4f1ea"/>
+
+  <!-- Panel 1: before -->
+  <g transform="translate(20,20)">
+    <text x="130" y="22" text-anchor="middle" font-size="17" font-weight="700" fill="#0b1f3a">1 · Support the arm</text>
+    <!-- head + neck -->
+    <circle cx="130" cy="70" r="26" fill="#e8c4a0" stroke="#5b4636" stroke-width="2"/>
+    <rect x="120" y="92" width="20" height="16" fill="#e8c4a0" stroke="#5b4636" stroke-width="2"/>
+    <!-- shirt -->
+    <path d="M70 110 L110 102 Q130 116 150 102 L190 110 L214 170 L192 180 L186 160 L186 330 L74 330 L74 160 L68 180 L46 170 Z" fill="#ffffff" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M110 102 Q130 122 150 102" fill="none" stroke="#0b1f3a" stroke-width="4"/>
+    <!-- uninjured arm hanging -->
+    <path d="M194 178 L204 260 Q206 272 196 274 L188 272 Q182 262 184 250 L180 184" fill="#e8c4a0" stroke="#5b4636" stroke-width="2"/>
+    <!-- injured arm across chest, supported by other hand -->
+    <path d="M60 176 L64 236 Q66 248 78 246 L168 222 Q180 218 176 206 Q172 196 160 200 L86 214 L84 178" fill="#e8c4a0" stroke="#5b4636" stroke-width="2"/>
+    <ellipse cx="170" cy="210" rx="12" ry="9" fill="#e8c4a0" stroke="#5b4636" stroke-width="2"/>
+    <!-- fold arrow from hem -->
+    <path d="M100 328 Q60 300 80 262" fill="none" stroke="#c0392b" stroke-width="3" stroke-dasharray="7 5"/>
+    <path d="M72 272 L80 258 L90 270" fill="none" stroke="#c0392b" stroke-width="3" stroke-linejoin="round"/>
+    <text x="130" y="360" text-anchor="middle" font-size="13" fill="#1b1b1b">Forearm across the chest,</text>
+    <text x="130" y="377" text-anchor="middle" font-size="13" fill="#1b1b1b">hand slightly raised</text>
+  </g>
+
+  <!-- arrow between panels -->
+  <path d="M300 200 L336 200" stroke="#c9a227" stroke-width="5"/>
+  <path d="M330 188 L344 200 L330 212" fill="none" stroke="#c9a227" stroke-width="5" stroke-linejoin="round"/>
+
+  <!-- Panel 2: after -->
+  <g transform="translate(360,20)">
+    <text x="130" y="22" text-anchor="middle" font-size="17" font-weight="700" fill="#0b1f3a">2 · Fold up and secure</text>
+    <circle cx="130" cy="70" r="26" fill="#e8c4a0" stroke="#5b4636" stroke-width="2"/>
+    <rect x="120" y="92" width="20" height="16" fill="#e8c4a0" stroke="#5b4636" stroke-width="2"/>
+    <rect x="80" y="250" width="100" height="80" rx="6" fill="#e8c4a0" stroke="#5b4636" stroke-width="2"/>
+    <path d="M70 110 L110 102 Q130 116 150 102 L190 110 L214 170 L192 180 L186 160 L186 262 L74 262 L74 160 L68 180 L46 170 Z" fill="#ffffff" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M110 102 Q130 122 150 102" fill="none" stroke="#0b1f3a" stroke-width="4"/>
+    <path d="M194 178 L204 260 Q206 272 196 274 L188 272 Q182 262 184 250 L180 184" fill="#e8c4a0" stroke="#5b4636" stroke-width="2"/>
+    <!-- arm cradled -->
+    <path d="M60 176 L64 236 Q66 248 78 246 L168 222 Q180 218 176 206 Q172 196 160 200 L86 214 L84 178" fill="#e8c4a0" stroke="#5b4636" stroke-width="2"/>
+    <ellipse cx="170" cy="210" rx="12" ry="9" fill="#e8c4a0" stroke="#5b4636" stroke-width="2"/>
+    <!-- folded hem pocket over forearm -->
+    <path d="M58 236 Q120 262 186 214 L186 250 Q120 290 60 262 Z" fill="#eef3f8" stroke="#0b1f3a" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M60 262 Q120 290 186 250" fill="none" stroke="#1f6aa5" stroke-width="3"/>
+    <!-- hem pinned to collar -->
+    <path d="M178 216 Q170 150 148 108" fill="none" stroke="#1f6aa5" stroke-width="3" stroke-dasharray="6 4"/>
+    <circle cx="148" cy="108" r="6" fill="#c9a227" stroke="#0b1f3a" stroke-width="2"/>
+    <text x="210" y="112" font-size="12" fill="#0b1f3a">tie / pin</text>
+    <text x="210" y="126" font-size="12" fill="#0b1f3a">at collar</text>
+    <text x="130" y="360" text-anchor="middle" font-size="13" fill="#1b1b1b">Hem folded over the forearm;</text>
+    <text x="130" y="377" text-anchor="middle" font-size="13" fill="#1b1b1b">fingers visible for CSM checks</text>
+  </g>
+</svg>
