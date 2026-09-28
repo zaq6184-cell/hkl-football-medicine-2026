@@ -74,6 +74,21 @@ function FifaScaPage() {
           </Link>
         </Section>
 
+        <Section title="FIFA INFOGRAPHICS">
+          <p className="text-xs leading-snug text-muted">Tap a picture to open it full size and zoom in.</p>
+          <div className="flex flex-col gap-3">
+            {fifaSca.infographics.map((g) => (
+              <a key={g.src} href={g.src} target="_blank" rel="noopener noreferrer" className="block overflow-hidden rounded-lg border border-line bg-white active:scale-[0.99]">
+                <img src={g.src} alt={g.title} loading="lazy" className="block max-h-96 w-full object-contain" />
+                <span className="block border-t border-line px-3 py-2">
+                  <span className="block text-sm font-semibold text-navy">{g.title}</span>
+                  <span className="block text-xs leading-snug text-muted">{g.note}</span>
+                </span>
+              </a>
+            ))}
+          </div>
+        </Section>
+
         <Section title="FIFA VIDEOS">
           <p className="text-xs leading-snug text-muted">
             These play on FIFA's website (they can't be embedded). Scroll down FIFA's page to the video.
@@ -158,7 +173,7 @@ function FifaScaPage() {
           <a href={FIFA_SCA_URL} target="_blank" rel="noopener noreferrer" className="underline">
             FIFA's Sudden cardiac arrest page
           </a>
-          . Videos, images and documents remain © FIFA and open on FIFA's website.
+          . Infographics, videos and documents © FIFA, shown for workshop education; originals on FIFA's website.
         </Note>
       </div>
     </AppShell>

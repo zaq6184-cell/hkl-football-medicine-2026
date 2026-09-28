@@ -3,6 +3,8 @@
  * plus links to FIFA's own videos and downloads. FIFA's videos and images are
  * FIFA / Getty copyright, so they are linked, not copied.
  */
+import { asset } from "@/lib/asset";
+
 export const FIFA_SCA_URL =
   "https://inside.fifa.com/health-and-medical/education-awareness/sudden-cardiac-arrest";
 
@@ -56,6 +58,14 @@ export const fifaSca = {
     "Cardiac screening is mandatory before FIFA competitions: medical history, examination and an ECG, with further tests if needed.",
     "Youth players: start at about 12 years and repeat every 2–4 years — personal and family history, focused examination and a resting 12-lead ECG.",
     "No screening programme gives complete protection: early CPR, a prompt AED and an emergency plan give the best chance of survival.",
+  ],
+  infographics: [
+    { src: asset("/img/fifa/how-to-help.jpg"), title: "Sudden cardiac arrest – how to help", note: "Signs, the 6 emergency steps, act fast and prevention." },
+    { src: asset("/img/fifa/managing-sca.jpg"), title: "Managing sudden cardiac arrest", note: "Collapse → check → call + AED → compressions → apply AED." },
+    { src: asset("/img/fifa/set-piece.jpg"), title: "FIFA Medical Set-Piece protocol for SCA", note: "Colour-coded algorithm for each PEAP role." },
+    { src: asset("/img/fifa/peap.jpg"), title: "FIFA Pre-Match Emergency Action Plan (PEAP)", note: "Fill in before every match: contacts, roles, positions." },
+    { src: asset("/img/fifa/youth-screening.jpg"), title: "Cardiac screening in youth players", note: "From 12 years, repeat every 2–4 years." },
+    { src: asset("/img/fifa/heart-heroes.jpg"), title: "Heart Heroes United", note: "FIFA animated series: CPR and AED for children." },
   ],
   videos: [
     {
