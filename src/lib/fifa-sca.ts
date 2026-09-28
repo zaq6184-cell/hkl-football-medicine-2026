@@ -67,20 +67,6 @@ export const fifaSca = {
     { src: asset("/img/fifa/youth-screening.jpg"), title: "Cardiac screening in youth players", note: "From 12 years, repeat every 2–4 years." },
     { src: asset("/img/fifa/heart-heroes.jpg"), title: "Heart Heroes United", note: "FIFA animated series: CPR and AED for children." },
   ],
-  videos: [
-    {
-      title: "Sudden cardiac arrest",
-      duration: "3:41",
-      text: "FIFA's film on recognising SCA and the Medical Set Piece response.",
-      href: FIFA_SCA_URL,
-    },
-    {
-      title: "FIFA Medical – post workshop",
-      duration: "1:51",
-      text: "Highlights from a FIFA emergency-medicine workshop.",
-      href: FIFA_SCA_URL,
-    },
-  ],
   downloads: [
     {
       title: "Sudden cardiac arrest – how to help",

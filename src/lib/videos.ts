@@ -2,6 +2,10 @@ import { asset } from "@/lib/asset";
 
 export type FifaClip = {
   youtubeId: string;
+  /** Full embed URL for non-YouTube players (FIFA uses Uplynk). */
+  embed?: string;
+  /** Page to open outside the app when the clip is not on YouTube. */
+  watchUrl?: string;
   title: string;
   source: string;
   duration: string;
@@ -9,7 +13,33 @@ export type FifaClip = {
   why: string;
 };
 
+export const FIFA_SCA_PAGE = "https://inside.fifa.com/health-and-medical/education-awareness/sudden-cardiac-arrest";
+
+export const fifaOwnClips: FifaClip[] = [
+  {
+    youtubeId: "fifa-sca",
+    embed: "https://content.uplynk.com/player/7kQGMRbuIM4KrRhEROo58lea.html",
+    watchUrl: FIFA_SCA_PAGE,
+    title: "Sudden Cardiac Arrest — FIFA Medical Set Piece",
+    source: "FIFA Medical",
+    duration: "3:41",
+    poster: asset("/img/fifa/video-sca.jpg"),
+    why: "FIFA's own film of the colour-coded Medical Set Piece: recognition, CPR, AED, airway and the role of each team member on the pitch.",
+  },
+  {
+    youtubeId: "fifa-workshop",
+    embed: "https://content.uplynk.com/player/6vHDnO4q7DNQzCZCvwp9oCea.html",
+    watchUrl: FIFA_SCA_PAGE,
+    title: "FIFA Medical — post workshop",
+    source: "FIFA Medical",
+    duration: "1:51",
+    poster: asset("/img/fifa/video-workshop.jpg"),
+    why: "Why FIFA trains medical teams in pitchside emergency care — player health as the top priority.",
+  },
+];
+
 export const fifaClips: FifaClip[] = [
+  ...fifaOwnClips,
   {
     youtubeId: "j-ZLHeQXFi8",
     title: "Heart Heroes United",

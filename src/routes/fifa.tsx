@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ExternalLink, FileText, PlayCircle } from "lucide-react";
+import { FileText } from "lucide-react";
+import { FifaClipCard } from "@/components/fifa-video";
+import { fifaOwnClips } from "@/lib/videos";
 import { AppShell, Note, Panel, SectionLabel } from "@/components/workshop";
 import { FIFA_SCA_URL, fifaSca } from "@/lib/fifa-sca";
 
@@ -64,6 +66,21 @@ function FifaScaPage() {
           </div>
         </Section>
 
+        <Section title="FIFA VIDEOS">
+          <p className="text-xs leading-snug text-muted">FIFA's own films. Tap play — needs a connection.</p>
+          <div className="-mx-3.5 flex flex-col gap-3">
+            {fifaOwnClips.map((c) => (
+              <FifaClipCard key={c.youtubeId} clip={c} />
+            ))}
+          </div>
+          <Link
+            to="/guides"
+            className="inline-flex min-h-11 items-center font-display text-sm font-semibold tracking-wide text-gold"
+          >
+            More films: Heart Heroes United, CPR and airway skills →
+          </Link>
+        </Section>
+
         <Section title="EMERGENCY STEPS">
           <List items={fifaSca.steps} ordered />
           <Link
@@ -89,35 +106,6 @@ function FifaScaPage() {
           </div>
         </Section>
 
-        <Section title="FIFA VIDEOS">
-          <p className="text-xs leading-snug text-muted">
-            These play on FIFA's website (they can't be embedded). Scroll down FIFA's page to the video.
-          </p>
-          {fifaSca.videos.map((v) => (
-            <a
-              key={v.title}
-              href={v.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-3 rounded-lg bg-navy px-3 py-3 text-on-navy active:scale-[0.99]"
-            >
-              <PlayCircle className="size-8 shrink-0 text-gold" strokeWidth={1.8} />
-              <span className="min-w-0 flex-1">
-                <span className="block font-display text-sm font-semibold tracking-wide">
-                  {v.title} <span className="font-normal text-gold-soft">· {v.duration}</span>
-                </span>
-                <span className="block text-xs leading-snug text-gold-soft">{v.text}</span>
-              </span>
-              <ExternalLink className="size-4 shrink-0 text-gold" />
-            </a>
-          ))}
-          <Link
-            to="/guides"
-            className="inline-flex min-h-11 items-center font-display text-sm font-semibold tracking-wide text-gold"
-          >
-            More films that play in the app (incl. FIFA Heart Heroes United) →
-          </Link>
-        </Section>
 
         <Section title="WHAT CAUSES SCA">
           <List items={fifaSca.causes} />

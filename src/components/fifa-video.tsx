@@ -79,13 +79,15 @@ export function SkillVideoList() {
   );
 }
 
-function ClipPlayer({
+export function ClipPlayer({
   id,
+  embed,
   title,
   source,
   poster,
 }: {
   id: string;
+  embed?: string;
   title: string;
   source: string;
   poster?: string;
@@ -94,7 +96,7 @@ function ClipPlayer({
   return play ? (
     <div className="relative aspect-video bg-navy">
       <iframe
-        src={`https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`}
+        src={embed ?? `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`}
         title={`${title} — ${source}`}
         className="absolute inset-0 h-full w-full"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -121,10 +123,10 @@ function ClipPlayer({
   );
 }
 
-function FifaClipCard({ clip }: { clip: FifaClip }) {
+export function FifaClipCard({ clip }: { clip: FifaClip }) {
   return (
     <Panel>
-      <ClipPlayer id={clip.youtubeId} title={clip.title} source={clip.source} poster={clip.poster} />
+      <ClipPlayer id={clip.youtubeId} embed={clip.embed} title={clip.title} source={clip.source} poster={clip.poster} />
       <div className="px-3.5 py-3">
         <p className="font-display text-sm font-semibold tracking-wide text-navy">{clip.title}</p>
         <p className="mt-0.5 text-[11px] text-muted">
@@ -132,12 +134,12 @@ function FifaClipCard({ clip }: { clip: FifaClip }) {
         </p>
         <p className="mt-2 text-sm leading-snug">{clip.why}</p>
         <a
-          href={`https://www.youtube.com/watch?v=${clip.youtubeId}`}
+          href={clip.watchUrl ?? `https://www.youtube.com/watch?v=${clip.youtubeId}`}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-2 inline-flex min-h-11 items-center text-sm font-medium text-navy underline-offset-2 hover:underline"
         >
-          Watch on YouTube
+          {clip.watchUrl ? "Open on FIFA.com" : "Watch on YouTube"}
         </a>
       </div>
     </Panel>
