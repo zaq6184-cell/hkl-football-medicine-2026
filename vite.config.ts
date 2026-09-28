@@ -196,6 +196,7 @@ export default defineConfig(({ command, isPreview }) => ({
               { path: "/role/green" },
               { path: "/role/yellow" },
               { path: "/stations" },
+              { path: "/fifa" },
               { path: "/station/1" },
               { path: "/station/2" },
               { path: "/station/3" },

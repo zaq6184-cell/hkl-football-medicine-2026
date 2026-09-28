@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   BriefcaseMedical,
   CalendarDays,
+  HeartPulse,
   ClipboardList,
   PlayCircle,
 } from "lucide-react";
@@ -50,12 +51,13 @@ function Home() {
         <SectionLabel>WORKSHOP</SectionLabel>
         <div className="grid grid-cols-2 gap-2.5">
           {[
+            { to: "/fifa" as const, icon: HeartPulse, title: "FIFA: sudden cardiac arrest", sub: "Signs · emergency steps · videos · official downloads", wide: true },
             { to: "/stations" as const, icon: ClipboardList, title: "Skill stations", sub: "Stations 1–5 + simulation" },
             { to: "/event" as const, icon: CalendarDays, title: "Programme", sub: `${programme.datesLabel}` },
             { to: "/bag" as const, icon: BriefcaseMedical, title: "Emergency bag", sub: "FIFA packing list" },
             { to: "/guides" as const, icon: PlayCircle, title: "Films", sub: "SCA + airway skills" },
           ].map((t) => (
-            <Link key={t.to} to={t.to} className="block active:scale-[0.98]">
+            <Link key={t.to} to={t.to} className={`block active:scale-[0.98]${"wide" in t && t.wide ? " col-span-2" : ""}`}>
               <Panel className="h-full">
                 <div className="flex h-full flex-col gap-2 px-3 py-3">
                   <span className="grid size-9 place-items-center rounded-full bg-navy text-gold">

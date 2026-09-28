@@ -1,0 +1,166 @@
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { ExternalLink, FileText, PlayCircle } from "lucide-react";
+import { AppShell, Note, Panel, SectionLabel } from "@/components/workshop";
+import { FIFA_SCA_URL, fifaSca } from "@/lib/fifa-sca";
+
+export const Route = createFileRoute("/fifa")({ component: FifaScaPage });
+
+function List({ items, ordered }: { items: string[]; ordered?: boolean }) {
+  const cls = "flex flex-col gap-1.5 pl-5 text-sm leading-snug";
+  return ordered ? (
+    <ol className={`${cls} list-decimal marker:font-semibold marker:text-navy`}>
+      {items.map((t) => (
+        <li key={t}>{t}</li>
+      ))}
+    </ol>
+  ) : (
+    <ul className={`${cls} list-disc marker:text-gold`}>
+      {items.map((t) => (
+        <li key={t}>{t}</li>
+      ))}
+    </ul>
+  );
+}
+
+function Section({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <Panel>
+      <div className="flex flex-col gap-2.5 px-3.5 py-3.5">
+        <SectionLabel>{title}</SectionLabel>
+        {children}
+      </div>
+    </Panel>
+  );
+}
+
+function FifaScaPage() {
+  return (
+    <AppShell tab="home">
+      <div className="flex flex-col gap-3.5">
+        <Panel>
+          <div className="bg-navy px-3.5 py-3 text-on-navy">
+            <p className="font-display text-xs font-semibold tracking-[0.14em] text-gold">FIFA HEALTH & MEDICAL</p>
+            <h2 className="mt-0.5 font-display text-xl font-bold leading-tight">Sudden cardiac arrest</h2>
+            <p className="mt-1 text-sm text-gold-soft">Key points from FIFA's official page, with its videos and downloads.</p>
+          </div>
+          <div className="px-3.5 py-3">
+            <List items={fifaSca.what} />
+          </div>
+        </Panel>
+
+        <Section title="4 SIGNS OF SCA">
+          <div className="grid grid-cols-1 gap-2">
+            {fifaSca.signs.map((s, i) => (
+              <div key={s.title} className="flex gap-3 rounded-lg bg-cream px-3 py-2.5">
+                <span className="grid size-7 shrink-0 place-items-center rounded-full bg-danger font-display text-sm font-bold text-white">
+                  {i + 1}
+                </span>
+                <div>
+                  <p className="text-sm font-semibold text-navy">{s.title}</p>
+                  <p className="text-sm leading-snug">{s.text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        <Section title="EMERGENCY STEPS">
+          <List items={fifaSca.steps} ordered />
+          <Link
+            to="/drill"
+            className="inline-flex min-h-11 items-center font-display text-sm font-semibold tracking-wide text-gold"
+          >
+            See the workshop team drill →
+          </Link>
+        </Section>
+
+        <Section title="FIFA VIDEOS">
+          <p className="text-xs leading-snug text-muted">
+            These play on FIFA's website (they can't be embedded). Scroll down FIFA's page to the video.
+          </p>
+          {fifaSca.videos.map((v) => (
+            <a
+              key={v.title}
+              href={v.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 rounded-lg bg-navy px-3 py-3 text-on-navy active:scale-[0.99]"
+            >
+              <PlayCircle className="size-8 shrink-0 text-gold" strokeWidth={1.8} />
+              <span className="min-w-0 flex-1">
+                <span className="block font-display text-sm font-semibold tracking-wide">
+                  {v.title} <span className="font-normal text-gold-soft">· {v.duration}</span>
+                </span>
+                <span className="block text-xs leading-snug text-gold-soft">{v.text}</span>
+              </span>
+              <ExternalLink className="size-4 shrink-0 text-gold" />
+            </a>
+          ))}
+          <Link
+            to="/guides"
+            className="inline-flex min-h-11 items-center font-display text-sm font-semibold tracking-wide text-gold"
+          >
+            More films that play in the app (incl. FIFA Heart Heroes United) →
+          </Link>
+        </Section>
+
+        <Section title="WHAT CAUSES SCA">
+          <List items={fifaSca.causes} />
+        </Section>
+
+        <Section title="PREVENT AND PREPARE">
+          <List items={fifaSca.prevention} />
+          <div className="rounded-lg border-l-4 border-navy bg-note px-2.5 py-2 text-sm leading-snug">
+            <p className="font-semibold text-navy">FIFA Medical Set Piece</p>
+            <p>{fifaSca.setPiece}</p>
+          </div>
+        </Section>
+
+        <Section title="CARDIAC SCREENING">
+          <List items={fifaSca.screening} />
+        </Section>
+
+        <Section title="OFFICIAL FIFA DOWNLOADS">
+          <ul className="flex flex-col divide-y divide-line">
+            {fifaSca.downloads.map((d) => (
+              <li key={d.href}>
+                <a
+                  href={d.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex min-h-11 items-center gap-2.5 py-2 text-sm leading-snug text-navy"
+                >
+                  <FileText className="size-4 shrink-0 text-gold" />
+                  <span className="flex-1">{d.title}</span>
+                  <span className="shrink-0 rounded-full bg-cream px-2 py-0.5 font-display text-[10px] font-semibold tracking-wide text-muted">
+                    {d.kind}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p className="font-display text-[11px] font-semibold tracking-[0.12em] text-navy">READ MORE</p>
+          {fifaSca.reading.map((r) => (
+            <a
+              key={r.href}
+              href={r.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm leading-snug text-navy underline underline-offset-2"
+            >
+              {r.title}
+            </a>
+          ))}
+        </Section>
+
+        <Note>
+          Summary of{" "}
+          <a href={FIFA_SCA_URL} target="_blank" rel="noopener noreferrer" className="underline">
+            FIFA's Sudden cardiac arrest page
+          </a>
+          . Videos, images and documents remain © FIFA and open on FIFA's website.
+        </Note>
+      </div>
+    </AppShell>
+  );
+}

@@ -13,6 +13,7 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as BagRouteImport } from './routes/bag'
 import { Route as DrillRouteImport } from './routes/drill'
 import { Route as EventRouteImport } from './routes/event'
+import { Route as FifaRouteImport } from './routes/fifa'
 import { Route as GuidesRouteImport } from './routes/guides'
 import { Route as RulesRouteImport } from './routes/rules'
 import { Route as StationsRouteImport } from './routes/stations'
@@ -39,6 +40,11 @@ const DrillRoute = DrillRouteImport.update({
 const EventRoute = EventRouteImport.update({
   id: '/event',
   path: '/event',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FifaRoute = FifaRouteImport.update({
+  id: '/fifa',
+  path: '/fifa',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GuidesRoute = GuidesRouteImport.update({
@@ -82,6 +88,7 @@ export interface FileRoutesByFullPath {
   '/bag': typeof BagRoute
   '/drill': typeof DrillRoute
   '/event': typeof EventRoute
+  '/fifa': typeof FifaRoute
   '/guides': typeof GuidesRoute
   '/rules': typeof RulesRoute
   '/stations': typeof StationsRoute
@@ -95,6 +102,7 @@ export interface FileRoutesByTo {
   '/bag': typeof BagRoute
   '/drill': typeof DrillRoute
   '/event': typeof EventRoute
+  '/fifa': typeof FifaRoute
   '/guides': typeof GuidesRoute
   '/rules': typeof RulesRoute
   '/stations': typeof StationsRoute
@@ -109,6 +117,7 @@ export interface FileRoutesById {
   '/bag': typeof BagRoute
   '/drill': typeof DrillRoute
   '/event': typeof EventRoute
+  '/fifa': typeof FifaRoute
   '/guides': typeof GuidesRoute
   '/rules': typeof RulesRoute
   '/stations': typeof StationsRoute
@@ -124,6 +133,7 @@ export interface FileRouteTypes {
     | '/bag'
     | '/drill'
     | '/event'
+    | '/fifa'
     | '/guides'
     | '/rules'
     | '/stations'
@@ -137,6 +147,7 @@ export interface FileRouteTypes {
     | '/bag'
     | '/drill'
     | '/event'
+    | '/fifa'
     | '/guides'
     | '/rules'
     | '/stations'
@@ -150,6 +161,7 @@ export interface FileRouteTypes {
     | '/bag'
     | '/drill'
     | '/event'
+    | '/fifa'
     | '/guides'
     | '/rules'
     | '/stations'
@@ -164,6 +176,7 @@ export interface RootRouteChildren {
   BagRoute: typeof BagRoute
   DrillRoute: typeof DrillRoute
   EventRoute: typeof EventRoute
+  FifaRoute: typeof FifaRoute
   GuidesRoute: typeof GuidesRoute
   RulesRoute: typeof RulesRoute
   StationsRoute: typeof StationsRoute
@@ -201,6 +214,13 @@ declare module '@tanstack/react-router' {
       path: '/event'
       fullPath: '/event'
       preLoaderRoute: typeof EventRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fifa': {
+      id: '/fifa'
+      path: '/fifa'
+      fullPath: '/fifa'
+      preLoaderRoute: typeof FifaRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/guides': {
@@ -260,6 +280,7 @@ const rootRouteChildren: RootRouteChildren = {
   BagRoute: BagRoute,
   DrillRoute: DrillRoute,
   EventRoute: EventRoute,
+  FifaRoute: FifaRoute,
   GuidesRoute: GuidesRoute,
   RulesRoute: RulesRoute,
   StationsRoute: StationsRoute,
