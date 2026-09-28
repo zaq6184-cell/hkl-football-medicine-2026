@@ -398,14 +398,14 @@ export const parking = [
     name: "HKL Orthopaedic Clinic parking",
     hint: "Klinik Ortopedik — short walk across the campus.",
     photo: asset("/img/event/venue/ortho.jpg"),
-    maps: "https://maps.app.goo.gl/8zC1Z7EvZWt422ce7",
+    maps: "https://www.google.com/maps/search/?api=1&query=Klinik+Ortopedik+Hospital+Kuala+Lumpur",
   },
   {
     id: "takraw",
     name: "Akademi Sepak Takraw Malaysia carpark",
     hint: "Overflow lot beside the sepak takraw hall.",
     photo: asset("/img/event/venue/takraw.jpg"),
-    maps: "https://maps.app.goo.gl/FD2RM9DuqCYJhwjn8",
+    maps: "https://www.google.com/maps/search/?api=1&query=Akademi+Sepak+Takraw+Malaysia+Kuala+Lumpur",
   },
 ];
 
