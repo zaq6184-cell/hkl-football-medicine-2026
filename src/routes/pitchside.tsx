@@ -109,6 +109,33 @@ function PitchsidePage() {
           </p>
         </Section>
 
+        <Section title="PROTOCOLS FOR ON-FIELD INTERVENTIONS">
+          <p className="text-xs leading-snug text-muted">FIFA Medical Set Piece booklet, version 3 (March 2025) — used at FIFA World Cups.</p>
+          <ul className="flex list-disc flex-col gap-1.5 pl-5 text-sm leading-snug marker:text-gold">
+            <li><b>Team:</b> 8–9 members — one emergency physician plus paramedics / health professionals, trained in the set piece by the FIFA Match Doctor 5–7 days before the first match.</li>
+            <li><b>Matchday:</b> present and kit checked by kick-off −2 h; moulages between −2 h and −1 h; always present at half-time and cool-down.</li>
+            <li><b>Entering the pitch:</b> only on the referee's stretcher signal — except a non-contact collapse, when the team runs on at once.</li>
+            <li><b>Ready position:</b> move along the touchline level with the incident and squat with the stretcher.</li>
+            <li><b>Kit:</b> two identical sets — basket, scoop or spine board, head blocks, collar, straps; AED; oxygen; splints.</li>
+            <li><b>SCA:</b> survival falls by up to 10% per minute; after the 3rd shock and drugs the team leader decides when to extricate, ideally with a mechanical CPR device.</li>
+            <li><b>Neck injury:</b> collar → log roll → straps (centre strap on the sternum) → head blocks → tape → release MILS → basket, 6 people.</li>
+            <li><b>Extremity fracture:</b> full A–E first; hands above and below; analgesia; clean and dress wounds; splint and recheck.</li>
+          </ul>
+          <div className="grid grid-cols-2 gap-2">
+            {["ready-position", "extrication-setup", "access-rules", "carry-photo"].map((f) => (
+              <a key={f} href={asset(`/img/fifa/onfield/${f}.jpg`)} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={asset(`/img/fifa/onfield/${f}.jpg`)}
+                  alt={f.replace("-", " ")}
+                  loading="lazy"
+                  className="aspect-[3/4] w-full rounded-lg border border-line bg-white object-cover object-top"
+                />
+              </a>
+            ))}
+          </div>
+          <p className="text-xs leading-snug text-muted">Details are in Stations 1, 3, 4 and 5.</p>
+        </Section>
+
         <Section title="FIFA POSTERS AND FACTSHEETS">
           <p className="text-xs leading-snug text-muted">Tap a picture to open it full size and zoom in.</p>
           <div className="flex flex-col gap-3">

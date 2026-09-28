@@ -137,6 +137,84 @@ export const stations: Station[] = [
         ],
       },
       {
+        title: "Entering the pitch (FIFA rules)",
+        blocks: [
+          {
+            kind: "list",
+            ordered: true,
+            items: [
+              "The referee assesses the incident.",
+              "If needed, the referee signals the team doctor onto the pitch.",
+              "Only then, if needed, the referee calls the field-of-play medical team — both hands held as if carrying a stretcher.",
+            ],
+          },
+          {
+            kind: "alert",
+            title: "Exception: non-contact collapse",
+            text: "A player who collapses without contact is treated as sudden cardiac arrest — the medical team runs on without waiting for the referee's signal.",
+          },
+          {
+            kind: "image",
+            src: asset("/img/fifa/onfield/access-rules.jpg"),
+            alt: "FIFA rules for accessing the pitch, with the referee's stretcher signal",
+            caption: "Referee's stretcher signal and the non-contact-collapse exception. FIFA Medical Set Piece — Protocols for on-field interventions (v3, March 2025). © FIFA",
+          },
+        ],
+      },
+      {
+        title: "Sideline position and ready position",
+        blocks: [
+          {
+            kind: "list",
+            items: [
+              "At FIFA matches the field-of-play team sits to the left of Team A's bench, with the extrication kit set up beside the bench.",
+              "The Match Doctor leads the team and may call it into the “ready” position.",
+              "Ready: move along the touchline to the point closest to the incident and squat in your assigned position with the stretcher.",
+              "Not needed: return to your seats, passing behind the team benches where possible.",
+            ],
+          },
+          {
+            kind: "image",
+            src: asset("/img/fifa/onfield/ready-position.jpg"),
+            alt: "Pitch diagram: move along the touchline to the level of the incident; team squatting in the ready position with the stretcher",
+            caption: "Move along the touchline to the level of the incident, then the ready position. FIFA Medical Set Piece — Protocols for on-field interventions (v3, March 2025). © FIFA",
+          },
+          {
+            kind: "image",
+            src: asset("/img/fifa/onfield/bench.jpg"),
+            alt: "Pitch diagram showing the medical team seated left of Team A's bench, with two basket stretchers in front",
+            caption: "Where the field-of-play medical team sits. FIFA Medical Set Piece — Protocols for on-field interventions (v3, March 2025). © FIFA",
+          },
+        ],
+      },
+      {
+        title: "Matchday principles",
+        blocks: [
+          {
+            kind: "defs",
+            items: [
+              { term: "Kick-off −2 h", text: "Team present, equipment checked; player medical centre staffed." },
+              { term: "−2 h to −1 h", text: "Moulages (simulations) of the most critical scenarios, led by the Match Doctor." },
+              { term: "Half-time · cool-down", text: "Medical team always present." },
+              { term: "Post-match", text: "Medical centre staff stay until the last player has left the stadium." },
+            ],
+          },
+          {
+            kind: "list",
+            items: [
+              "Everyone knows their PEAP colour, wears their bib and shows no team bias.",
+              "Equipment set up next to the bench; no phones, photos or food pitchside.",
+            ],
+          },
+          {
+            kind: "image",
+            src: asset("/img/fifa/onfield/timeline.jpg"),
+            alt: "FIFA matchday timeline for the medical team",
+            caption: "FIFA matchday timeline. FIFA Medical Set Piece — Protocols for on-field interventions (v3, March 2025). © FIFA",
+          },
+        ],
+      },
+      {
         title: "FIFA Skill Zone: sideline and set-up",
         blocks: [
           { kind: "text", text: "FIFA's own films of the first seconds of the set piece: where the team waits, how it enters, and how the kit is laid out around the player." },
@@ -186,6 +264,25 @@ export const stations: Station[] = [
           {
             kind: "text",
             text: "Trauma: scoop stretcher + basket. Cardiac arrest: spinal board ± basket. The scoop / basket set piece above is for trauma; for an arrest in progress, log-roll onto the spinal board (± basket for the carry) — see Station 4.",
+          },
+          {
+            kind: "list",
+            items: [
+              "FIFA team kit (two identical sets): basket stretcher, split scoop or spine board, head blocks, cervical collar, straps or spider; AED; oxygen bottle; splints; an emergency bag the team knows well.",
+              "Entering: Green carries the emergency bag; the others carry the basket with the scoop / board, head blocks, collar and straps inside.",
+            ],
+          },
+          {
+            kind: "image",
+            src: asset("/img/fifa/onfield/extrication-setup.jpg"),
+            alt: "FIFA extrication set-up: bag and oxygen at the head, board or scoop between player and basket, basket 2-3 lengths from the feet",
+            caption: "Extrication set-up: 1 bag + oxygen left of the head · 2 basket 2–3 lengths from the feet · 3 scoop / board laid out between them. FIFA Medical Set Piece — Protocols for on-field interventions (v3, March 2025). © FIFA",
+          },
+          {
+            kind: "image",
+            src: asset("/img/fifa/onfield/equipment.jpg"),
+            alt: "FIFA field-of-play medical team equipment laid out: basket stretcher with scoop, collar and straps",
+            caption: "FIFA field-of-play team equipment. FIFA Medical Set Piece — Protocols for on-field interventions (v3, March 2025). © FIFA",
           },
         ],
       },
@@ -711,6 +808,10 @@ export const stations: Station[] = [
               "Assess balance and gait when returning the player to standing, if appropriate.",
             ],
           },
+          {
+            kind: "text",
+            text: "FIFA “Hands On 1, 2, 3” for D: 1 observation = AVPU · 2 pupils (equal and reactive?) · 3 places — sensation and movement in the arms, upper legs and lower legs.",
+          },
         ],
       },
       {
@@ -808,6 +909,15 @@ export const stations: Station[] = [
           {
             kind: "text",
             text: "Good compressions and early defibrillation matter most — do not let ALS distract from them. Reversible causes on the pitch: hypoxia, hypovolaemia, hypo/hyperthermia, tension pneumothorax.",
+          },
+          {
+            kind: "alert",
+            title: "Every minute counts",
+            text: "For every minute without return of circulation, the chance of a good outcome falls by up to 10% (FIFA).",
+          },
+          {
+            kind: "text",
+            text: "FIFA on-field protocol: after the third shock and medications, the team leader decides when to extricate. Where available, apply a mechanical CPR device (e.g. LUCAS / AutoPulse) before extrication to keep interruptions to a minimum.",
           },
         ],
       },
@@ -956,6 +1066,18 @@ export const stations: Station[] = [
             kind: "text",
             text: "Trauma: scoop stretcher + basket. Cardiac arrest: spinal board ± basket. FIFA ECM: a scoop moves a trauma player only ~15° vs a 90° log roll; for cardiac arrest the rigid long board gives better compressions. A basket makes carrying a scoop or board safer.",
           },
+          {
+            kind: "list",
+            ordered: true,
+            items: [
+              "FIFA extrication order (suspected neck injury): size and fit the collar — check the mouth can still open.",
+              "Log roll onto the scoop or spine board (Orange leads).",
+              "Apply straps — the first, centre strap lined up with the sternum.",
+              "Apply head blocks and fix them to the board, then tape.",
+              "Only now can MILS be released.",
+              "Slide the basket under the scoop / board and extricate with 6 people if possible.",
+            ],
+          },
         ],
       },
       {
@@ -1060,6 +1182,27 @@ export const stations: Station[] = [
             ],
           },
           { kind: "remember", text: "CSM BEFORE → SPLINT → SECURE → CSM AFTER" },
+        ],
+      },
+      {
+        title: "Extremity fracture (FIFA protocol)",
+        blocks: [
+          {
+            kind: "text",
+            text: "Any extremity fracture is a distracting injury — always do the full primary survey (A–E) and clear or protect the cervical spine first.",
+          },
+          {
+            kind: "list",
+            ordered: true,
+            items: [
+              "Stabilise the limb: one hand above and one below the fracture.",
+              "Inspect: swelling, deformity, bruising, wound. Feel: tenderness, crepitus, pulses and sensation. Active, then passive movement.",
+              "Analgesia — FIFA suggests inhaled methoxyflurane where available.",
+              "Wounds: clean thoroughly, cover with saline-soaked swabs and dress.",
+              "Apply the splint, then recheck circulation and neurology.",
+              "Extricate — or, if there is no neck injury and the player can help, assist them into the basket stretcher.",
+            ],
+          },
         ],
       },
       {
