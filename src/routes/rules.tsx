@@ -26,7 +26,7 @@ function Rules() {
         </Panel>
         <Panel>
           <div className="flex flex-col gap-2 px-3.5 py-3.5">
-            <SectionLabel>WORKSHOP vs FIFA</SectionLabel>
+            <SectionLabel>FIFA KEY POINTS</SectionLabel>
             {workshop.fifaNotes.map((line) => (
               <p key={line} className="text-sm leading-snug">
                 {line}
