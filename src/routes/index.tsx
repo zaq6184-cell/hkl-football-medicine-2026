@@ -73,10 +73,11 @@ function Home() {
           </div>
         </Panel>
         <HeroPhoto
-          src={asset("/img/stations/positions-aerial-v2.jpg")}
-          alt="Team positions around the collapsed player: Orange and Green at the head, Red chest, Blue right hip, White right leg, Black left flank, four Yellow First Aiders at the feet"
-          caption="FIFA PEAP 2025 positions. Orange, Red, Blue and White on the player's RIGHT. Green at the head on the LEFT. Black on the LEFT flank. Yellow First Aiders at the FEET."
+          src={asset("/img/stations/positions-aerial-v3.jpg")}
+          alt="Team positions around the collapsed player: Orange and Green at the head, Red chest, Blue right hip, White right leg, Black left flank, four Yellow First Aiders at the feet; below the feet, in line with the player, the split scoop stretcher and then the basket stretcher"
+          caption="FIFA PEAP 2025 positions. Orange, Red, Blue and White on the player's RIGHT. Green at the head on the LEFT. Black on the LEFT flank. Yellow First Aiders at the FEET. Extrication kit below the feet, in line with the player (FIFA): split scoop, then the basket 2–3 lengths away (arrest: spinal board ± basket)."
           contain
+          tall
         />
         <SectionLabel>WORKSHOP</SectionLabel>
         <div className="grid grid-cols-2 gap-2.5">

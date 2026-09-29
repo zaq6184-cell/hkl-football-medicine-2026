@@ -169,11 +169,14 @@ export function HeroPhoto({
   alt,
   caption,
   contain,
+  tall,
 }: {
   src: string;
   alt: string;
   caption?: string;
   contain?: boolean;
+  /** Portrait image: allow more height so it is not shrunk to a thumbnail. */
+  tall?: boolean;
 }) {
   return (
     <figure className="overflow-hidden rounded-xl bg-paper shadow-card">
@@ -182,7 +185,8 @@ export function HeroPhoto({
         alt={alt}
         className={cn(
           "block w-full",
-          contain ? "max-h-80 bg-cream object-contain" : "max-h-80 object-cover object-center",
+          tall ? "max-h-[36rem]" : "max-h-80",
+          contain ? "bg-cream object-contain" : "object-cover object-center",
         )}
       />
       {caption ? (
