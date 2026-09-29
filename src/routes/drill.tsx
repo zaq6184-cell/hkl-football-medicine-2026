@@ -59,8 +59,8 @@ function Drill() {
         </Panel>
         <SectionLabel>SEQUENCE</SectionLabel>
         <p className="text-xs leading-snug text-muted">
-          Assess → airway + O2 + AED → first shock → spinal board → shock + 10-second dash → continue.
-          HKL colour roles, spinal-board carry, first shock before the board.
+          Assess → airway + O2 + AED → first shock → spinal board → 2nd shock → 3rd shock + 10-second dash → continue.
+          HKL colour roles, spinal-board carry, first shock before the board, first carry after the 3rd shock (earlier if ROSC).
         </p>
         <Link to="/guides" className="block active:scale-[0.99]">
           <Panel>

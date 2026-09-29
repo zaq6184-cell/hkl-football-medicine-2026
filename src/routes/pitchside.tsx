@@ -113,7 +113,7 @@ function PitchsidePage() {
             <li><b>Entering the pitch:</b> only on the referee's stretcher signal — except a non-contact collapse, when the team runs on at once.</li>
             <li><b>Ready position:</b> move along the touchline level with the incident and squat with the stretcher.</li>
             <li><b>Kit:</b> two identical sets — basket, scoop or spine board, head blocks, collar, straps; AED; oxygen; splints.</li>
-            <li><b>SCA:</b> survival falls by up to 10% per minute. At FIFA matches (ALS team) extrication is considered after the 3rd shock and drugs, ideally with a mechanical CPR device; the workshop drill practises the manual 10-second stop-and-start carry.</li>
+            <li><b>SCA:</b> survival falls by up to 10% per minute. At FIFA matches (ALS team) extrication is considered after the 3rd shock and drugs, ideally with a mechanical CPR device; the workshop uses the same timing (earlier if ROSC) with the manual 10-second stop-and-start carry.</li>
             <li><b>Neck injury:</b> collar → log roll onto the scoop → straps (centre strap on the sternum) → head blocks → tape → release MILS → basket, 6 people.</li>
             <li><b>Extremity fracture:</b> full A–E first; hands above and below; analgesia; clean and dress wounds; splint and recheck.</li>
           </ul>

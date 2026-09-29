@@ -125,9 +125,9 @@ export const stations: Station[] = [
               ["Team Leader (Black)", "Left flank, 2–3 m back; full view", "Hands off. Overall command, CPR/AED flow, calls the lift for extrication, ambulance/referee liaison."],
               ["M1 Head (Orange)", "At head", "MILS, airway alignment; commands the log-roll / tilt count."],
               ["M2 Chest (Red)", "Right chest", "ABCDE, continuous CPR 100–120/min, full recoil."],
-              ["M3 Oxygen (Blue)", "Right hip", "O2 15 L/min; takes PELVIS in log-roll; oxygen OFF for shocks; takes over compressions at 2 min."],
+              ["M3 Oxygen (Blue)", "Right hip", "O2 15 L/min; takes PELVIS in log-roll; takes over compressions at 2 min."],
               ["M4 Legs / Extrication (White)", "Right leg", "Extrication kit (trauma: scoop + basket; arrest: spinal board ± basket), splints; takes LEGS in log-roll."],
-              ["M5 Equipment (Green)", "Left head/shoulder", "AED, emergency bag, equipment to M2; CLEAR + oxygen off before shock; priority is timely, safe defibrillation."],
+              ["M5 Equipment (Green)", "Left head/shoulder", "AED, emergency bag, equipment to M2; CLEAR before shock; priority is timely, safe defibrillation."],
             ],
           },
           {
@@ -866,7 +866,7 @@ export const stations: Station[] = [
           {
             kind: "info",
             title: "Follows the HKL SCA Colour Role Cards",
-            text: "First shock before the board. Then Orange (the head) controls the log roll; White + Yellow First Aiders slide in the spinal board; player + spinal board + AED move as one strapped unit (± basket for the carry). Blue takes over compressions from Red at 2 minutes (FIFA role card). Carry ≤ 10 seconds on Black's “LIFT”, then board down and at least 2 minutes of compressions.",
+            text: "First shock before the board. Then Orange (the head) controls the log roll; White + Yellow First Aiders slide in the spinal board; player + spinal board + AED move as one strapped unit (± basket for the carry). Blue takes over compressions from Red at 2 minutes (FIFA role card). First carry only after the 3rd shock (earlier if ROSC): ≤ 10 seconds on Black's “LIFT”, then board down and at least 2 minutes of compressions.",
           },
         ],
       },
@@ -928,7 +928,7 @@ export const stations: Station[] = [
           {
             kind: "info",
             title: "Oxygen at the shock — workshop rule",
-            text: "FIFA's 2025 on-field booklet allows oxygen to stay connected through a closed system such as the i-gel. This workshop follows the FIFA Emergency Care Manual and the role cards: Blue turns the flow OFF for every shock (do not disconnect the i-gel), and any mask or cannula goes at least 1 m away.",
+            text: "LMA / i-gel connected (closed circuit): leave the BVM and oxygen connected for the shock — no need to turn the O2 off. Face mask only (no LMA): Orange lifts the BVM off the face for the shock and replaces it straight after.",
           },
         ],
       },
@@ -954,7 +954,7 @@ export const stations: Station[] = [
           },
           {
             kind: "text",
-            text: "FIFA World Cup protocol (ALS-trained team): after the third shock and drugs, the team leader decides when to extricate — ideally with a mechanical CPR device (e.g. LUCAS / AutoPulse) fitted first, so compressions are not interrupted. This workshop drill practises the manual alternative: the 10-second stop-and-start carry after the second shock, as in Step 5.",
+            text: "FIFA World Cup protocol (ALS-trained team): after the third shock and drugs, the team leader decides when to extricate — ideally with a mechanical CPR device (e.g. LUCAS / AutoPulse) fitted first, so compressions are not interrupted. The workshop follows the same timing: extricate only after the 3rd shock (earlier if ROSC), using the manual 10-second stop-and-start carry when no mechanical CPR device is available — Step 5.",
           },
         ],
       },
@@ -1381,9 +1381,9 @@ export const simulation = {
       title: "Cardiac arrest scenario",
       story: "Mid-game, a walking player suddenly collapses without contact with another player.",
       locked: {
-        salt: "GYTB2wuuVsN/KK+PN9wmNw==",
-        iv: "S+xW7GVDz637KiHh",
-        data: "tydtF6mtaUvbvw6lFK6PkSw3l3wQeq+3mDcyy9psEYUwKhRWP7GiveGpagTk93pMXENW9o+S5vLhR4eoTF6qJdZWYINyqBdspAqg/g5c0fW3Zq36kLpqN+cxoPyiI4FWiPZA5ouplEqMmKEapJeAJ2sMrMsa8sQFpOSOXlN199Ai84JNAall6HIbN+4dbK6PWAjmWI0PX7JNdXaJE9Es+oglurn8kuTx6w+ulzbUM9O8Ejl9rBIPNk4GlN6w++TI4XlE0aDWbLUNjj+iXSEbFjr4N8XPkgLdNl2gsuxtWewQTkWZkhegD6+Ce2yq9YpzOHG8Tdmo2+Y0S5+TkVhWAUqxQ9U3vrJnuDSfnWKUf+LQzq9/A7RMHl+nNHBWkUQJ5YFAGkbg3xJrCK9YnKBFoCiYdZ9a01Zf9fxR2zIFlkdJtH9F7i3uo3x4mtbeQcUQyx5IMMVqCzI4JM4bpEEgfG8IiygF1tOmMo/ByuV+lZtciiwVrV6CHTOaINd5yKmNn8Ot5n2CnJwKWc4lmHSr1zjfygMDOqNjeYi9VGCwVpGd0rNJqEwnoUdGilcRpF5JHUBfDn52bPQa5RWPOZhNMWiYr393ciEO0a4jyVB0gq/+vlfyV9uY71adGI/XlcXaU4K1L8lJw80WxmliF7TnqU99sFLrzkmreYl8TtQwRMoFFRjTrQKxrsWKw2R4mSsrwg+boIsN+JuZzxZkmIVhztr2YAmM1gU+cT4I35XKoc7cY5b2wwMrFvZWrrnRqSOxnQiNZzvvZuXWZ98163TPPBhMM5kCnF4xFbRSpcTfFh07mFDtpSRrg60whiI+nrDBoKQ5/ONf",
+        salt: "aRc2Pj8URcVF58jIHTgKVg==",
+        iv: "0oBJ+GM6IIVuvwJJ",
+        data: "i3RDamCHHVQUT2/ThH220Nizu4iTFdPk7Or1qkjO9AvdfxXzd7g0lKXRUmgo4LU3ru67+Y98fihu+7eHXTpt/HhLVzd1KZ7NnzHmI0puKlE23jJe9G9pJob16wC1Pj6MHeIGFAe4P4YqQbz6jVSD/bK4zcvwhfmD+l37+H09YoM2ettj6zUb3b9QLVIYQ3w4bnrc1SvoalH6PKBLaqAe8LPjlMdD1O6j0U9KkfqC26LYVko4EvwNZC3cHzA4TtuoZAp4eQ2YJ0yPGd8RHxB8O3dKwMtD5Zx1NHtgqHdv9b9ZV2d8JrZ4Wd3T5qxBx7j9KvMmr6DnKScvQvlmJvT8CNMDJOxncX5iQfBw+ayatZhk4I1a9UhRoQtOefGOcC6Yx3Yb/GFwFQPMLUSZDjispsIABf8T6O/e2j8CJKL/0OlqmcjGfrk3Vzse1X2VxwDXtOseA/9+e9te/8d9+1nqV+84LAYkW1mLxla1pQ+DtW6Ml6du8dXNkEblb7/Co+Dqx77Sp9Gnm4wSiMO4Uk26SBwuhSihf6KvNFkc5HKJpSZDVRnp/s+BMTGSEPyg6zqOXI94AXDACCGQNST2bwFRVI/qhxSYWt5pFxmBAkuYgwZnafErCh6o4u/wGPMJH3sQUwjRs5wC3rvSsoeBGTiehoHSrp+zHt1qKI4gD/TGAbd4HWT3brC2J0jw+Q0GUGc35zv4/eaLViSK0rmMgpCkQ1d5WduHGJnp2kcmsNFRL5WBSEKD8vh/ZrEkQ5mwXD7yi9lZGWvEfxoBx/KyDVaqFTEWm15GPgewIvcE1IwS+D/TBnAjzajjmUgqzHQ/H3KVATV+MFIvtuif77MNuUi2RvoHSkI7mLNtFdhiZ+YEzUHsQbtzFb+OvA/PojCLXAX2Us+QdCaF4161I/9kPi8PXwq3utaZ/P5rCg+c9PzmgvUUxuRFGWj1RjxOKMlL1nb0R/UcPZiUTDSTCimHHkvgwC6dmRYsiclFFb4dLVGs8xX4qX6GLxMFDG9EnSGcdOqvgFwAbqc8AkS7a+5TYLuDtxG7n+f65tH4LDnrRqEragEk21HqR3tlp0w8RxD5IG0aKlCbXdUkXz/Uz8+OoXujaDw3oMGiFxgZflQvpqSY",
       },
     },
   ],
