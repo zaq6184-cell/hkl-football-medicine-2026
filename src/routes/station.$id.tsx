@@ -2,10 +2,19 @@ import { createFileRoute, Link, Navigate } from "@tanstack/react-router";
 import { ArrowLeft, Box, ChevronLeft, ChevronRight, MapPin, X } from "lucide-react";
 import { useState } from "react";
 import { FifaClipCard } from "@/components/fifa-video";
-import { AppShell, Note, Panel, RoleChip, SectionLabel } from "@/components/workshop";
+import { AppShell, JumpChips, Note, Panel, RoleChip, SectionLabel } from "@/components/workshop";
 import { type Block, getStation, stations } from "@/lib/stations";
 
 export const Route = createFileRoute("/station/$id")({ component: StationPage });
+
+const slug = (t: string) =>
+  "s-" + t.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+
+/** Chip label: the part before any dash, colon or bracket. */
+const shortTitle = (t: string) => {
+  const cut = t.split(/ — | – |: | \(/)[0].trim();
+  return cut.length > 28 ? cut.slice(0, 26).trimEnd() + "…" : cut;
+};
 
 function StationPage() {
   const { id } = Route.useParams();
@@ -62,15 +71,21 @@ function StationPage() {
           </details>
         </Panel>
 
+        {s.sections.length > 5 ? (
+          <JumpChips items={s.sections.map((sec) => ({ id: slug(sec.title), label: shortTitle(sec.title) }))} />
+        ) : null}
+
         {s.sections.map((sec) => (
-          <Panel key={sec.title}>
-            <div className="flex flex-col gap-2.5 px-3.5 py-3.5">
-              <SectionLabel>{sec.title.toUpperCase()}</SectionLabel>
-              {sec.blocks.map((b, j) => (
-                <BlockView key={j} b={b} />
-              ))}
-            </div>
-          </Panel>
+          <section key={sec.title} id={slug(sec.title)} className="scroll-mt-24">
+            <Panel>
+              <div className="flex flex-col gap-2.5 px-3.5 py-3.5">
+                <SectionLabel>{sec.title.toUpperCase()}</SectionLabel>
+                {sec.blocks.map((b, j) => (
+                  <BlockView key={j} b={b} />
+                ))}
+              </div>
+            </Panel>
+          </section>
         ))}
 
         <Note>Source: {s.source} Teaching aid only — follow local protocol.</Note>

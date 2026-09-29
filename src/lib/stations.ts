@@ -1,6 +1,6 @@
 import { asset } from "@/lib/asset";
 import { type RoleId, workshop } from "@/lib/workshop";
-import { type FifaClip, fifaSkillClips } from "@/lib/videos";
+import { type FifaClip, fifaOwnClips, fifaSkillClips } from "@/lib/videos";
 
 /** Content blocks rendered by the station page. Copy is taken from the station handouts — do not invent protocol. */
 export type Block =
@@ -888,6 +888,13 @@ export const stations: Station[] = [
       {
         title: "Step by step",
         blocks: [
+          {
+            kind: "image",
+            src: asset("/img/drill-sequence-v4.jpg"),
+            alt: "Six-panel drill: assess, airway + O2 + AED, first shock, spinal board, 10-second carry, continue",
+            caption: "The workshop drill in six pictures — tap to open full size. Same order as the steps below.",
+          },
+          { kind: "video", clip: fifaOwnClips[0] },
           {
             kind: "steps",
             items: workshop.steps.map((s) => ({

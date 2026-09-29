@@ -203,3 +203,23 @@ export function Note({ children }: { children: React.ReactNode }) {
     <p className="rounded-lg bg-note px-2.5 py-2 text-xs leading-snug text-muted">{children}</p>
   );
 }
+
+/** Horizontal "jump to" chips for long pages. Targets need an id and scroll-mt. */
+export function JumpChips({ items }: { items: { id: string; label: string }[] }) {
+  return (
+    <nav aria-label="Jump to section" className="-mx-3.5 overflow-x-auto px-3.5 pb-0.5 [scrollbar-width:none]">
+      <ul className="flex w-max gap-1.5">
+        {items.map((it) => (
+          <li key={it.id}>
+            <a
+              href={`#${it.id}`}
+              className="inline-flex min-h-9 items-center whitespace-nowrap rounded-full border border-line bg-paper px-3 font-display text-[11px] font-semibold tracking-wide text-navy shadow-card active:bg-cream"
+            >
+              {it.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}

@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { FileText } from "lucide-react";
-import { FifaClipCard } from "@/components/fifa-video";
+import { VideoList } from "@/components/fifa-video";
 import { AppShell, Note, Panel, SectionLabel } from "@/components/workshop";
 import { asset } from "@/lib/asset";
 import { FIFA_PITCHSIDE_PAGE, fifaSkillList } from "@/lib/videos";
@@ -78,12 +78,8 @@ function PitchsidePage() {
         </Panel>
 
         <Section title="FIFA SKILL ZONE — 5 FILMS">
-          <p className="text-xs leading-snug text-muted">Tap play — needs a connection. Each film also appears in its matching station.</p>
-          <div className="-mx-3.5 flex flex-col gap-3">
-            {fifaSkillList.map((c) => (
-              <FifaClipCard key={c.youtubeId} clip={c} />
-            ))}
-          </div>
+          <p className="text-xs leading-snug text-muted">Tap a film to play it — needs a connection. Each film also appears in its matching station.</p>
+          <VideoList clips={fifaSkillList} />
         </Section>
 
         <Section title="PEAP & ROLE CARDS">
