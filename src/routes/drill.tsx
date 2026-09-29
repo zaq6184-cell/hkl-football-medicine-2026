@@ -14,7 +14,7 @@ function Drill() {
           <HeroPhoto
             src={asset("/img/drill-sequence-v4.jpg")}
             alt="Six-step pictorial sequence of the on-field SCA drill"
-            caption="Tap the picture to open it full size. Assess · airway + O2 + AED · first shock · spinal board · 10-second dash · continue."
+            caption="Tap the picture to open it full size. Assess · airway + O2 + AED · first shock · spinal board · 3rd shock + 10-second dash · continue."
             contain
           />
         </a>

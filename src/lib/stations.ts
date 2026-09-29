@@ -235,15 +235,15 @@ export const stations: Station[] = [
         blocks: [
           {
             kind: "image",
-            src: asset("/img/stations/s1-positioning-v2.jpg"),
-            alt: "Positioning layout: coloured marks around the player, bags and AED at the head, first aiders at the feet",
-            caption: "May flip all aspects depending on site of injury and hazards.",
+            src: asset("/img/stations/s1-positioning-v3.jpg"),
+            alt: "Positioning layout: coloured marks around the player, bags and AED at the head, first aiders at the feet, then the split scoop and the basket below the feet in line with the player",
+            caption: "Extrication kit below the feet, in line with the player (FIFA): split scoop (arrest: spinal board) between the feet and the basket; basket 2–3 lengths from the feet. May flip all aspects depending on site of injury and hazards.",
           },
           {
             kind: "defs",
             items: [
               { term: "Equipment zone", text: "AED + O2 + emergency care bag at the player's head / left side." },
-              { term: "Extrication zone", text: "Extrication kit (scoop or spinal board, basket) aligned at the feet, initially kept back until required." },
+              { term: "Extrication zone", text: "Below the player's feet, in line with the body (FIFA): basket 2–3 basket lengths from the feet; scoop (trauma) or spinal board (arrest) laid out between the feet and the basket. Kept back until required." },
               { term: "Team Leader", text: "Remain 2–3 m away with a full view. Keep the working area clean and uncluttered." },
             ],
           },
@@ -837,6 +837,7 @@ export const stations: Station[] = [
         blocks: [
           { kind: "text", text: "Complete necessary exposure and safely extricate the player from the pitch." },
           { kind: "remember", text: "TRAUMA: SCOOP STRETCHER + BASKET · CARDIAC ARREST: SPINAL BOARD ± BASKET" },
+          { kind: "text", text: "Set up below the feet (FIFA): basket in line with the player, 2–3 basket lengths from the feet; scoop out of the basket, extended and split, laid between the feet and the basket." },
         ],
       },
     ],
@@ -891,7 +892,7 @@ export const stations: Station[] = [
           {
             kind: "image",
             src: asset("/img/drill-sequence-v4.jpg"),
-            alt: "Six-panel drill: assess, airway + O2 + AED, first shock, spinal board, 10-second carry, continue",
+            alt: "Six-panel drill: assess, airway + O2 + AED, first shock, spinal board, 10-second carry after the 3rd shock, continue",
             caption: "The workshop drill in six pictures — tap to open full size. Same order as the steps below.",
           },
           { kind: "video", clip: fifaOwnClips[0] },
@@ -1154,6 +1155,7 @@ export const stations: Station[] = [
             kind: "list",
             ordered: true,
             items: [
+              "Set up below the feet (FIFA): basket in line with the player, 2–3 basket lengths from the feet; scoop out of the basket, extended and split, laid between the feet and the basket.",
               "Adjust length to the player.",
               "Separate the two halves.",
               "Position each half alongside with minimal movement.",
@@ -1184,6 +1186,7 @@ export const stations: Station[] = [
             kind: "list",
             ordered: true,
             items: [
+              "Set up below the feet (FIFA): basket in line with the player, 2–3 basket lengths from the feet, scoop or board laid out between them.",
               "Transfer the player into the basket with an appropriate technique / device.",
               "Position centrally.",
               "Secure torso, pelvis and legs.",
@@ -1311,7 +1314,7 @@ export const stations: Station[] = [
                 lines: [
                   "Primary survey; control bleeding.",
                   "Check CSM, support and splint, recheck CSM.",
-                  "Scoop stretcher + basket for removal from the pitch.",
+                  "Scoop stretcher + basket for removal from the pitch — both set up below the feet, in line with the player.",
                 ],
               },
               {
@@ -1371,9 +1374,9 @@ export const simulation = {
       story:
         "Player X was tackled, fell and rolled over: suspected cervical spine injury and open fracture of the right tibia with active bleeding.",
       locked: {
-        salt: "/DKI3NoSE+fzqR8OjTsKsQ==",
-        iv: "Pa7VjVXF3Cwhq1vQ",
-        data: "gKSWOK4sU4gl9Udzr+eY/MQNm2urgmvGqKkSWL8bLLwsIzoCduUa4guPmX5M9m0eyehuWsTjmP3TQuUTbhZ+GRQNJc9lnKFjIP/W4lk7WTcMgq4EtYuu0elero2DjY8PggUCdX0h6RmKGMsEzzNmxtl/Yva/684W05jACWxn+7u3VnS4HP7lSxFCyYDHdFseHREQqAN4i7l8OUFkdAiNMitNiLVKgiKmCmWQM3Z4YcgK9/jhbQVdP/zYf3xBnKmftnheK2s3booBUcgY5/2V/ZG5mg/NeQi0kVC1lSMOGHvC/56LVUb6ESXTQVhcyWMpnz1wQd/j6+VPzX/bZ5b2r0swCnSGqgEhhJ9jl0mp3nEfo+rbBRuUvdaEDJEZuwWA8pJuZqBQTjgXRHjiIwlr5rwMamZHalh5TThJ9DGVnka9piwB/Pw+OXo5o3CJ/1ZYzBiEYJrkWDWg6L0I44W9eNZ+ZawvpyqyM15WPvRBjYxssCLi+CM/nEQv90sLmJHzjz9hF3tyMbhA1Xmdj9vVVuCcELaKhqB6rPv3eAl5/d0=",
+        salt: "PtkjjokUr9iCnvTp4Gu9Rg==",
+        iv: "5QLoxsyBmSG0QnP4",
+        data: "1fcqsTmECG+7PSj7EGcDYlOosdMBhwiA5x7hzQWHmE5cS2MR93hqbxeah/u8Wn89bX3rqlgsGWzF4iZBpnC27RPNWPhpe82jchJsEC/CGpkSZx+4rkPmnOt7IAhzm804b9GfMy7xgBY1iNYdRouGPH8LSJMEyf9Q7jj1Fd1rSd5MBCu6RFdIjYwvaKRzPBO/7fMXKhS0Gr3pKBkcKarKmPxwTnl9dTzZaSMgTRIEM5ptbAOdbW8EK6bs6bl4yedbH38b2K5xd6SP7BBMUp7HYCwVnGKfq5KJoU1yDMvIjisx5y4MTHxMShN+iczjrl+QB6HGDoNNQYAIWZLZPERup3lzy6Lm77M4+fBrXkCh+cJaYYis2qFGkib+dUy+22/eNeknhDHY2UKD9ifYit+pebqM0qOhK1CVpNA28V5WUBk4lZ0s82NuMzCqVO0HUvSRx2Mnz2WkIW0Ub6hutQa49kdV944CjV6y73QJOR2LkAZub6ai9oTBUw1iYq3VsBwtSfiu+43y9qP4ntqSKz9a1cjfQbgC0nMuRZnu0GGAtmJuXQcbGcDcDTUbLsFy6Dqu00xlFSgLfn290wVTY/f1YWxrOQbyp8JTvpZfRQvO/LjZM8ddrex2MfwMWz3V7re4+AQNnbu4brXZWWv/uumJrYsVRtKe9FSZGTgNTPI2m2DE+Ec=",
       },
     },
     {

@@ -49,7 +49,7 @@ function Home() {
           <div className="px-3.5 py-3.5">
             <SectionLabel>PRINTABLE HKL CARDS (PDF)</SectionLabel>
             <p className="mt-2 text-xs leading-snug text-muted">
-              Updated to FIFA: Blue takes over compressions at 2 min; White = spinal board ± basket.
+              Updated: Blue takes over compressions at 2 min · White = spinal board ± basket · first carry after the 3rd shock (earlier if ROSC) · LMA connected: oxygen stays on for shocks.
             </p>
             <ul className="mt-2 flex flex-col divide-y divide-line">
               {[

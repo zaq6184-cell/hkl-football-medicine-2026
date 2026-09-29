@@ -155,7 +155,8 @@ export const workshop = {
       fifa: "For cardiac-arrest transfer the player, long spinal board and AED are strapped together as one unit. Involve First Aiders. Take the legs in the log-roll.",
       do: [
         "Bring the spinal board, spider straps and splints. Involve the yellow First Aiders.",
-        "Spinal board in line with the feet, 2–3 lengths away, ready to slide in.",
+        "Spinal board (± basket) below the feet, in line with the player, 2–3 lengths away, ready to slide in.",
+        "Trauma (FIFA): basket in line with the player, 2–3 basket lengths from the feet; scoop out, extended and split between the feet and the basket.",
         "Take the LEGS in the log-roll.",
         "Strap the player to the board: player + spinal board + AED move as one strapped unit. Place the board in the basket if used.",
       ],
