@@ -188,7 +188,7 @@ export const workshop = {
       text: "#1C1C1C",
       stand: "At the FEET, in an arc facing the player (FIFA PEAP yellow marks). Not medical staff by default.",
       bring: "Nothing required. Spinal board (± basket), splints and spider straps if directed.",
-      photo: asset("/img/roles/yellow-v2.jpg"),
+      photo: asset("/img/roles/yellow-v3.jpg"),
       fifa: "The extrication team stands or kneels beside the extrication device facing the player and awaits instructions. They may be invited into log-roll positions if extra hands are needed.",
       do: [
         "Stand or kneel beside the spinal board, facing the player. Await instructions.",

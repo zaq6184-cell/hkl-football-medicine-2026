@@ -47,29 +47,27 @@ function Home() {
         <Note>If it is not your colour, do not reach in.</Note>
         <Panel>
           <div className="px-3.5 py-3.5">
-            <SectionLabel>PRINTABLE HKL CARDS (PDF)</SectionLabel>
+            <SectionLabel>PRINTABLE HKL CARDS & HANDOUTS (PDF)</SectionLabel>
             <p className="mt-2 text-xs leading-snug text-muted">
               Updated: Blue takes over compressions at 2 min · White = spinal board ± basket · first carry after the 3rd shock (earlier if ROSC) · LMA connected: oxygen stays on for shocks.
             </p>
-            <ul className="mt-2 flex flex-col divide-y divide-line">
-              {[
+            <PdfList
+              items={[
                 ["Colour role cards (A4, 10 cards)", "/docs/HKL-SCA-Colour-Role-Cards-2026.pdf"],
                 ["Pictorial participant card (2 pages)", "/docs/HKL-SCA-Pictorial-Participant-Card-2026.pdf"],
                 ["On-field colour reference (2 pages)", "/docs/HKL-SCA-OnField-Colour-Reference-2026.pdf"],
-              ].map(([t, h]) => (
-                <li key={h}>
-                  <a
-                    href={asset(h)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex min-h-11 items-center gap-2.5 py-2 text-sm leading-snug text-navy"
-                  >
-                    <FileText className="size-4 shrink-0 text-gold" />
-                    {t}
-                  </a>
-                </li>
-              ))}
-            </ul>
+              ]}
+            />
+            <p className="mt-3 font-display text-[11px] font-semibold tracking-[0.12em] text-navy">STATION HANDOUTS</p>
+            <PdfList
+              items={[
+                ["Station 1 · FIFA PEAP (3 pages)", "/docs/HKL-Station-1-FIFA-PEAP-2026.pdf"],
+                ["Station 2 · Emergency care bag (7 pages)", "/docs/HKL-Station-2-Emergency-Care-Bag-2026.pdf"],
+                ["Station 3 · Primary survey (5 pages)", "/docs/HKL-Station-3-Primary-Survey-2026.pdf"],
+                ["Station 4 · Cardiac arrest (2 pages)", "/docs/HKL-Station-4-Cardiac-Arrest-2026.pdf"],
+                ["Station 5 · Immobilization (6 pages)", "/docs/HKL-Station-5-Immobilization-2026.pdf"],
+              ]}
+            />
           </div>
         </Panel>
         <HeroPhoto
@@ -117,5 +115,25 @@ function Home() {
         />
       </div>
     </AppShell>
+  );
+}
+
+function PdfList({ items }: { items: [string, string][] }) {
+  return (
+    <ul className="mt-2 flex flex-col divide-y divide-line">
+      {items.map(([t, h]) => (
+        <li key={h}>
+          <a
+            href={asset(h)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex min-h-11 items-center gap-2.5 py-2 text-sm leading-snug text-navy"
+          >
+            <FileText className="size-4 shrink-0 text-gold" />
+            {t}
+          </a>
+        </li>
+      ))}
+    </ul>
   );
 }
