@@ -235,7 +235,6 @@ export const workshop = {
         "AED: “Stop CPR. Analysing.” Red hovers hands above the chest; Orange pauses ventilations.",
         "Shock advised: LMA connected (closed circuit) — BVM and oxygen stay on, no need to turn O2 off. Face mask only — Orange lifts the BVM off. Green checks all clear.",
         "Green: “I'm clear, you're clear, everyone's clear!” Shock. “Shock delivered.”",
-        "Red resumes compressions at once — no pulse check.",
       ],
     },
     {
