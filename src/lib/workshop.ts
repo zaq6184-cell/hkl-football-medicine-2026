@@ -72,7 +72,7 @@ export const workshop = {
       do: [
         "You are the team leader. Remain hands-off on the LEFT flank.",
         "Ensure the ambulance is called.",
-        "Confirm continuous compressions and that Green applies the AED.",
+        "Confirm compressions are running and that Green applies the AED.",
         "After the first shock, oversee the log-roll onto the spinal board (Orange controls it): Red chest, Blue pelvis, White legs.",
         "Call the first lift only after the 3rd shock — or earlier if ROSC.",
       ],
@@ -91,7 +91,7 @@ export const workshop = {
       stand: "At the player's HEAD (FIFA PEAP orange mark). Never leave the head.",
       bring: "LMA (i-gel) and BVM with reservoir.",
       photo: asset("/img/roles/orange.jpg"),
-      fifa: "Airway after compressions + AED are running. i-gel LMA: bag once every 10 compressions. Face-mask only, or i-gel leaking: pause for 30:2. At a shock: LMA connected (closed circuit) — leave the BVM and oxygen on; face mask only — lift the BVM off.",
+      fifa: "Airway after compressions + AED are running. i-gel LMA: bag once every 10 compressions. Face-mask only, or i-gel leaking: pause for 30:2.",
       do: [
         "Airway opening manoeuvres (jaw thrust if experienced). Manual in-line C-spine control if trauma.",
         "Insert i-gel / LMA. Attach bag-valve.",
@@ -100,7 +100,8 @@ export const workshop = {
         "Control the log-roll from the HEAD.",
       ],
       say: [
-        "Airway open. LMA in. (or “OPA in — bagging.”)",
+        "Airway open. LMA in.",
+        "No LMA: OPA in — bagging.",
         "Holding the head. Ready to roll.",
         "Roll on three. One, two, three, ROLL.",
       ],
@@ -117,7 +118,7 @@ export const workshop = {
       fifa: "Commence chest compressions at once. 5–6 cm, 100–120/min, full recoil. Do not stop while Green applies the AED.",
       do: [
         "Priority: assess for signs of life.",
-        "If no signs of life: start CONTINUOUS chest compressions (5–6 cm, 100–120/min, full recoil) and call for AED.",
+        "If no signs of life: start chest compressions at once (5–6 cm, 100–120/min, full recoil) and call for the AED. 30:2 until the i-gel is in, then continuous.",
         "Do not stop compressions while Green applies the AED.",
         "Take the CHEST in the log-roll.",
         "Rotate off compressions after 2 minutes. After a shock: no pulse check — resume at once (after the first shock, as soon as the board is in).",
@@ -133,7 +134,7 @@ export const workshop = {
       stand: "Player's RIGHT HIP (FIFA PEAP blue mark), same side as Red.",
       bring: "Oxygen cylinder.",
       photo: asset("/img/roles/blue.jpg"),
-      fifa: "FIFA role card: oxygen to the bag/valve reservoir at 15 L/min and be prepared to take over compressions from Red after two minutes.",
+      fifa: "Oxygen to the bag/valve reservoir at 15 L/min and be prepared to take over compressions from Red after two minutes.",
       do: [
         "Bring the oxygen cylinder onto the pitch.",
         "Apply oxygen at 15 L/min to the bag / reservoir (SCA) or trauma mask.",
@@ -171,7 +172,7 @@ export const workshop = {
       stand: "At the HEAD with the bag and AED (FIFA PEAP green mark).",
       bring: "FIFA emergency care bag and AED.",
       photo: asset("/img/roles/green.jpg"),
-      fifa: "AED on as soon as it arrives — do not wait for the current 30-count. Pads: upper-right chest + lower-left axilla. Green checks all clear (face mask only: BVM off).",
+      fifa: "AED on as soon as it arrives — do not wait for the current 30-count. Pads: upper-right chest + lower-left axilla. Green checks all clear before every shock.",
       do: [
         "Bring the FIFA bag and AED. Apply the AED.",
         "Pads: upper-right chest + lower-left axilla. Before shock: all clear (face mask only: ensure the BVM is off).",
