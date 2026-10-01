@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import {
+  Bone,
+  Brain,
   BriefcaseMedical,
   CalendarDays,
   ChevronRight,
@@ -77,36 +79,24 @@ function Home() {
           contain
           tall
         />
+        <SectionLabel>FIFA TOPICS</SectionLabel>
+        <Tiles
+          items={[
+            { to: "/fifa", icon: HeartPulse, title: "Sudden cardiac arrest", sub: "Signs · emergency steps · videos · official downloads", wide: true },
+            { to: "/focus", icon: Brain, title: "Concussion assessment (FOCUS)", sub: "11 domains · FIFA video · lanyard card · PDFs", wide: true },
+            { to: "/cspine", icon: Bone, title: "Cervical spine injury", sub: "FIFA film · set piece by colour · collar · log roll", wide: true },
+            { to: "/pitchside", icon: Stethoscope, title: "Pitchside emergency care", sub: "5 Skill Zone films · set-piece protocols · role cards · bag", wide: true },
+          ]}
+        />
         <SectionLabel>WORKSHOP</SectionLabel>
-        <div className="grid grid-cols-2 gap-2.5">
-          {[
-            { to: "/fifa" as const, icon: HeartPulse, title: "FIFA: sudden cardiac arrest", sub: "Signs · emergency steps · videos · official downloads", wide: true },
-            { to: "/pitchside" as const, icon: Stethoscope, title: "FIFA: pitchside emergency care", sub: "5 Skill Zone films · set-piece protocols · role cards · bag", wide: true },
-            { to: "/stations" as const, icon: ClipboardList, title: "Skill stations", sub: "Stations 1–5 + simulation" },
-            { to: "/event" as const, icon: CalendarDays, title: "Programme", sub: `${programme.datesLabel}` },
-            { to: "/bag" as const, icon: BriefcaseMedical, title: "Emergency bag", sub: "FIFA packing list" },
-            { to: "/guides" as const, icon: PlayCircle, title: "Films", sub: "SCA + airway skills" },
-          ].map((t) => (
-            <Link key={t.to} to={t.to} className={`block active:scale-[0.98]${"wide" in t && t.wide ? " col-span-2" : ""}`}>
-              <Panel className="h-full">
-                <div
-                  className={`flex h-full gap-2 px-3 py-3${"wide" in t && t.wide ? " flex-row items-center gap-3" : " flex-col"}`}
-                >
-                  <span className="grid size-9 shrink-0 place-items-center rounded-full bg-navy text-gold">
-                    <t.icon className="size-[18px]" strokeWidth={2} />
-                  </span>
-                  <div>
-                    <p className="font-display text-xs font-semibold tracking-[0.12em] text-navy">
-                      {t.title.toUpperCase()}
-                    </p>
-                    <p className="mt-0.5 text-xs leading-snug text-muted">{t.sub}</p>
-                  </div>
-                  {"wide" in t && t.wide ? <ChevronRight className="ml-auto size-5 shrink-0 text-gold" /> : null}
-                </div>
-              </Panel>
-            </Link>
-          ))}
-        </div>
+        <Tiles
+          items={[
+            { to: "/stations", icon: ClipboardList, title: "Skill stations", sub: "Stations 1–5 + simulation" },
+            { to: "/event", icon: CalendarDays, title: "Programme", sub: `${programme.datesLabel}` },
+            { to: "/bag", icon: BriefcaseMedical, title: "Emergency bag", sub: "FIFA packing list" },
+            { to: "/guides", icon: PlayCircle, title: "Films", sub: "SCA + airway skills" },
+          ]}
+        />
         <HeroPhoto
           src={asset("/img/stations/peap-marks.jpg")}
           alt="FIFA PEAP 2025 official position marks around the player"
@@ -135,5 +125,36 @@ function PdfList({ items }: { items: [string, string][] }) {
         </li>
       ))}
     </ul>
+  );
+}
+
+type Tile = {
+  to: "/fifa" | "/focus" | "/cspine" | "/pitchside" | "/stations" | "/event" | "/bag" | "/guides";
+  icon: typeof HeartPulse;
+  title: string;
+  sub: string;
+  wide?: boolean;
+};
+
+function Tiles({ items }: { items: Tile[] }) {
+  return (
+    <div className="grid grid-cols-2 gap-2.5">
+      {items.map((t) => (
+        <Link key={t.to} to={t.to} className={`block active:scale-[0.98]${t.wide ? " col-span-2" : ""}`}>
+          <Panel className="h-full">
+            <div className={`flex h-full gap-2 px-3 py-3${t.wide ? " flex-row items-center gap-3" : " flex-col"}`}>
+              <span className="grid size-9 shrink-0 place-items-center rounded-full bg-navy text-gold">
+                <t.icon className="size-[18px]" strokeWidth={2} />
+              </span>
+              <div>
+                <p className="font-display text-xs font-semibold tracking-[0.12em] text-navy">{t.title.toUpperCase()}</p>
+                <p className="mt-0.5 text-xs leading-snug text-muted">{t.sub}</p>
+              </div>
+              {t.wide ? <ChevronRight className="ml-auto size-5 shrink-0 text-gold" /> : null}
+            </div>
+          </Panel>
+        </Link>
+      ))}
+    </div>
   );
 }

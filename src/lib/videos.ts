@@ -61,6 +61,21 @@ export const fifaSkillClips = {
 };
 export const fifaSkillList: FifaClip[] = Object.values(fifaSkillClips);
 
+export const FIFA_FOCUS_PAGE = "https://inside.fifa.com/health-and-medical/focus";
+
+/** FIFA FOCUS on-pitch concussion assessment film (FIFA Uplynk player). */
+export const fifaFocusClip: FifaClip = {
+  youtubeId: "fifa-focus",
+  embed: "https://content.uplynk.com/player/3xGvftSyb8AP8Ig7SXq15fea.html",
+  watchUrl: FIFA_FOCUS_PAGE,
+  title: "FOCUS — on-pitch concussion assessment",
+  source: "FIFA Medical",
+  duration: "35:40",
+  poster: asset("/img/fifa/focus/video.jpg"),
+  why: "FIFA's full overview of FOCUS, with examples of clinicians completing the assessment on the pitch.",
+};
+
+
 export const fifaClips: FifaClip[] = [
   ...fifaOwnClips,
   {

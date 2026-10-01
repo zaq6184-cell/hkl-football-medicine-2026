@@ -198,6 +198,8 @@ export default defineConfig(({ command, isPreview }) => ({
               { path: "/stations" },
               { path: "/fifa" },
               { path: "/pitchside" },
+              { path: "/focus" },
+              { path: "/cspine" },
               { path: "/station/1" },
               { path: "/station/2" },
               { path: "/station/3" },

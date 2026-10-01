@@ -1005,7 +1005,7 @@ export const stations: Station[] = [
           { kind: "video", clip: fifaSkillClips.cspine },
           {
             kind: "image",
-            src: asset("/img/fifa/cspine-protocol.jpg"),
+            src: asset("/img/fifa/cspine-protocol-v2.jpg"),
             alt: "FIFA Medical Set-Piece protocol for cervical spine injury: colour-coded tasks from assessment to extrication",
             caption: "FIFA Medical Set-Piece protocol for cervical spine injury — each colour's tasks from MILS to extrication. Tap to open full size. © FIFA",
           },

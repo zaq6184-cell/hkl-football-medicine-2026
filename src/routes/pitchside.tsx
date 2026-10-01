@@ -19,7 +19,7 @@ const posters = [
     note: "Each colour's tasks from collapse to transfer.",
   },
   {
-    src: asset("/img/fifa/cspine-protocol.jpg"),
+    src: asset("/img/fifa/cspine-protocol-v2.jpg"),
     title: "Set-Piece protocol: cervical spine injury",
     note: "MILS, A–E assessment, collar, blocks, straps and extrication with 6 people.",
   },

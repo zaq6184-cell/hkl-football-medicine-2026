@@ -11,9 +11,11 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as BagRouteImport } from './routes/bag'
+import { Route as CspineRouteImport } from './routes/cspine'
 import { Route as DrillRouteImport } from './routes/drill'
 import { Route as EventRouteImport } from './routes/event'
 import { Route as FifaRouteImport } from './routes/fifa'
+import { Route as FocusRouteImport } from './routes/focus'
 import { Route as GuidesRouteImport } from './routes/guides'
 import { Route as PitchsideRouteImport } from './routes/pitchside'
 import { Route as RulesRouteImport } from './routes/rules'
@@ -33,6 +35,11 @@ const BagRoute = BagRouteImport.update({
   path: '/bag',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CspineRoute = CspineRouteImport.update({
+  id: '/cspine',
+  path: '/cspine',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const DrillRoute = DrillRouteImport.update({
   id: '/drill',
   path: '/drill',
@@ -46,6 +53,11 @@ const EventRoute = EventRouteImport.update({
 const FifaRoute = FifaRouteImport.update({
   id: '/fifa',
   path: '/fifa',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FocusRoute = FocusRouteImport.update({
+  id: '/focus',
+  path: '/focus',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GuidesRoute = GuidesRouteImport.update({
@@ -92,9 +104,11 @@ const StationIdRoute = StationIdRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/bag': typeof BagRoute
+  '/cspine': typeof CspineRoute
   '/drill': typeof DrillRoute
   '/event': typeof EventRoute
   '/fifa': typeof FifaRoute
+  '/focus': typeof FocusRoute
   '/guides': typeof GuidesRoute
   '/pitchside': typeof PitchsideRoute
   '/rules': typeof RulesRoute
@@ -107,9 +121,11 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/bag': typeof BagRoute
+  '/cspine': typeof CspineRoute
   '/drill': typeof DrillRoute
   '/event': typeof EventRoute
   '/fifa': typeof FifaRoute
+  '/focus': typeof FocusRoute
   '/guides': typeof GuidesRoute
   '/pitchside': typeof PitchsideRoute
   '/rules': typeof RulesRoute
@@ -123,9 +139,11 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/bag': typeof BagRoute
+  '/cspine': typeof CspineRoute
   '/drill': typeof DrillRoute
   '/event': typeof EventRoute
   '/fifa': typeof FifaRoute
+  '/focus': typeof FocusRoute
   '/guides': typeof GuidesRoute
   '/pitchside': typeof PitchsideRoute
   '/rules': typeof RulesRoute
@@ -140,9 +158,11 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/bag'
+    | '/cspine'
     | '/drill'
     | '/event'
     | '/fifa'
+    | '/focus'
     | '/guides'
     | '/pitchside'
     | '/rules'
@@ -155,9 +175,11 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/bag'
+    | '/cspine'
     | '/drill'
     | '/event'
     | '/fifa'
+    | '/focus'
     | '/guides'
     | '/pitchside'
     | '/rules'
@@ -170,9 +192,11 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/bag'
+    | '/cspine'
     | '/drill'
     | '/event'
     | '/fifa'
+    | '/focus'
     | '/guides'
     | '/pitchside'
     | '/rules'
@@ -186,9 +210,11 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   BagRoute: typeof BagRoute
+  CspineRoute: typeof CspineRoute
   DrillRoute: typeof DrillRoute
   EventRoute: typeof EventRoute
   FifaRoute: typeof FifaRoute
+  FocusRoute: typeof FocusRoute
   GuidesRoute: typeof GuidesRoute
   PitchsideRoute: typeof PitchsideRoute
   RulesRoute: typeof RulesRoute
@@ -215,6 +241,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BagRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/cspine': {
+      id: '/cspine'
+      path: '/cspine'
+      fullPath: '/cspine'
+      preLoaderRoute: typeof CspineRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/drill': {
       id: '/drill'
       path: '/drill'
@@ -234,6 +267,13 @@ declare module '@tanstack/react-router' {
       path: '/fifa'
       fullPath: '/fifa'
       preLoaderRoute: typeof FifaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/focus': {
+      id: '/focus'
+      path: '/focus'
+      fullPath: '/focus'
+      preLoaderRoute: typeof FocusRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/guides': {
@@ -298,9 +338,11 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   BagRoute: BagRoute,
+  CspineRoute: CspineRoute,
   DrillRoute: DrillRoute,
   EventRoute: EventRoute,
   FifaRoute: FifaRoute,
+  FocusRoute: FocusRoute,
   GuidesRoute: GuidesRoute,
   PitchsideRoute: PitchsideRoute,
   RulesRoute: RulesRoute,

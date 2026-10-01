@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ChevronRight, HeartPulse } from "lucide-react";
-import { FifaSkillZoneList, FifaVideoList, SkillVideoList } from "@/components/fifa-video";
-import { AppShell, JumpChips } from "@/components/workshop";
+import { FifaSkillZoneList, FifaVideoList, SkillVideoList, VideoList } from "@/components/fifa-video";
+import { AppShell, JumpChips, SectionLabel } from "@/components/workshop";
+import { fifaFocusClip } from "@/lib/videos";
 
 export const Route = createFileRoute("/guides")({ component: GuidesPage });
 
@@ -13,6 +14,7 @@ function GuidesPage() {
           items={[
             { id: "films-sca", label: "SCA films" },
             { id: "films-skill", label: "FIFA Skill Zone" },
+            { id: "films-focus", label: "Concussion (FOCUS)" },
             { id: "films-airway", label: "Airway & equipment" },
           ]}
         />
@@ -31,6 +33,17 @@ function GuidesPage() {
         </Link>
         <FifaVideoList />
         <FifaSkillZoneList />
+        <section id="films-focus" className="flex scroll-mt-24 flex-col gap-3">
+          <SectionLabel>CONCUSSION — FOCUS</SectionLabel>
+          <p className="text-sm leading-snug text-muted">
+            FIFA’s on-pitch concussion assessment film.{" "}
+            <Link to="/focus" className="font-medium text-navy underline underline-offset-2">
+              Open the FOCUS protocol
+            </Link>
+            .
+          </p>
+          <VideoList clips={[fifaFocusClip]} />
+        </section>
         <div id="skills">
           <SkillVideoList />
         </div>
