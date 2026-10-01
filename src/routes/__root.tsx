@@ -18,7 +18,7 @@ export const Route = createRootRoute({
       {
         name: "description",
         content:
-          "Hospital Kuala Lumpur participant app for the Sports-Emergency Football Medicine Workshop 2026 — programme, FIFA emergency bag, FIFA guideline films, colour roles, drill, and 10-second dash timer.",
+          "Hospital Kuala Lumpur participant app for the Sports-Emergency Football Medicine Workshop 2026 — programme, skill stations, FIFA topics (cardiac arrest, concussion FOCUS, cervical spine), colour roles, drill and 10-second dash timer.",
       },
       { name: "theme-color", content: "#0B1F3A" },
       { name: "apple-mobile-web-app-capable", content: "yes" },

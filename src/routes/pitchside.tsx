@@ -103,6 +103,12 @@ function PitchsidePage() {
             anyone else's. FIFA's toolkit gives colour-coded protocols for on-field interventions, sudden cardiac arrest and cervical
             spine injury — the colours match the PEAP roles.
           </p>
+          <Link to="/cspine" className="inline-flex min-h-11 items-center font-display text-sm font-semibold tracking-wide text-gold">
+            Cervical spine injury — set piece by colour →
+          </Link>
+          <Link to="/focus" className="inline-flex min-h-11 items-center font-display text-sm font-semibold tracking-wide text-gold">
+            Concussion assessment (FOCUS) →
+          </Link>
         </Section>
 
         <Section title="PROTOCOLS FOR ON-FIELD INTERVENTIONS">

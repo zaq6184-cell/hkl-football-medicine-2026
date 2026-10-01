@@ -21,6 +21,14 @@ export function AppShell({
 
   const bag = pathname.startsWith("/bag");
   const guides = pathname.startsWith("/guides");
+  const topic = (
+    [
+      ["/focus", "FIFA FOCUS · on-pitch concussion assessment"],
+      ["/cspine", "FIFA Medical Set Piece · cervical spine injury"],
+      ["/fifa", "FIFA Health & Medical · sudden cardiac arrest"],
+      ["/pitchside", "FIFA Health & Medical · pitchside emergency care"],
+    ] as const
+  ).find(([p]) => pathname.startsWith(p))?.[1];
 
   return (
     <div className="min-h-dvh bg-bg text-ink">
@@ -33,6 +41,8 @@ export function AppShell({
             ? "FIFA Medical Emergency Bag · Green brings this"
             : guides
               ? "FIFA / UEFA guideline films · needs a connection"
+              : topic
+                ? topic
               : tab === "event"
                 ? "3–4 Oct 2026 · Hospital Tunku Azizah"
                 : tab === "stations"

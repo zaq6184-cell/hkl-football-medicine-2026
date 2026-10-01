@@ -94,7 +94,7 @@ function Home() {
             { to: "/stations", icon: ClipboardList, title: "Skill stations", sub: "Stations 1–5 + simulation" },
             { to: "/event", icon: CalendarDays, title: "Programme", sub: `${programme.datesLabel}` },
             { to: "/bag", icon: BriefcaseMedical, title: "Emergency bag", sub: "FIFA packing list" },
-            { to: "/guides", icon: PlayCircle, title: "Films", sub: "SCA + airway skills" },
+            { to: "/guides", icon: PlayCircle, title: "Films", sub: "SCA · Skill Zone · concussion · airway" },
           ]}
         />
         <HeroPhoto

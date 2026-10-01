@@ -966,7 +966,7 @@ export const stations: Station[] = [
     id: "5",
     short: "Immobilization",
     title: "Immobilization",
-    subtitle: "Collar, head immobiliser, spinal board, scoop, basket, splints and slings",
+    subtitle: "Collar, head immobilizer, spinal board, scoop, basket, splints and slings",
     pic: "PPP Fakhri / Sr Aznie",
     equipment: [
       { name: "Cervical collar", qty: "1" },
@@ -1050,7 +1050,7 @@ export const stations: Station[] = [
           {
             kind: "device",
             src: asset("/img/s5/head.jpg"),
-            alt: "Head immobiliser: orange lateral head blocks with forehead and chin straps on a board, ear opening visible",
+            alt: "Head immobilizer: orange lateral head blocks with forehead and chin straps on a board, ear opening visible",
             credit: { by: "Stefan Schumacher", license: "CC BY-SA 4.0", href: "https://commons.wikimedia.org/wiki/File:Elk_paramedics_stretcher_Grey.jpg" },
             model: { uid: "1216e5d1e494433d92d36517337444ce", name: "Spine board kit", by: "Guardiano" },
           },
