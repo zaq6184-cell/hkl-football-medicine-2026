@@ -62,7 +62,7 @@ export const workshop = {
     {
       id: "black",
       name: "BLACK",
-      role: "Team Leader",
+      role: "Match Doctor",
       color: "#1C1C1C",
       text: "#FFFFFF",
       stand: "Player's LEFT flank, mid-torso (FIFA PEAP black mark). Hands-off. Not at the feet.",
@@ -70,7 +70,7 @@ export const workshop = {
       photo: asset("/img/roles/black.jpg"),
       fifa: "Hands-off. Closed-loop commands. Ensure ambulance is called. Prefer the ambulance onto the field.",
       do: [
-        "You are the team leader. Remain hands-off on the LEFT flank.",
+        "You are the Match Doctor — leader of the Field of Play (FoP) medical team. Remain hands-off on the LEFT flank.",
         "Ensure the ambulance is called.",
         "Confirm compressions are running and that Green applies the AED.",
         "After the first shock, oversee the log-roll onto the spinal board (Orange controls it): Red chest, Blue pelvis, White legs.",
@@ -187,7 +187,7 @@ export const workshop = {
       role: "First Aiders",
       color: "#E8C31A",
       text: "#1C1C1C",
-      stand: "At the FEET, in an arc facing the player (FIFA PEAP yellow marks). Not medical staff by default.",
+      stand: "At the FEET, in an arc facing the player (FIFA PEAP yellow marks). You are the second-response FoP medical team. Not medical staff by default.",
       bring: "Nothing required. Spinal board (± basket), splints and spider straps if directed.",
       photo: asset("/img/roles/yellow-v3.jpg"),
       fifa: "The extrication team stands or kneels beside the extrication device facing the player and awaits instructions. They may be invited into log-roll positions if extra hands are needed.",

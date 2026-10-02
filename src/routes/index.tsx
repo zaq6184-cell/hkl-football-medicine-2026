@@ -41,12 +41,29 @@ function Home() {
             >
               <span className="font-display text-xl font-bold tracking-[0.1em]">{r.name}</span>
               <span className="mt-1 text-[11px] font-medium opacity-90">
-                {r.id === "yellow" ? "× 4 First Aiders" : r.role}
+                {r.id === "yellow" ? "× 4 First Aiders · second response" : r.role}
               </span>
             </Link>
           ))}
         </div>
         <Note>If it is not your colour, do not reach in.</Note>
+        <Panel>
+          <div className="px-3.5 py-3.5">
+            <SectionLabel>FIELD OF PLAY (FoP) MEDICAL TEAM</SectionLabel>
+            <dl className="mt-2 flex flex-col divide-y divide-line text-sm leading-snug">
+              {[
+                ["Match Doctor", "Black — leads the FoP medical team."],
+                ["First-response team", "Red + Blue + White + Green + Orange."],
+                ["Second-response team", "Yellow — the First Aiders."],
+              ].map(([t, d]) => (
+                <div key={t} className="py-1.5">
+                  <dt className="font-display text-xs font-semibold tracking-wide text-navy">{t}</dt>
+                  <dd>{d}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </Panel>
         <Panel>
           <div className="px-3.5 py-3.5">
             <SectionLabel>PRINTABLE HKL CARDS & HANDOUTS (PDF)</SectionLabel>

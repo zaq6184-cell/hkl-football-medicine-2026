@@ -11,7 +11,7 @@ const posters = [
   {
     src: asset("/img/fifa/peap.jpg"),
     title: "FIFA Pre-Match Emergency Action Plan (PEAP)",
-    note: "Fill in before every match: venue, hospital, team leader and a name for each colour.",
+    note: "Fill in before every match: venue, hospital, Match Doctor and a name for each colour.",
   },
   {
     src: asset("/img/fifa/set-piece.jpg"),

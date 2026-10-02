@@ -68,8 +68,10 @@ export const stations: Station[] = [
           {
             kind: "list",
             items: [
-              "Team doctor enters first, followed by the pitchside medical team.",
-              "Match doctor – highest rank (Black).",
+              "Team doctor enters first, followed by the Field of Play (FoP) medical team.",
+              "Match Doctor (Black) — leads the FoP medical team.",
+              "First-response FoP medical team: Red, Blue, White, Green and Orange.",
+              "Second-response FoP medical team: Yellow (First Aiders).",
             ],
           },
         ],
@@ -93,7 +95,7 @@ export const stations: Station[] = [
               {
                 title: "R — Roles & positioning",
                 sub: "Who does what and where?",
-                lines: ["Assign TL + M1–M5", "Assign extrication crew", "Confirm positions", "Brief / rehearse"],
+                lines: ["Assign Match Doctor + M1–M5 (first response)", "Assign second response (Yellow)", "Confirm positions", "Brief / rehearse"],
               },
               {
                 title: "E — Equipment",
@@ -116,18 +118,27 @@ export const stations: Station[] = [
         ],
       },
       {
-        title: "Pitchside resuscitation team",
+        title: "Field of Play (FoP) medical team",
         blocks: [
           {
             kind: "table",
             head: ["Role", "Position", "Main responsibility"],
             rows: [
-              ["Team Leader (Black)", "Left flank, 2–3 m back; full view", "Hands off. Overall command, CPR/AED flow, calls the lift for extrication, ambulance/referee liaison."],
+              ["Match Doctor (Black)", "Left flank, 2–3 m back; full view", "Hands off. Overall command, CPR/AED flow, calls the lift for extrication, ambulance/referee liaison."],
               ["M1 Head (Orange)", "At head", "MILS, airway alignment; commands the log-roll / tilt count."],
               ["M2 Chest (Red)", "Right chest", "ABCDE, continuous CPR 100–120/min, full recoil."],
               ["M3 Oxygen (Blue)", "Right hip", "O2 15 L/min; takes PELVIS in log-roll; takes over compressions at 2 min."],
               ["M4 Legs / Extrication (White)", "Right leg", "Extrication kit (trauma: scoop + basket; arrest: spinal board ± basket), splints; takes LEGS in log-roll."],
               ["M5 Equipment (Green)", "Left head/shoulder", "AED, emergency bag, equipment to M2; CLEAR before shock; priority is timely, safe defibrillation."],
+              ["Second response (Yellow × 4)", "At the feet", "First Aiders. Wait beside the stretcher; lift and carry only on the Match Doctor's command."],
+            ],
+          },
+          {
+            kind: "defs",
+            items: [
+              { term: "Match Doctor", text: "Black — the FoP team leader." },
+              { term: "First-response FoP medical team", text: "Red + Blue + White + Green + Orange (M1–M5)." },
+              { term: "Second-response FoP medical team", text: "Yellow — the First Aiders." },
             ],
           },
           {
@@ -145,13 +156,13 @@ export const stations: Station[] = [
             items: [
               "The referee assesses the incident.",
               "If needed, the referee signals the team doctor onto the pitch.",
-              "Only then, if needed, the referee calls the field-of-play medical team — both hands held as if carrying a stretcher.",
+              "Only then, if needed, the referee calls the Field of Play (FoP) medical team — both hands held as if carrying a stretcher.",
             ],
           },
           {
             kind: "alert",
             title: "Exception: non-contact collapse",
-            text: "A player who collapses without contact is treated as sudden cardiac arrest — the medical team runs on without waiting for the referee's signal.",
+            text: "A player who collapses without contact is treated as sudden cardiac arrest — the FoP medical team runs on without waiting for the referee's signal.",
           },
           {
             kind: "image",
@@ -167,7 +178,7 @@ export const stations: Station[] = [
           {
             kind: "list",
             items: [
-              "At FIFA matches the field-of-play team sits to the left of Team A's bench, with the extrication kit set up beside the bench.",
+              "At FIFA matches the FoP medical team sits to the left of Team A's bench, with the extrication kit set up beside the bench.",
               "The Match Doctor leads the team and may call it into the “ready” position.",
               "Ready: move along the touchline to the point closest to the incident and squat in your assigned position with the stretcher.",
               "Not needed: return to your seats, passing behind the team benches where possible.",
@@ -183,12 +194,12 @@ export const stations: Station[] = [
             kind: "image",
             src: asset("/img/fifa/onfield/bench.jpg"),
             alt: "Pitch diagram showing the medical team seated left of Team A's bench, with two basket stretchers in front",
-            caption: "Where the field-of-play medical team sits. FIFA Medical Set Piece — Protocols for on-field interventions (v3, March 2025). © FIFA",
+            caption: "Where the FoP medical team sits. FIFA Medical Set Piece — Protocols for on-field interventions (v3, March 2025). © FIFA",
           },
           {
             kind: "defs",
             items: [
-              { term: "FIFA field-of-play team", text: "8–9 members: one emergency physician experienced in out-of-hospital care plus paramedics / health professionals doing BLS and ALS, with 2–3 reserves. The same team works every match at a venue." },
+              { term: "FIFA Field of Play (FoP) medical team", text: "8–9 members: one emergency physician experienced in out-of-hospital care plus paramedics / health professionals doing BLS and ALS, with 2–3 reserves. The same team works every match at a venue." },
               { term: "Training", text: "The whole team trains in the FIFA set piece with the FIFA Match Doctor 5–7 days before the first match, on the standard FIFA equipment." },
               { term: "FIFA Match Doctor", text: "Sits with and leads the team, reviews injury mechanisms on a replay device (often with a remote injury spotter), makes their own assessment, calls the ready position, and enters for potentially serious injury or concussion — then directs when the team comes on with the equipment." },
             ],
@@ -244,7 +255,7 @@ export const stations: Station[] = [
             items: [
               { term: "Equipment zone", text: "AED + O2 + emergency care bag at the player's head / left side." },
               { term: "Extrication zone", text: "Below the player's feet, in line with the body (FIFA): basket 2–3 basket lengths from the feet; scoop (trauma) or spinal board (arrest) laid out between the feet and the basket. Kept back until required." },
-              { term: "Team Leader", text: "Remain 2–3 m away with a full view. Keep the working area clean and uncluttered." },
+              { term: "Match Doctor", text: "Remain 2–3 m away with a full view. Keep the working area clean and uncluttered." },
             ],
           },
         ],
@@ -266,7 +277,7 @@ export const stations: Station[] = [
             items: [
               { term: "Medical kit (FIFA)", text: "FIFA bag + oxygen to one side of the head; one person hands out equipment." },
               { term: "Extrication kit (FIFA)", text: "Basket in line with the feet, 2–3 basket lengths away. Scoop out of the basket, extended and split between basket and player." },
-              { term: "Extrication team (yellow)", text: "Stand or kneel beside the scoop / basket facing the player; wait for the team leader. One stays free to pass the scoop and slide the basket." },
+              { term: "Extrication team (yellow)", text: "Stand or kneel beside the scoop / basket facing the player; wait for the Match Doctor. One stays free to pass the scoop and slide the basket." },
             ],
           },
           {
@@ -289,8 +300,8 @@ export const stations: Station[] = [
           {
             kind: "image",
             src: asset("/img/fifa/onfield/equipment.jpg"),
-            alt: "FIFA field-of-play medical team equipment laid out: basket stretcher with scoop, collar and straps",
-            caption: "FIFA field-of-play team equipment. FIFA Medical Set Piece — Protocols for on-field interventions (v3, March 2025). © FIFA",
+            alt: "FIFA Field of Play medical team equipment laid out: basket stretcher with scoop, collar and straps",
+            caption: "FIFA FoP medical team equipment. FIFA Medical Set Piece — Protocols for on-field interventions (v3, March 2025). © FIFA",
           },
         ],
       },
@@ -298,7 +309,7 @@ export const stations: Station[] = [
         title: "Closed-loop communication",
         blocks: [
           { kind: "remember", text: "NAME → COMMAND → REPEAT → CONFIRM" },
-          { kind: "text", text: "Example — TL: “M5, apply AED.” M5: “Applying AED.” M5: “AED attached.”" },
+          { kind: "text", text: "Example — Match Doctor: “M5, apply AED.” M5: “Applying AED.” M5: “AED attached.”" },
         ],
       },
       {
@@ -955,7 +966,7 @@ export const stations: Station[] = [
           },
           {
             kind: "text",
-            text: "FIFA World Cup protocol (ALS-trained team): after the third shock and drugs, the team leader decides when to extricate — ideally with a mechanical CPR device (e.g. LUCAS / AutoPulse) fitted first, so compressions are not interrupted. The workshop follows the same timing: extricate only after the 3rd shock (earlier if ROSC), using the manual 10-second stop-and-start carry when no mechanical CPR device is available — Step 5.",
+            text: "FIFA World Cup protocol (ALS-trained team): after the third shock and drugs, the Match Doctor decides when to extricate — ideally with a mechanical CPR device (e.g. LUCAS / AutoPulse) fitted first, so compressions are not interrupted. The workshop follows the same timing: extricate only after the 3rd shock (earlier if ROSC), using the manual 10-second stop-and-start carry when no mechanical CPR device is available — Step 5.",
           },
         ],
       },
@@ -1091,7 +1102,7 @@ export const stations: Station[] = [
             kind: "list",
             ordered: true,
             items: [
-              "One team leader coordinates; maintain spinal alignment.",
+              "The Match Doctor coordinates; maintain spinal alignment.",
               "Position the player centrally.",
               "Secure torso and pelvis before the head, then the legs.",
               "Straps snug enough to control movement without impairing breathing or circulation.",
@@ -1161,7 +1172,7 @@ export const stations: Station[] = [
               "Position each half alongside with minimal movement.",
               "Connect head and foot ends securely.",
               "Check all locks before lifting.",
-              "Enough rescuers; lift on the team leader's command.",
+              "Enough rescuers; lift on the Match Doctor's command.",
               "Reassess after transfer.",
             ],
           },
@@ -1339,7 +1350,7 @@ export const stations: Station[] = [
               "Applying equipment before an appropriate primary assessment.",
               "Releasing MILS too early.",
               "Incorrect collar sizing.",
-              "Uncoordinated lifting without a clear team leader.",
+              "Uncoordinated lifting without a clear leader.",
               "Straps too loose or too tight.",
               "Moving a suspected fracture to get a 'normal' position.",
               "Not checking CSM before and after splinting.",
