@@ -118,7 +118,7 @@ export const stations: Station[] = [
         ],
       },
       {
-        title: "Field of Play (FoP) medical team",
+        title: "Field of Play medical team",
         blocks: [
           {
             kind: "table",
