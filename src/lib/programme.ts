@@ -222,15 +222,15 @@ export const day1: Session[] = [
   {
     start: "08:30",
     end: "08:50",
-    topic: "Sudden cardiac arrest on the field of play",
-    speakerId: "peter",
+    topic: "Emergency action plan & medical set-piece",
+    speakerId: "celeste",
     kind: "talk",
   },
   {
     start: "08:50",
     end: "09:10",
-    topic: "Emergency action plan & medical set-piece",
-    speakerId: "celeste",
+    topic: "Sudden cardiac arrest on the field of play",
+    speakerId: "peter",
     kind: "talk",
   },
   {
@@ -257,8 +257,8 @@ export const day1: Session[] = [
   {
     start: "10:10",
     end: "10:30",
-    topic: "Keeping sports clean of doping — prevention & TUEs",
-    speakerId: "gurcharan",
+    topic: "Significance of integrative care in a competitive sports environment — are we equipped?",
+    speakerId: "mahathar",
     kind: "talk",
   },
   { start: "10:30", end: "11:00", topic: "Coffee / tea break", kind: "break" },
@@ -266,8 +266,8 @@ export const day1: Session[] = [
   {
     start: "12:00",
     end: "12:20",
-    topic: "Significance of integrative care in a competitive sports environment — are we equipped?",
-    speakerId: "mahathar",
+    topic: "Keeping sports clean of doping — prevention & TUEs",
+    speakerId: "gurcharan",
     kind: "talk",
   },
   {
