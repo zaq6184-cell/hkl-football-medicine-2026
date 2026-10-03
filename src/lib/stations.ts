@@ -77,7 +77,7 @@ export const stations: Station[] = [
         ],
       },
       {
-        title: "Before kickoff: 4 key PEAP components",
+        title: "Before kickoff: 5 key PEAP components",
         blocks: [
           {
             kind: "cards",
@@ -95,16 +95,42 @@ export const stations: Station[] = [
               {
                 title: "R — Roles & positioning",
                 sub: "Who does what and where?",
-                lines: ["Assign Match Doctor + M1–M5 (first response)", "Assign second response (Yellow)", "Confirm positions", "Brief / rehearse"],
+                lines: ["Assign Match Doctor + M1–M5 (first response)", "Assign second response (Yellow)", "Confirm positions", "Brief the team"],
               },
               {
                 title: "E — Equipment",
                 sub: "Is everything ready?",
                 lines: ["Emergency care bag", "AED + pads", "Oxygen + BVM", "Scoop / spinal board / basket + straps"],
               },
+              {
+                title: "T — Training",
+                sub: "Have we rehearsed?",
+                lines: [
+                  "Rehearse the critical scenarios before the event",
+                  "Sudden cardiac arrest · cervical spine injury · trauma",
+                  "Every colour practises its own role, with the real equipment",
+                  "Debrief, then fix the gaps",
+                ],
+              },
             ],
           },
-          { kind: "remember", text: "M-CRE = Meet → Call → Position → Check" },
+          { kind: "remember", text: "M-CRET = Meet → Call → Position → Check → Train" },
+          {
+            kind: "defs",
+            items: [
+              { term: "FIFA — before the tournament", text: "The whole Field of Play medical team trains in the FIFA set piece with the Match Doctor 5–7 days before the first match, on the standard FIFA equipment." },
+              { term: "FIFA — on matchday", text: "Between 2 hours and 1 hour before kick-off the team runs moulages (simulations) of the most critical scenarios, led by the Match Doctor." },
+              { term: "FIFA — everywhere", text: "Use and rehearse the PEAP in all football settings — training sessions as well as matches — adapted to the site and the expertise available." },
+              { term: "How often", text: "Practise the emergency plan at least once a year with everyone likely to respond, and review it briefly with the home and visiting medical staff before each competition." },
+              { term: "How to rehearse", text: "Hands-on and scenario-based, at different places in the venue: sudden cardiac arrest, head and neck injury, heat stroke and limb injuries. Record when, where, who took part and which scenarios." },
+              { term: "After a real emergency", text: "Debrief with everyone involved and use it to improve the plan." },
+              { term: "Why it matters", text: "Aim for the first shock within 3 minutes of collapse. In one US study, 89% of school athletes survived a cardiac arrest when CPR and defibrillation were prompt — and survival was higher with an AED already on site." },
+            ],
+          },
+          {
+            kind: "text",
+            text: "Sources: FIFA Medical Set Piece — Protocols for on-field interventions (2025); consensus on sudden cardiac arrest on the field of play (Br J Sports Med, 2017); NATA position statement on emergency action plans in sport (J Athl Train, 2024).",
+          },
         ],
       },
       {
@@ -318,7 +344,7 @@ export const stations: Station[] = [
           {
             kind: "defs",
             items: [
-              { term: "Before match", text: "M-CRE: Meet – Call – Position – Check" },
+              { term: "Before match", text: "M-CRET: Meet – Call – Position – Check – Train" },
               { term: "Non-contact collapse", text: "SCA → CPR → AED. AED within 30 sec. Spinal board ± basket; Black calls the lift." },
               { term: "Leadership", text: "Hands off – eyes up. Command and confirm." },
               { term: "Extrication (trauma)", text: "M1 commands. Tilt – Scoop – Strap – Basket." },
