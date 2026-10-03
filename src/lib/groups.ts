@@ -7,7 +7,7 @@ export const groups: Group[] = [
     members: [
       "Dr Zaeem Hanef",
       "Dr Alubah",
-      "Andi",
+      "MA Andi",
       "Dr Annuar Deen",
       "Dr Firdaus",
       "En Che Fahmi",
@@ -23,7 +23,7 @@ export const groups: Group[] = [
       "Dr Amir Azwan",
       "Dr Baran",
       "Ms Dona",
-      "Hasnan",
+      "MA Hasnan",
       "Dr Ihsan",
       "Dr Khoo",
       "Dr Mohd Zaidi",
